@@ -8,7 +8,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
-import com.palmdev.learn_math.data.model.ExerciseSelect
 import com.palmdev.learn_math.databinding.FragmentLearnTableBinding
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -45,7 +44,7 @@ class LearnTableFragment : Fragment() {
                 R.id.action_learnTableFragment_to_exerciseSelectFragment,
                 bundleOf(
                     ExerciseSelectFragment.ARG_WITH_NUMBER to selectedNumber,
-                    ExerciseSelectFragment.ARG_TYPE to ExerciseSelectFragment.Type.MULTIPLICATION
+                    ExerciseSelectFragment.ARG_OPERATION to ExerciseSelectFragment.Operation.MULTIPLICATION
                 )
             )
         }
@@ -55,7 +54,7 @@ class LearnTableFragment : Fragment() {
                 R.id.action_learnTableFragment_to_exerciseSelectFragment,
                 bundleOf(
                     ExerciseSelectFragment.ARG_WITH_NUMBER to selectedNumber,
-                    ExerciseSelectFragment.ARG_TYPE to ExerciseSelectFragment.Type.DIVISION
+                    ExerciseSelectFragment.ARG_OPERATION to ExerciseSelectFragment.Operation.DIVISION
                 )
             )
         }

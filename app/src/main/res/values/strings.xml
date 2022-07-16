@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Multiplication Table</string>
+    <string name="questionMark" translatable="false">\?</string>
 
     <string name="learnTable">Learn Table</string>
     <string name="selectNumber">Select the number:</string>
@@ -7,7 +8,12 @@
     <string name="startDivision">Start Division</string>
     <string name="multiplication">Multiplication</string>
     <string name="division">Division</string>
-    <string name="questionMark">\?</string>
+    <string name="training">Training</string>
+    <string name="setDifficulty">Set difficulty:</string>
+    <string name="minNumber">min. number</string>
+    <string name="maxNumber">max. number</string>
+    <string name="selectGame">Select the game:</string>
+    <string name="selectOperation">Select the operation:</string>
 
 
 

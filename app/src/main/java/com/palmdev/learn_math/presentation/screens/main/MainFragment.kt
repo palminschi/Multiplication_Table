@@ -28,5 +28,8 @@ class MainFragment : Fragment() {
         binding.btnLearnTable.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_selectTableFragment)
         }
+        binding.btnTraining.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_selectTrainingFragment)
+        }
     }
 }

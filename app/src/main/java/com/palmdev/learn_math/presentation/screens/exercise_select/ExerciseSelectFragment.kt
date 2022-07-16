@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseSelectBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlin.random.Random
 
 class ExerciseSelectFragment : Fragment() {
 
@@ -19,7 +20,8 @@ class ExerciseSelectFragment : Fragment() {
     private var withNumber = 0
     private var minNumber = 0
     private var maxNumber = 10
-    private var type = Type.MULTIPLICATION
+    private var operation = Operation.MULTIPLICATION
+    private var type = Type.FIXED
     private var correctAnswerPosition = 0
     private var correctAnswer = 0
     private var progressCounter = 0
@@ -32,8 +34,10 @@ class ExerciseSelectFragment : Fragment() {
     }
     private var correctAnswers = 0
     private var wrongAnswers = 0
+    private val handler by lazy { Handler(Looper.getMainLooper()) }
 
-    enum class Type { MULTIPLICATION, DIVISION }
+    enum class Operation { MULTIPLICATION, DIVISION, PLUS, MINUS }
+    enum class Type { FIXED, RANDOM }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +45,7 @@ class ExerciseSelectFragment : Fragment() {
     ): View {
         binding = FragmentExerciseSelectBinding.inflate(layoutInflater, container, false)
         arguments?.getInt(ARG_WITH_NUMBER)?.let { withNumber = it }
+        arguments?.getSerializable(ARG_OPERATION)?.let { operation = it as Operation }
         arguments?.getSerializable(ARG_TYPE)?.let { type = it as Type }
         minNumber = arguments?.getInt(ARG_MIN_NUMBER, 0) ?: 0
         maxNumber = arguments?.getInt(ARG_MAX_NUMBER, 10) ?: 10
@@ -53,12 +58,7 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun init() {
-        when (type) {
-            Type.MULTIPLICATION ->
-                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
-            Type.DIVISION ->
-                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
-        }
+        getNewExercise()
         updateViews()
         viewModel.exercise.observe(viewLifecycleOwner) {
             correctAnswerPosition = it.correctAnswerPosition
@@ -106,14 +106,16 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun getNewExercise() {
-        when (type) {
-            Type.MULTIPLICATION ->
-                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
-            Type.DIVISION ->
-                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+        if (type == Type.RANDOM) {
+            withNumber = Random(System.currentTimeMillis()).nextInt(minNumber, maxNumber + 1)
         }
-        updateViews()
-        progressCounter++
+        when (operation) {
+            Operation.MULTIPLICATION ->
+                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+            Operation.DIVISION ->
+                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+            else -> viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+        }
     }
 
     private fun answeredRight(view: View) {
@@ -127,9 +129,13 @@ class ExerciseSelectFragment : Fragment() {
         binding.option2.isClickable = false
         binding.option3.isClickable = false
         binding.option4.isClickable = false
-        Handler(Looper.getMainLooper()).postDelayed({
+        handler.postDelayed({
             if (progressCounter == 9) finishExercise()
-            else getNewExercise()
+            else {
+                getNewExercise()
+                updateViews()
+                progressCounter++
+            }
         }, 2000)
     }
 
@@ -144,9 +150,13 @@ class ExerciseSelectFragment : Fragment() {
         binding.option2.isClickable = false
         binding.option3.isClickable = false
         binding.option4.isClickable = false
-        Handler(Looper.getMainLooper()).postDelayed({
+        handler.postDelayed({
             if (progressCounter == 9) finishExercise()
-            else getNewExercise()
+            else {
+                getNewExercise()
+                updateViews()
+                progressCounter++
+            }
         }, 2000)
     }
 
@@ -154,10 +164,16 @@ class ExerciseSelectFragment : Fragment() {
         findNavController().navigate(R.id.action_exerciseSelectFragment_to_endFragment) // TODO: Bundle
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacksAndMessages(null)
+    }
+
     companion object {
         const val ARG_WITH_NUMBER = "ARG_WITH_NUMBER"
         const val ARG_MIN_NUMBER = "ARG_MIN_NUMBER"
         const val ARG_MAX_NUMBER = "ARG_MAX_NUMBER"
+        const val ARG_OPERATION = "ARG_OPERATION"
         const val ARG_TYPE = "ARG_TYPE"
     }
 }

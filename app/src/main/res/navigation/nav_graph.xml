@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_selectTableFragment"
             app:destination="@id/selectTableFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_selectTrainingFragment"
+            app:destination="@id/selectTrainingFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTableFragment"
@@ -46,4 +49,13 @@
         android:name="com.palmdev.learn_math.presentation.screens.end.EndFragment"
         android:label="fragment_end"
         tools:layout="@layout/fragment_end" />
+    <fragment
+        android:id="@+id/selectTrainingFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.select_training.SelectTrainingFragment"
+        android:label="fragment_select_training"
+        tools:layout="@layout/fragment_select_training" >
+        <action
+            android:id="@+id/action_selectTrainingFragment_to_exerciseSelectFragment"
+            app:destination="@id/exerciseSelectFragment" />
+    </fragment>
 </navigation>

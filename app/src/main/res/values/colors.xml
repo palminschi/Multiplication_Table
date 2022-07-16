@@ -11,8 +11,6 @@
 
     <color name="background">#1D2238</color>
     <color name="second_background">#00579c</color>
-    <!--<color name="background">#151e27</color>
-    <color name="second_background">#00579c</color>-->
     <color name="main_color">#d74315</color>
     <color name="gray">#a1a6aa</color>
     <color name="gray_transparent">#806E6E6E</color>
