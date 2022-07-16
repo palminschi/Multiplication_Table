@@ -9,12 +9,14 @@ val presentationModule = module {
 
     viewModel {
         LearnTableViewModel(
-            multiplicationRepository = get()
+            multiplicationRepository = get(),
+            divisionRepository = get()
         )
     }
     viewModel {
         ExerciseSelectViewModel(
-            multiplicationRepository = get()
+            multiplicationRepository = get(),
+            divisionRepository = get()
         )
     }
 }

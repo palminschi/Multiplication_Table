@@ -5,12 +5,12 @@ import com.palmdev.learn_math.data.model.ExerciseInput
 import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
 import kotlin.random.Random
 
-class MultiplicationRepositoryImpl : MultiplicationRepository {
+class DivisionRepositoryImpl : DivisionRepository {
 
     override fun getTable(withNumber: Int): String {
         var table = ""
         for (i in 0..10) {
-            table += "$withNumber x $i = ${withNumber * i}"
+            table += "${withNumber * i} ÷ $withNumber = $i"
             if (i != 10) table += "\n"
         }
         return table
@@ -18,47 +18,40 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
 
     override fun getExerciseInput(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseInput {
         val random = Random(System.currentTimeMillis())
-        val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
+        val result = withNumber * secondNumber
+        val exerciseCondition = "$result ÷ $withNumber ="
 
         return ExerciseInput(
             condition = exerciseCondition,
-            answer = result
+            answer = secondNumber
         )
     }
 
-    /** Get a multiplication exercise with 4 choices (3 of them wrong)
-    and random position of the right answer. **/
-    override fun getExerciseSelect(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseSelect {
+    override fun getExerciseSelect(
+        withNumber: Int,
+        minNumber: Int,
+        maxNumber: Int
+    ): ExerciseSelect {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
-        val secondNumber = random.nextInt(minNumber, maxNumber + 1)
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
-        val exerciseEquation = "$firstNumber x $secondNumber = ${firstNumber*secondNumber}"
+        val result = random.nextInt(minNumber, maxNumber + 1)
+        val exerciseCondition = "${firstNumber * result} ÷ $firstNumber ="
+        val exerciseEquation = "${firstNumber * result} ÷ $firstNumber = $result"
         val positionRightAnswer = random.nextInt(1, 5)
 
-        val wrongResult1 = when (result) {
-            in 0..10 -> result + 2
-            in 11..50 -> result + 4
-            in 51..100 -> result + 9
-            else -> result + (result / 10)
-        }
-        val wrongResult2 = when (result) {
-            in 0..10 -> result + 4
-            in 11..50 -> result - 4
-            in 51..100 -> result - 2
-            else -> result - (result / 10)
-        }
-        val wrongResult3 = when (result) {
-            in 0..10 -> result + 1
-            in 11..50 -> result - 2
-            in 51..100 -> result + 6
-            else -> result + 4
-        }
+        var wrongResult1 = random.nextInt(minNumber, maxNumber + 1)
+        while (wrongResult1 == result)
+            wrongResult1 = random.nextInt(minNumber, maxNumber + 1)
+
+        var wrongResult2 = random.nextInt(minNumber, maxNumber + 1)
+        while (wrongResult2 == result || wrongResult2 == wrongResult1)
+            wrongResult2 = random.nextInt(minNumber, maxNumber + 1)
+
+        var wrongResult3 = random.nextInt(minNumber, maxNumber + 1)
+        while (wrongResult3 == result || wrongResult3 == wrongResult2 || wrongResult3 == wrongResult1)
+            wrongResult3 = random.nextInt(minNumber, maxNumber + 1)
 
         return ExerciseSelect(
             condition = exerciseCondition,
@@ -97,28 +90,21 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         )
     }
 
-    /** Get a multiplication exercise True or False **/
     override fun getExerciseTrueOrFalse(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseTrueOrFalse {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
         val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
+        val exerciseCondition = "$result ÷ $firstNumber ="
         val isTrue = random.nextBoolean()
 
-        val wrongAnswer = when (result) {
-            in 0..9 -> result + random.nextInt(1, 5)
-            else -> {
-                val toAdd = random.nextBoolean()
-                if (toAdd) result + (result / random.nextInt(1, 11))
-                else result - (result / random.nextInt(1, 11))
-            }
-        }
+        var wrongAnswer = random.nextInt(minNumber, maxNumber + 1)
+        while (wrongAnswer == secondNumber) wrongAnswer = random.nextInt(minNumber, maxNumber + 1)
 
         return ExerciseTrueOrFalse(
             condition = exerciseCondition,
-            correctAnswer = result,
+            correctAnswer = secondNumber,
             wrongAnswer = wrongAnswer,
             isTrue = isTrue
         )

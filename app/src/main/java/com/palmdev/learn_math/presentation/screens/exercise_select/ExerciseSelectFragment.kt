@@ -33,7 +33,7 @@ class ExerciseSelectFragment : Fragment() {
     private var correctAnswers = 0
     private var wrongAnswers = 0
 
-    enum class Type { MULTIPLICATION, DIVISION, MIXED }
+    enum class Type { MULTIPLICATION, DIVISION }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,7 +53,12 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun init() {
-        viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+        when (type) {
+            Type.MULTIPLICATION ->
+                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+            Type.DIVISION ->
+                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+        }
         updateViews()
         viewModel.exercise.observe(viewLifecycleOwner) {
             correctAnswerPosition = it.correctAnswerPosition
@@ -101,7 +106,12 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun getNewExercise() {
-        viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+        when (type) {
+            Type.MULTIPLICATION ->
+                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+            Type.DIVISION ->
+                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+        }
         updateViews()
         progressCounter++
     }
@@ -140,7 +150,7 @@ class ExerciseSelectFragment : Fragment() {
         }, 2000)
     }
 
-    private fun finishExercise(){
+    private fun finishExercise() {
         findNavController().navigate(R.id.action_exerciseSelectFragment_to_endFragment) // TODO: Bundle
     }
 

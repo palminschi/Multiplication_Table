@@ -18,6 +18,7 @@ class LearnTableFragment : Fragment() {
     private lateinit var binding: FragmentLearnTableBinding
     private val viewModel by viewModel<LearnTableViewModel>()
     private var selectedNumber = 1
+    private var isDivision = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +35,7 @@ class LearnTableFragment : Fragment() {
     }
 
     private fun init() {
-        viewModel.getMultiplicationTable(selectedNumber)
+        setMultiplication()
         viewModel.table.observe(viewLifecycleOwner) {
             binding.tvTable.text = it
         }
@@ -48,6 +49,34 @@ class LearnTableFragment : Fragment() {
                 )
             )
         }
+
+        binding.btnStartDivision.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_learnTableFragment_to_exerciseSelectFragment,
+                bundleOf(
+                    ExerciseSelectFragment.ARG_WITH_NUMBER to selectedNumber,
+                    ExerciseSelectFragment.ARG_TYPE to ExerciseSelectFragment.Type.DIVISION
+                )
+            )
+        }
+
+        // TODO: Animation
+        binding.btnSwitchTable.setOnClickListener {
+            when (isDivision) {
+                true -> setMultiplication()
+                false -> setDivision()
+            }
+        }
+    }
+
+    private fun setMultiplication(){
+        viewModel.getMultiplicationTable(selectedNumber)
+        isDivision = false
+    }
+
+    private fun setDivision(){
+        viewModel.getDivisionTable(selectedNumber)
+        isDivision = true
     }
 
     companion object {
