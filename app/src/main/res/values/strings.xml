@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">learn_math</string>
+    <string name="app_name">Multiplication Table</string>
+
+    <string name="learnTable">Learn Table</string>
+    <string name="selectNumber">Select the number:</string>
+    <string name="startMultiply">Start Multiply</string>
+    <string name="startDivision">Start Division</string>
+    <string name="multiplication">Multiplication</string>
+    <string name="division">Division</string>
+    <string name="questionMark">\?</string>
+
+
+
+    <string name="tableExample"> 1 x 0 = 0\n
+        1 x 1 = 1\n
+        1 x 2 = 2\n
+        1 x 3 = 3\n
+        1 x 4 = 4\n
+        1 x 5 = 5\n
+        1 x 6 = 6\n
+        1 x 7 = 7\n
+        1 x 8 = 8\n
+        1 x 9 = 9\n
+        1 x 10 = 10
+    </string>
 </resources>

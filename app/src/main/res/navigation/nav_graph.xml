@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_selectTableFragment"
+            app:destination="@id/selectTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTableFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.select_table.SelectTableFragment"
+        android:label="fragment_select_table"
+        tools:layout="@layout/fragment_select_table" >
+        <action
+            android:id="@+id/action_selectTableFragment_to_learnTableFragment"
+            app:destination="@id/learnTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnTableFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.learn_table.LearnTableFragment"
+        android:label="fragment_learn_table"
+        tools:layout="@layout/fragment_learn_table" >
+        <action
+            android:id="@+id/action_learnTableFragment_to_exerciseSelectFragment"
+            app:destination="@id/exerciseSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseSelectFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment"
+        android:label="fragment_exercise_select"
+        tools:layout="@layout/fragment_exercise_select" >
+        <action
+            android:id="@+id/action_exerciseSelectFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.end.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+</navigation>

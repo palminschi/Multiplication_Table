@@ -1,13 +1,24 @@
 package com.palmdev.learn_math.data.repository
 
 import com.palmdev.learn_math.data.model.ExerciseSelect
-import com.palmdev.learn_math.data.model.ExerciseSimple
+import com.palmdev.learn_math.data.model.ExerciseInput
 import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
 import kotlin.random.Random
 
 class MultiplicationRepositoryImpl : MultiplicationRepository {
 
-    override fun getExerciseSimple(withNumber: Int, maxNumber: Int): ExerciseSimple {
+    override fun getTable(withNumber: Int): String {
+        var table = ""
+        for (i in 0..10) {
+            table += if (i == 10)
+                "$withNumber x $i = ${withNumber * i}"
+            else
+                "$withNumber x $i = ${withNumber * i}\n"
+        }
+        return table
+    }
+
+    override fun getExerciseInput(withNumber: Int, maxNumber: Int): ExerciseInput {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
         val secondNumber = random.nextInt(0, maxNumber + 1)
@@ -15,7 +26,7 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         val result = firstNumber * secondNumber
         val exerciseCondition = "$firstNumber x $secondNumber ="
 
-        return ExerciseSimple(
+        return ExerciseInput(
             condition = exerciseCondition,
             answer = result
         )
@@ -23,13 +34,13 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
 
     /** Get a multiplication exercise with 4 choices (3 of them wrong)
     and random position of the right answer. **/
-    override fun getExerciseSelect(withNumber: Int, maxNumber: Int): ExerciseSelect {
+    override fun getExerciseSelect(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseSelect {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
         val secondNumber = random.nextInt(0, maxNumber + 1)
-
         val result = firstNumber * secondNumber
         val exerciseCondition = "$firstNumber x $secondNumber ="
+        val exerciseEquation = "$firstNumber x $secondNumber = ${firstNumber*secondNumber}"
         val positionRightAnswer = random.nextInt(1, 5)
 
         val wrongResult1 = when (result) {
@@ -53,6 +64,7 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
 
         return ExerciseSelect(
             condition = exerciseCondition,
+            equation = exerciseEquation,
             correctAnswer = result,
             correctAnswerPosition = positionRightAnswer,
             choice_1 = when (positionRightAnswer) {

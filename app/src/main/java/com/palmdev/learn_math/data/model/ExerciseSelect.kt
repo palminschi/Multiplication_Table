@@ -2,6 +2,7 @@ package com.palmdev.learn_math.data.model
 
 data class ExerciseSelect(
     val condition: String,
+    val equation: String,
     val correctAnswer: Int,
     val correctAnswerPosition: Int,
     val choice_1: Int,
