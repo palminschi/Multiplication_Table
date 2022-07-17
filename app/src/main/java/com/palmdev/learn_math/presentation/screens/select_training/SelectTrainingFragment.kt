@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentSelectTrainingBinding
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
+import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SelectTrainingFragment : Fragment() {
@@ -59,7 +60,19 @@ class SelectTrainingFragment : Fragment() {
         }
         binding.btnGameTrueOrFalse.setOnClickListener {
             checkEnteredData()
-            // TODO: Navigation
+            findNavController().navigate(
+                R.id.action_selectTrainingFragment_to_exerciseTrueOrFalseFragment,
+                bundleOf(
+                    ExerciseTrueOrFalseFragment.ARG_OPERATION to when (operation) {
+                        Operation.MULTIPLY -> ExerciseTrueOrFalseFragment.Operation.MULTIPLICATION
+                        Operation.DIVIDE -> ExerciseTrueOrFalseFragment.Operation.DIVISION
+                        Operation.PLUS -> ExerciseTrueOrFalseFragment.Operation.PLUS
+                        Operation.MINUS -> ExerciseTrueOrFalseFragment.Operation.MINUS
+                    },
+                    ExerciseTrueOrFalseFragment.ARG_MAX_NUMBER to maxNumber,
+                    ExerciseTrueOrFalseFragment.ARG_MIN_NUMBER to minNumber,
+                )
+            )
         }
     }
 

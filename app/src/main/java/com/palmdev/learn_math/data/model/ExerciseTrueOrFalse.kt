@@ -4,5 +4,5 @@ data class ExerciseTrueOrFalse(
      val condition: String,
      val correctAnswer: Int,
      val wrongAnswer: Int,
-     val isTrue: Boolean
+     val isTrueOrFalse: Boolean
 )

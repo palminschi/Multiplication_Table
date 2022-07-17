@@ -120,7 +120,7 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
             condition = exerciseCondition,
             correctAnswer = result,
             wrongAnswer = wrongAnswer,
-            isTrue = isTrue
+            isTrueOrFalse = isTrue
         )
     }
 }

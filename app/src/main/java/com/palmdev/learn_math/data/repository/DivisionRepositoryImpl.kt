@@ -106,7 +106,7 @@ class DivisionRepositoryImpl : DivisionRepository {
             condition = exerciseCondition,
             correctAnswer = secondNumber,
             wrongAnswer = wrongAnswer,
-            isTrue = isTrue
+            isTrueOrFalse = isTrue
         )
     }
 }
