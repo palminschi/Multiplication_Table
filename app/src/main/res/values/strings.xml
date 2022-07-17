@@ -14,7 +14,12 @@
     <string name="maxNumber">max. number</string>
     <string name="selectGame">Select the game:</string>
     <string name="selectOperation">Select the operation:</string>
-
+    <string name="exam">Exam</string>
+    <string name="selectDifficulty">Select difficulty:</string>
+    <string name="start">Start</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

@@ -31,5 +31,8 @@ class MainFragment : Fragment() {
         binding.btnTraining.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_selectTrainingFragment)
         }
+        binding.btnExam.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_startExamFragment)
+        }
     }
 }

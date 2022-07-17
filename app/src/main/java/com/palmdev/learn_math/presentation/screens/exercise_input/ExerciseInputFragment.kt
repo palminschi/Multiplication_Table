@@ -12,10 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseInputBinding
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseFragment
-import com.palmdev.learn_math.utils.ARG_MAX_NUMBER
-import com.palmdev.learn_math.utils.ARG_MIN_NUMBER
-import com.palmdev.learn_math.utils.ARG_OPERATION
-import com.palmdev.learn_math.utils.Operation
+import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
@@ -27,6 +24,7 @@ class ExerciseInputFragment : Fragment() {
     private var maxNumber = 10
     private var withNumber = 0
     private var operation = Operation.MULTIPLICATION
+    private var examOrTraining = TRAINING
     private var progressCounter = 0
     private var correctAnswers = 0
     private var correctAnswer = 0
@@ -56,6 +54,7 @@ class ExerciseInputFragment : Fragment() {
         minNumber = arguments?.getInt(ARG_MIN_NUMBER, 0) ?: 0
         maxNumber = arguments?.getInt(ARG_MAX_NUMBER, 10) ?: 10
         arguments?.getSerializable(ARG_OPERATION)?.let { operation = it as Operation }
+        examOrTraining = arguments?.getString(ARG_EXAM_OR_TRAINING, TRAINING) ?: TRAINING
         return binding.root
     }
 
@@ -174,6 +173,10 @@ class ExerciseInputFragment : Fragment() {
     }
 
     private fun finishExercise() {
-        findNavController().navigate(R.id.action_exerciseInputFragment_to_endFragment) // TODO: Bundle
+        if (examOrTraining == EXAM) {
+            findNavController().navigate(R.id.action_exerciseInputFragment_to_endExamFragment)
+        } else {
+            findNavController().navigate(R.id.action_exerciseInputFragment_to_endFragment) // TODO: Bundle
+        }
     }
 }
