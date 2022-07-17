@@ -1,5 +1,6 @@
 package com.palmdev.learn_math.di
 
+import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
 import com.palmdev.learn_math.presentation.screens.learn_table.LearnTableViewModel
@@ -22,6 +23,12 @@ val presentationModule = module {
     }
     viewModel {
         ExerciseTrueOrFalseViewModel(
+            multiplicationRepository = get(),
+            divisionRepository = get()
+        )
+    }
+    viewModel {
+        ExerciseInputViewModel(
             multiplicationRepository = get(),
             divisionRepository = get()
         )

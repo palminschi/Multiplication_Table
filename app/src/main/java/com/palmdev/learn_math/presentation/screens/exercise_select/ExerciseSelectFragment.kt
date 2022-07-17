@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseSelectBinding
+import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
@@ -21,7 +22,7 @@ class ExerciseSelectFragment : Fragment() {
     private var minNumber = 0
     private var maxNumber = 10
     private var operation = Operation.MULTIPLICATION
-    private var type = Type.FIXED
+    private var numberType = NumberType.FIXED
     private var correctAnswerPosition = 0
     private var correctAnswer = 0
     private var progressCounter = 0
@@ -36,9 +37,6 @@ class ExerciseSelectFragment : Fragment() {
     private var wrongAnswers = 0
     private val handler by lazy { Handler(Looper.getMainLooper()) }
 
-    enum class Operation { MULTIPLICATION, DIVISION, PLUS, MINUS }
-    enum class Type { FIXED, RANDOM }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,7 +44,7 @@ class ExerciseSelectFragment : Fragment() {
         binding = FragmentExerciseSelectBinding.inflate(layoutInflater, container, false)
         arguments?.getInt(ARG_WITH_NUMBER)?.let { withNumber = it }
         arguments?.getSerializable(ARG_OPERATION)?.let { operation = it as Operation }
-        arguments?.getSerializable(ARG_TYPE)?.let { type = it as Type }
+        arguments?.getSerializable(ARG_TYPE)?.let { numberType = it as NumberType }
         minNumber = arguments?.getInt(ARG_MIN_NUMBER, 0) ?: 0
         maxNumber = arguments?.getInt(ARG_MAX_NUMBER, 10) ?: 10
         return binding.root
@@ -106,7 +104,7 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun getNewExercise() {
-        if (type == Type.RANDOM) {
+        if (numberType == NumberType.RANDOM) {
             withNumber = Random(System.currentTimeMillis()).nextInt(minNumber, maxNumber + 1)
         }
         when (operation) {
@@ -168,13 +166,5 @@ class ExerciseSelectFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         handler.removeCallbacksAndMessages(null)
-    }
-
-    companion object {
-        const val ARG_WITH_NUMBER = "ARG_WITH_NUMBER"
-        const val ARG_MIN_NUMBER = "ARG_MIN_NUMBER"
-        const val ARG_MAX_NUMBER = "ARG_MAX_NUMBER"
-        const val ARG_OPERATION = "ARG_OPERATION"
-        const val ARG_TYPE = "ARG_TYPE"
     }
 }

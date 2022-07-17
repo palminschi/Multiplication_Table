@@ -11,16 +11,15 @@ import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentSelectTrainingBinding
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseFragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.palmdev.learn_math.utils.*
 
 class SelectTrainingFragment : Fragment() {
 
     private lateinit var binding: FragmentSelectTrainingBinding
     private var minNumber = 0
     private var maxNumber = 10
-    private var operation = Operation.MULTIPLY
+    private var operation = Operation.MULTIPLICATION
 
-    enum class Operation { MULTIPLY, DIVIDE, PLUS, MINUS }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,22 +38,24 @@ class SelectTrainingFragment : Fragment() {
         binding.multiply.isChecked = true
         binding.btnGameInput.setOnClickListener {
             checkEnteredData()
-            // TODO: Navigation
+            findNavController().navigate(
+                R.id.action_selectTrainingFragment_to_exerciseInputFragment,
+                bundleOf(
+                    ARG_OPERATION to operation,
+                    ARG_MAX_NUMBER to maxNumber,
+                    ARG_MIN_NUMBER to minNumber
+                )
+            )
         }
         binding.btnGameSelect.setOnClickListener {
             checkEnteredData()
             findNavController().navigate(
                 R.id.action_selectTrainingFragment_to_exerciseSelectFragment,
                 bundleOf(
-                    ExerciseSelectFragment.ARG_OPERATION to when (operation) {
-                        Operation.MULTIPLY -> ExerciseSelectFragment.Operation.MULTIPLICATION
-                        Operation.DIVIDE -> ExerciseSelectFragment.Operation.DIVISION
-                        Operation.PLUS -> ExerciseSelectFragment.Operation.PLUS
-                        Operation.MINUS -> ExerciseSelectFragment.Operation.MINUS
-                    },
-                    ExerciseSelectFragment.ARG_MAX_NUMBER to maxNumber,
-                    ExerciseSelectFragment.ARG_MIN_NUMBER to minNumber,
-                    ExerciseSelectFragment.ARG_TYPE to ExerciseSelectFragment.Type.RANDOM
+                    ARG_OPERATION to operation,
+                    ARG_MAX_NUMBER to maxNumber,
+                    ARG_MIN_NUMBER to minNumber,
+                    ARG_TYPE to NumberType.RANDOM
                 )
             )
         }
@@ -63,14 +64,9 @@ class SelectTrainingFragment : Fragment() {
             findNavController().navigate(
                 R.id.action_selectTrainingFragment_to_exerciseTrueOrFalseFragment,
                 bundleOf(
-                    ExerciseTrueOrFalseFragment.ARG_OPERATION to when (operation) {
-                        Operation.MULTIPLY -> ExerciseTrueOrFalseFragment.Operation.MULTIPLICATION
-                        Operation.DIVIDE -> ExerciseTrueOrFalseFragment.Operation.DIVISION
-                        Operation.PLUS -> ExerciseTrueOrFalseFragment.Operation.PLUS
-                        Operation.MINUS -> ExerciseTrueOrFalseFragment.Operation.MINUS
-                    },
-                    ExerciseTrueOrFalseFragment.ARG_MAX_NUMBER to maxNumber,
-                    ExerciseTrueOrFalseFragment.ARG_MIN_NUMBER to minNumber,
+                    ARG_OPERATION to operation,
+                    ARG_MAX_NUMBER to maxNumber,
+                    ARG_MIN_NUMBER to minNumber,
                 )
             )
         }
@@ -83,8 +79,8 @@ class SelectTrainingFragment : Fragment() {
         maxNumber = if (binding.maxNumber.text.isNullOrEmpty()) 10
         else binding.maxNumber.text.toString().toInt()
 
-        if (binding.multiply.isChecked) operation = Operation.MULTIPLY
-        if (binding.divide.isChecked) operation = Operation.DIVIDE
+        if (binding.multiply.isChecked) operation = Operation.MULTIPLICATION
+        if (binding.divide.isChecked) operation = Operation.DIVISION
         if (binding.minus.isChecked) operation = Operation.MINUS
         if (binding.plus.isChecked) operation = Operation.PLUS
     }

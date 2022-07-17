@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.ItemNumberBinding
 import com.palmdev.learn_math.presentation.screens.learn_table.LearnTableFragment
+import com.palmdev.learn_math.utils.ARG_SELECTED_NUMBER
 
 class NumberAdapter(private val maxNumber: Int) :
     RecyclerView.Adapter<NumberAdapter.NumberHolder>() {
@@ -25,7 +26,7 @@ class NumberAdapter(private val maxNumber: Int) :
             binding.root.setOnClickListener {
                 it.findNavController().navigate(
                     R.id.action_selectTableFragment_to_learnTableFragment,
-                    bundleOf(LearnTableFragment.ARG_SELECTED_NUMBER to position + 1)
+                    bundleOf(ARG_SELECTED_NUMBER to position + 1)
                 )
             }
         }

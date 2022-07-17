@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_selectTrainingFragment_to_exerciseTrueOrFalseFragment"
             app:destination="@id/exerciseTrueOrFalseFragment" />
+        <action
+            android:id="@+id/action_selectTrainingFragment_to_exerciseInputFragment"
+            app:destination="@id/exerciseInputFragment" />
     </fragment>
     <fragment
         android:id="@+id/exerciseTrueOrFalseFragment"
@@ -68,6 +71,15 @@
         tools:layout="@layout/fragment_exercise_true_or_false" >
         <action
             android:id="@+id/action_exerciseTrueOrFalseFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseInputFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputFragment"
+        android:label="fragment_exercise_input"
+        tools:layout="@layout/fragment_exercise_input" >
+        <action
+            android:id="@+id/action_exerciseInputFragment_to_endFragment"
             app:destination="@id/endFragment" />
     </fragment>
 </navigation>

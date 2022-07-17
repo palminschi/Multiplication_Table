@@ -10,6 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseTrueOrFalseBinding
+import com.palmdev.learn_math.utils.ARG_MAX_NUMBER
+import com.palmdev.learn_math.utils.ARG_MIN_NUMBER
+import com.palmdev.learn_math.utils.ARG_OPERATION
+import com.palmdev.learn_math.utils.Operation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
@@ -33,8 +37,6 @@ class ExerciseTrueOrFalseFragment : Fragment() {
             binding.progress9, binding.progress10
         )
     }
-
-    enum class Operation { MULTIPLICATION, DIVISION, PLUS, MINUS }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,19 +68,19 @@ class ExerciseTrueOrFalseFragment : Fragment() {
 
         binding.btnTrue.setOnClickListener {
             when (isTrueOrFalse) {
-                true -> answeredRight()
-                false -> answeredWrong()
+                true -> answeredCorrectly()
+                false -> answeredWrongly()
             }
             progressCounter++
         }
         binding.btnFalse.setOnClickListener {
             when (isTrueOrFalse) {
-                true -> answeredWrong()
-                false -> answeredRight()
+                true -> answeredWrongly()
+                false -> answeredCorrectly()
             }
             progressCounter++
         }
-        progressViews.forEach { it.setBackgroundColor(resources.getColor(R.color.green, null)) }
+        progressViews.forEach { it.setBackgroundColor(resources.getColor(R.color.gray, null)) }
         binding.tvWrongAnswers.text = wrongAnswers.toString()
         binding.tvCorrectAnswers.text = correctAnswers.toString()
     }
@@ -101,7 +103,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         binding.btnFalse.isClickable = true
     }
 
-    private fun answeredRight() {
+    private fun answeredCorrectly() {
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.green, null))
@@ -116,7 +118,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         }, 200)
     }
 
-    private fun answeredWrong() {
+    private fun answeredWrongly() {
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.red, null))
@@ -141,9 +143,4 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         handler.removeCallbacksAndMessages(null)
     }
 
-    companion object {
-        const val ARG_MIN_NUMBER = "ARG_MIN_NUMBER"
-        const val ARG_MAX_NUMBER = "ARG_MAX_NUMBER"
-        const val ARG_OPERATION = "ARG_OPERATION"
-    }
 }

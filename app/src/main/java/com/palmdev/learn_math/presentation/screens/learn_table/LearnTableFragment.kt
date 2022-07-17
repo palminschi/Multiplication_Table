@@ -10,6 +10,10 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentLearnTableBinding
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
+import com.palmdev.learn_math.utils.ARG_OPERATION
+import com.palmdev.learn_math.utils.ARG_SELECTED_NUMBER
+import com.palmdev.learn_math.utils.ARG_WITH_NUMBER
+import com.palmdev.learn_math.utils.Operation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LearnTableFragment : Fragment() {
@@ -43,8 +47,8 @@ class LearnTableFragment : Fragment() {
             findNavController().navigate(
                 R.id.action_learnTableFragment_to_exerciseSelectFragment,
                 bundleOf(
-                    ExerciseSelectFragment.ARG_WITH_NUMBER to selectedNumber,
-                    ExerciseSelectFragment.ARG_OPERATION to ExerciseSelectFragment.Operation.MULTIPLICATION
+                    ARG_WITH_NUMBER to selectedNumber,
+                    ARG_OPERATION to Operation.MULTIPLICATION
                 )
             )
         }
@@ -53,8 +57,8 @@ class LearnTableFragment : Fragment() {
             findNavController().navigate(
                 R.id.action_learnTableFragment_to_exerciseSelectFragment,
                 bundleOf(
-                    ExerciseSelectFragment.ARG_WITH_NUMBER to selectedNumber,
-                    ExerciseSelectFragment.ARG_OPERATION to ExerciseSelectFragment.Operation.DIVISION
+                    ARG_WITH_NUMBER to selectedNumber,
+                    ARG_OPERATION to Operation.DIVISION
                 )
             )
         }
@@ -76,9 +80,5 @@ class LearnTableFragment : Fragment() {
     private fun setDivision(){
         viewModel.getDivisionTable(selectedNumber)
         isDivision = true
-    }
-
-    companion object {
-        const val ARG_SELECTED_NUMBER = "ARG_SELECTED_NUMBER"
     }
 }
