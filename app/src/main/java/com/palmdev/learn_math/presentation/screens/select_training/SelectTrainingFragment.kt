@@ -9,8 +9,6 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentSelectTrainingBinding
-import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
-import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseFragment
 import com.palmdev.learn_math.utils.*
 
 class SelectTrainingFragment : Fragment() {
@@ -81,8 +79,8 @@ class SelectTrainingFragment : Fragment() {
 
         if (binding.multiply.isChecked) operation = Operation.MULTIPLICATION
         if (binding.divide.isChecked) operation = Operation.DIVISION
-        if (binding.minus.isChecked) operation = Operation.MINUS
-        if (binding.plus.isChecked) operation = Operation.PLUS
+        if (binding.minus.isChecked) operation = Operation.SUBTRACTION
+        if (binding.plus.isChecked) operation = Operation.ADDITION
     }
 
     private fun checkEnteredData() {

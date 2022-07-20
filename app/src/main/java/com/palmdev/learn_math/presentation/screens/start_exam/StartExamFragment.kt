@@ -41,8 +41,8 @@ class StartExamFragment : Fragment() {
 
             if (binding.multiply.isChecked) operation = Operation.MULTIPLICATION
             else if (binding.divide.isChecked) operation = Operation.DIVISION
-            else if (binding.plus.isChecked) operation = Operation.PLUS
-            else if (binding.minus.isChecked) operation = Operation.MINUS
+            else if (binding.plus.isChecked) operation = Operation.ADDITION
+            else if (binding.minus.isChecked) operation = Operation.SUBTRACTION
 
             when (difficulty) {
                 Difficulty.EASY -> {

@@ -11,7 +11,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseInputBinding
-import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseFragment
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
@@ -88,9 +87,9 @@ class ExerciseInputFragment : Fragment() {
             Operation.DIVISION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
             // TODO: Plus and minus
-            Operation.PLUS ->
+            Operation.ADDITION ->
                 viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
-            Operation.MINUS ->
+            Operation.SUBTRACTION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
         }
         binding.tvCorrectAnswer.visibility = View.INVISIBLE

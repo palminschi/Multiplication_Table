@@ -9,6 +9,7 @@
     <string name="multiplication">Multiplication</string>
     <string name="division">Division</string>
     <string name="training">Training</string>
+    <string name="games">Games</string>
     <string name="setDifficulty">Set difficulty:</string>
     <string name="minNumber">min. number</string>
     <string name="maxNumber">max. number</string>
@@ -20,6 +21,16 @@
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+    <string name="statistics">Statistics</string>
+    <string name="passedExams">Passed exams: 2</string>
+    <string name="correctAnswers">Correct answers:</string>
+    <string name="multiplicationPercent">Multiplication - 75%</string>
+    <string name="divisionPercent">Division - 60%</string>
+    <string name="additionPercent">Addition - ?</string>
+    <string name="subtractionPercent">Subtraction - 80%</string>
+    <string name="avgAnswerTime">Avg. answer time: 3.80s</string>
+    <string name="details">Details</string>
+    <string name="removeAds">Remove Ads</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

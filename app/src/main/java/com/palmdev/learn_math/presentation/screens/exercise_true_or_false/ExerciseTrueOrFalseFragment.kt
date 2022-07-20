@@ -93,9 +93,9 @@ class ExerciseTrueOrFalseFragment : Fragment() {
             Operation.DIVISION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
             // TODO: Plus and minus
-            Operation.PLUS ->
+            Operation.ADDITION ->
                 viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
-            Operation.MINUS ->
+            Operation.SUBTRACTION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
         }
         binding.layoutCorrectAnswer.visibility = View.INVISIBLE

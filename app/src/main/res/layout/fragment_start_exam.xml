@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/tvSelectOperation">
 
@@ -42,7 +43,11 @@
             android:id="@+id/multiply"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            android:background="@drawable/style_radio_button"
+            android:button="@null"
+            android:gravity="center"
             android:text="x"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -52,7 +57,11 @@
             android:id="@+id/divide"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            android:background="@drawable/style_radio_button"
+            android:button="@null"
+            android:gravity="center"
             android:text="÷"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -62,7 +71,11 @@
             android:id="@+id/minus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            android:background="@drawable/style_radio_button"
+            android:button="@null"
+            android:gravity="center"
             android:text="-"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -72,7 +85,11 @@
             android:id="@+id/plus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
+            android:background="@drawable/style_radio_button"
+            android:button="@null"
+            android:gravity="center"
             android:text="+"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -113,7 +130,8 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
             android:text="@string/easy"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/medium"
@@ -127,7 +145,8 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
             android:text="@string/medium"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/hard"
@@ -141,7 +160,8 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
             android:text="@string/hard"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RadioGroup>
 
     <Button

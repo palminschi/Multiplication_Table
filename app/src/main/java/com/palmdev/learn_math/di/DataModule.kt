@@ -1,9 +1,6 @@
 package com.palmdev.learn_math.di
 
-import com.palmdev.learn_math.data.repository.DivisionRepository
-import com.palmdev.learn_math.data.repository.DivisionRepositoryImpl
-import com.palmdev.learn_math.data.repository.MultiplicationRepository
-import com.palmdev.learn_math.data.repository.MultiplicationRepositoryImpl
+import com.palmdev.learn_math.data.repository.*
 import org.koin.dsl.module
 
 val dataModule = module {
@@ -14,6 +11,10 @@ val dataModule = module {
 
     single <DivisionRepository> {
         DivisionRepositoryImpl()
+    }
+
+    single <ResultsRepository> {
+        ResultsRepositoryImpl(resultsDao = get())
     }
 
 }

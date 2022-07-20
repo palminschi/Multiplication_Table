@@ -1,70 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".presentation.screens.main.MainFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/btnLearnTable"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/second_background"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@id/btnExam">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/coins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/learnTable"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            android:layout_marginEnd="4dp"
+            android:text="1050"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/btnTraining"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/second_background"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@id/btnLearnTable">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_gravity="center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@null"
+            android:src="@drawable/img_coins" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/img_einstein"
+            tools:ignore="NestedWeights" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplicationPercent"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="5dp"
+                android:progress="75"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/divisionPercent"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="5dp"
+                android:progress="60"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/additionPercent"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="5dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/subtractionPercent"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="5dp"
+                android:progress="80"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+
+            <Button
+                android:id="@+id/btnDetails"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_games_34"
+            android:paddingVertical="6dp"
+            android:text="@string/games"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_brain_34"
+            android:paddingVertical="6dp"
             android:text="@string/training"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/btnExam"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="@color/second_background"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnLearnTable"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/exam"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_table_34"
+            android:paddingVertical="6dp"
+            android:text="@string/learnTable"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_exam_34"
+            android:paddingVertical="6dp"
+            android:text="@string/exam"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRemoveAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_no_ads_34"
+            android:paddingVertical="6dp"
+            android:text="@string/removeAds"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

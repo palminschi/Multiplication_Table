@@ -10,10 +10,12 @@
     <color name="transparent">#00FFFFFF</color>
 
     <color name="background">#1D2238</color>
-    <color name="second_background">#00579c</color>
+    <color name="second_background">#086dd9</color>
+    <color name="second_background_transparent">#4B00579C</color>
     <color name="main_color">#d74315</color>
     <color name="gray">#a1a6aa</color>
     <color name="gray_transparent">#806E6E6E</color>
+    <color name="yellow">#ffde50</color>
 
     <color name="red">#D6231F</color>
     <color name="green">#35BC62</color>
