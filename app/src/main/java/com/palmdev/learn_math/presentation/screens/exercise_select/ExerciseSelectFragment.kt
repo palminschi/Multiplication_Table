@@ -6,12 +6,15 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseSelectBinding
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.random.Random
 
 class ExerciseSelectFragment : Fragment() {
@@ -36,6 +39,10 @@ class ExerciseSelectFragment : Fragment() {
     private var correctAnswers = 0
     private var wrongAnswers = 0
     private val handler by lazy { Handler(Looper.getMainLooper()) }
+    private var answerStartTime: Long = 0
+    private var answerEndTime: Long = 0
+    private var listAnswersTime = ArrayList<Long>()
+    private var avgAnswerTime = 0.0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +60,12 @@ class ExerciseSelectFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+
+        Timer().schedule(object : TimerTask() {
+            override fun run() {
+
+            }
+        }, 1000)
     }
 
     private fun init() {
@@ -68,20 +81,20 @@ class ExerciseSelectFragment : Fragment() {
             binding.option4.text = it.choice_4.toString()
         }
         binding.option1.setOnClickListener {
-            if (correctAnswerPosition == 1) answeredRight(it)
-            else answeredWrong(it)
+            if (correctAnswerPosition == 1) answeredCorrectly(it)
+            else answeredWrongly(it)
         }
         binding.option2.setOnClickListener {
-            if (correctAnswerPosition == 2) answeredRight(it)
-            else answeredWrong(it)
+            if (correctAnswerPosition == 2) answeredCorrectly(it)
+            else answeredWrongly(it)
         }
         binding.option3.setOnClickListener {
-            if (correctAnswerPosition == 3) answeredRight(it)
-            else answeredWrong(it)
+            if (correctAnswerPosition == 3) answeredCorrectly(it)
+            else answeredWrongly(it)
         }
         binding.option4.setOnClickListener {
-            if (correctAnswerPosition == 4) answeredRight(it)
-            else answeredWrong(it)
+            if (correctAnswerPosition == 4) answeredCorrectly(it)
+            else answeredWrongly(it)
         }
         progressViews.forEach {
             it.setBackgroundColor(resources.getColor(R.color.gray_transparent, null))
@@ -104,6 +117,7 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun getNewExercise() {
+        answerStartTime = System.currentTimeMillis()
         if (numberType == NumberType.RANDOM) {
             withNumber = Random(System.currentTimeMillis()).nextInt(minNumber, maxNumber + 1)
         }
@@ -117,7 +131,8 @@ class ExerciseSelectFragment : Fragment() {
         }
     }
 
-    private fun answeredRight(view: View) {
+    private fun answeredCorrectly(view: View) {
+        setAnswerTime()
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
         view.setBackgroundColor(resources.getColor(R.color.green, null))
@@ -138,7 +153,8 @@ class ExerciseSelectFragment : Fragment() {
         }, 2000)
     }
 
-    private fun answeredWrong(view: View) {
+    private fun answeredWrongly(view: View) {
+        setAnswerTime()
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()
         view.setBackgroundColor(resources.getColor(R.color.red, null))
@@ -159,8 +175,23 @@ class ExerciseSelectFragment : Fragment() {
         }, 2000)
     }
 
+    private fun setAnswerTime() {
+        answerEndTime = System.currentTimeMillis()
+        val exerciseTime = answerEndTime - answerStartTime
+        listAnswersTime.add(exerciseTime)
+        avgAnswerTime = listAnswersTime.average() / 1000.0
+    }
+
     private fun finishExercise() {
-        findNavController().navigate(R.id.action_exerciseSelectFragment_to_endFragment) // TODO: Bundle
+        findNavController().navigate(
+            R.id.action_exerciseSelectFragment_to_endFragment,
+            bundleOf(
+                ARG_OPERATION to operation,
+                ARG_AVG_TIME to avgAnswerTime,
+                ARG_RIGHT_ANSWERS to correctAnswers,
+                ARG_WRONG_ANSWERS to wrongAnswers
+            )
+        )
     }
 
     override fun onDestroyView() {

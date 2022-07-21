@@ -6,6 +6,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
@@ -30,6 +31,10 @@ class ExerciseInputFragment : Fragment() {
     private var wrongAnswers = 0
     private val userInput = MutableLiveData<String>()
     private val handler by lazy { Handler(Looper.getMainLooper()) }
+    private var answerStartTime: Long = 0
+    private var answerEndTime: Long = 0
+    private var listAnswersTime = ArrayList<Long>()
+    private var avgAnswerTime = 0.0
     private val progressViews by lazy {
         listOf(
             binding.progress1, binding.progress2, binding.progress3, binding.progress4,
@@ -80,6 +85,7 @@ class ExerciseInputFragment : Fragment() {
     }
 
     private fun getNewExercise() {
+        answerStartTime = System.currentTimeMillis()
         withNumber = Random(System.currentTimeMillis()).nextInt(minNumber, maxNumber + 1)
         when (operation) {
             Operation.MULTIPLICATION ->
@@ -102,6 +108,7 @@ class ExerciseInputFragment : Fragment() {
         if (correctAnswer == binding.tvAnswer.text.toString().toInt()) answeredCorrectly()
         else answeredWrongly()
         progressCounter++
+        setAnswerTime()
     }
 
     private fun answeredCorrectly() {
@@ -111,7 +118,7 @@ class ExerciseInputFragment : Fragment() {
         binding.tvCorrectAnswers.text = correctAnswers.toString()
         keyboardButtons.forEach { it.isClickable = false }
         handler.postDelayed({
-            if (progressCounter == 9) {
+            if (progressCounter == 10) {
                 finishExercise()
                 return@postDelayed
             }
@@ -127,7 +134,7 @@ class ExerciseInputFragment : Fragment() {
         binding.tvWrongAnswers.text = wrongAnswers.toString()
         keyboardButtons.forEach { it.isClickable = false }
         handler.postDelayed({
-            if (progressCounter == 9) {
+            if (progressCounter == 10) {
                 finishExercise()
                 return@postDelayed
             }
@@ -171,11 +178,23 @@ class ExerciseInputFragment : Fragment() {
         }
     }
 
+    private fun setAnswerTime() {
+        answerEndTime = System.currentTimeMillis()
+        val exerciseTime = answerEndTime - answerStartTime
+        listAnswersTime.add(exerciseTime)
+        avgAnswerTime = listAnswersTime.average() / 1000.0
+    }
+
     private fun finishExercise() {
-        if (examOrTraining == EXAM) {
-            findNavController().navigate(R.id.action_exerciseInputFragment_to_endExamFragment)
-        } else {
-            findNavController().navigate(R.id.action_exerciseInputFragment_to_endFragment) // TODO: Bundle
-        }
+            findNavController().navigate(
+                R.id.action_exerciseInputFragment_to_endFragment,
+                bundleOf(
+                    ARG_OPERATION to operation,
+                    ARG_RIGHT_ANSWERS to correctAnswers,
+                    ARG_WRONG_ANSWERS to wrongAnswers,
+                    ARG_AVG_TIME to avgAnswerTime,
+                    ARG_EXAM_OR_TRAINING to examOrTraining
+                )
+            )
     }
 }

@@ -2,15 +2,20 @@ package com.palmdev.learn_math.data.repository
 
 import com.palmdev.learn_math.data.database.ResultsDao
 import com.palmdev.learn_math.data.mapper.ResultMapper
+import com.palmdev.learn_math.data.model.ExamResults
 import com.palmdev.learn_math.data.model.ResultExercise
+import com.palmdev.learn_math.data.storage.UserDataStorage
 import com.palmdev.learn_math.utils.Operation
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class ResultsRepositoryImpl(private val resultsDao: ResultsDao) : ResultsRepository {
+class ResultsRepositoryImpl(
+    private val resultsDao: ResultsDao,
+    private val userDataStorage: UserDataStorage
+    ) : ResultsRepository {
 
     private val resultMapper = ResultMapper()
-    override fun saveResult(resultExercise: ResultExercise) {
+    override suspend fun saveResult(resultExercise: ResultExercise) {
         resultsDao.saveResult(result = resultMapper.mapToData(resultExercise))
     }
 
@@ -36,5 +41,21 @@ class ResultsRepositoryImpl(private val resultsDao: ResultsDao) : ResultsReposit
                 resultMapper.mapToPresentation(it)
             }
         }
+    }
+
+    override fun addCoins(amount: Int) {
+        userDataStorage.addCoins(amount)
+    }
+
+    override fun getCoins(): Int {
+        return userDataStorage.getCoins()
+    }
+
+    override fun saveExamResult(isPassed: Boolean) {
+        userDataStorage.saveExamResult(isPassed)
+    }
+
+    override fun getExamResults(): ExamResults {
+        return userDataStorage.getExamResult()
     }
 }

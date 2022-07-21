@@ -9,6 +9,6 @@ data class ResultExerciseEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long? = null,
     val operation: String,
-    val correctAnswersPercent: Float,
-    val avgAnswerTime: Float // seconds
+    val correctAnswersPercent: Int,
+    val avgAnswerTime: Double // seconds
 )

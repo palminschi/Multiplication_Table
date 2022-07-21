@@ -28,9 +28,20 @@
     <string name="divisionPercent">Division - 60%</string>
     <string name="additionPercent">Addition - ?</string>
     <string name="subtractionPercent">Subtraction - 80%</string>
-    <string name="avgAnswerTime">Avg. answer time: 3.80s</string>
+    <string name="avgAnswerTime">Average answer time</string>
     <string name="details">Details</string>
     <string name="removeAds">Remove Ads</string>
+    <string name="perfect">Perfect!</string>
+    <string name="great">Great!</string>
+    <string name="good">Good</string>
+    <string name="notBad">Not bad!</string>
+    <string name="tryAgain">Try again</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="home">Home</string>
+    <string name="back">Back</string>
+    <string name="passed">Passed!</string>
+    <string name="failed">Failed</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

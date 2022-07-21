@@ -6,14 +6,12 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseTrueOrFalseBinding
-import com.palmdev.learn_math.utils.ARG_MAX_NUMBER
-import com.palmdev.learn_math.utils.ARG_MIN_NUMBER
-import com.palmdev.learn_math.utils.ARG_OPERATION
-import com.palmdev.learn_math.utils.Operation
+import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
@@ -30,6 +28,10 @@ class ExerciseTrueOrFalseFragment : Fragment() {
     private var wrongAnswers = 0
     private var isTrueOrFalse = true
     private val handler by lazy { Handler(Looper.getMainLooper()) }
+    private var answerStartTime: Long = 0
+    private var answerEndTime: Long = 0
+    private var listAnswersTime = ArrayList<Long>()
+    private var avgAnswerTime = 0.0
     private val progressViews by lazy {
         listOf(
             binding.progress1, binding.progress2, binding.progress3, binding.progress4,
@@ -86,6 +88,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
     }
 
     private fun getNewExercise() {
+        answerStartTime = System.currentTimeMillis()
         withNumber = Random(System.currentTimeMillis()).nextInt(minNumber, maxNumber + 1)
         when (operation) {
             Operation.MULTIPLICATION ->
@@ -104,13 +107,14 @@ class ExerciseTrueOrFalseFragment : Fragment() {
     }
 
     private fun answeredCorrectly() {
+        setAnswerTime()
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.green, null))
         binding.btnTrue.isClickable = false
         binding.btnFalse.isClickable = false
         handler.postDelayed({
-            if (progressCounter == 9) {
+            if (progressCounter == 10) {
                 finishExercise()
                 return@postDelayed
             }
@@ -119,6 +123,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
     }
 
     private fun answeredWrongly() {
+        setAnswerTime()
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.red, null))
@@ -126,7 +131,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         binding.btnTrue.isClickable = false
         binding.btnFalse.isClickable = false
         handler.postDelayed({
-            if (progressCounter == 9) {
+            if (progressCounter == 10) {
                 finishExercise()
                 return@postDelayed
             }
@@ -134,8 +139,23 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         }, 1500)
     }
 
+    private fun setAnswerTime() {
+        answerEndTime = System.currentTimeMillis()
+        val exerciseTime = answerEndTime - answerStartTime
+        listAnswersTime.add(exerciseTime)
+        avgAnswerTime = listAnswersTime.average() / 1000.0
+    }
+
     private fun finishExercise() {
-        findNavController().navigate(R.id.action_exerciseTrueOrFalseFragment_to_endFragment) // TODO: Bundle
+        findNavController().navigate(
+            R.id.action_exerciseTrueOrFalseFragment_to_endFragment,
+            bundleOf(
+                ARG_OPERATION to operation,
+                ARG_AVG_TIME to avgAnswerTime,
+                ARG_RIGHT_ANSWERS to correctAnswers,
+                ARG_WRONG_ANSWERS to wrongAnswers
+            )
+        )
     }
 
     override fun onDestroyView() {
