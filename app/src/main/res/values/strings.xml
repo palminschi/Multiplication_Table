@@ -24,10 +24,10 @@
     <string name="statistics">Statistics</string>
     <string name="passedExams">Passed exams: 2</string>
     <string name="correctAnswers">Correct answers:</string>
-    <string name="multiplicationPercent">Multiplication - 75%</string>
-    <string name="divisionPercent">Division - 60%</string>
-    <string name="additionPercent">Addition - ?</string>
-    <string name="subtractionPercent">Subtraction - 80%</string>
+    <string name="multiplicationPercent">Multiplication -</string>
+    <string name="divisionPercent">Division -</string>
+    <string name="additionPercent">Addition -</string>
+    <string name="subtractionPercent">Subtraction -</string>
     <string name="avgAnswerTime">Average answer time</string>
     <string name="details">Details</string>
     <string name="removeAds">Remove Ads</string>

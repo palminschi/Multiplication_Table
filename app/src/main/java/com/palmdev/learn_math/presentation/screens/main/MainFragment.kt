@@ -25,6 +25,50 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        init()
+    }
+
+    private fun init() {
+        viewModel.getResults()
+        viewModel.coins.observe(viewLifecycleOwner) {
+            binding.coins.text = it.toString()
+        }
+        viewModel.multiplicationCorrectAnswers.observe(viewLifecycleOwner) {
+            if (it != 0) {
+                binding.tvMultiplication.text = "${getText(R.string.multiplicationPercent)} $it%"
+                binding.multiplicationProgress.progress = it
+            } else {
+                binding.tvMultiplication.text =
+                    "${getText(R.string.multiplicationPercent)} ${getText(R.string.questionMark)}"
+            }
+        }
+        viewModel.divisionCorrectAnswers.observe(viewLifecycleOwner) {
+            if (it != 0) {
+                binding.tvDivision.text = "${getText(R.string.divisionPercent)} $it%"
+                binding.divisionProgress.progress = it
+            } else {
+                binding.tvDivision.text =
+                    "${getText(R.string.divisionPercent)} ${getText(R.string.questionMark)}"
+            }
+        }
+        viewModel.additionCorrectAnswers.observe(viewLifecycleOwner) {
+            if (it != 0) {
+                binding.tvAddition.text = "${getText(R.string.additionPercent)} $it%"
+                binding.additionProgress.progress = it
+            } else {
+                binding.tvAddition.text =
+                    "${getText(R.string.additionPercent)} ${getText(R.string.questionMark)}"
+            }
+        }
+        viewModel.subtractionCorrectAnswers.observe(viewLifecycleOwner) {
+            if (it != 0) {
+                binding.tvSubtraction.text = "${getText(R.string.subtractionPercent)} $it%"
+                binding.subtractionProgress.progress = it
+            } else {
+                binding.tvSubtraction.text =
+                    "${getText(R.string.subtractionPercent)} ${getText(R.string.questionMark)}"
+            }
+        }
         binding.btnLearnTable.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_selectTableFragment)
         }
