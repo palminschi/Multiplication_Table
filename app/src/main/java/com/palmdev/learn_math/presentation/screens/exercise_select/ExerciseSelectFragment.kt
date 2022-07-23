@@ -126,8 +126,10 @@ class ExerciseSelectFragment : Fragment() {
                 viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
             Operation.DIVISION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
-            // TODO: Plus and minus
-            else -> viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+            Operation.ADDITION ->
+                viewModel.getAdditionExercise(withNumber, minNumber, maxNumber)
+            Operation.SUBTRACTION ->
+                viewModel.getSubtractionExercise(withNumber, minNumber, maxNumber)
         }
     }
 

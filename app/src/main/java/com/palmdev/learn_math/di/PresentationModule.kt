@@ -20,19 +20,25 @@ val presentationModule = module {
     viewModel {
         ExerciseSelectViewModel(
             multiplicationRepository = get(),
-            divisionRepository = get()
+            divisionRepository = get(),
+            additionRepository = get(),
+            subtractionRepository = get()
         )
     }
     viewModel {
         ExerciseTrueOrFalseViewModel(
             multiplicationRepository = get(),
-            divisionRepository = get()
+            divisionRepository = get(),
+            additionRepository = get(),
+            subtractionRepository = get()
         )
     }
     viewModel {
         ExerciseInputViewModel(
             multiplicationRepository = get(),
-            divisionRepository = get()
+            divisionRepository = get(),
+            additionRepository = get(),
+            subtractionRepository = get()
         )
     }
     viewModel {

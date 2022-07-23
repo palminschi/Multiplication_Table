@@ -5,24 +5,16 @@ import com.palmdev.learn_math.data.model.ExerciseInput
 import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
 import kotlin.random.Random
 
-class MultiplicationRepositoryImpl : MultiplicationRepository {
+class AdditionRepositoryImpl : AdditionRepository {
 
-    override fun getTable(withNumber: Int): String {
-        var table = ""
-        for (i in 0..10) {
-            table += "$withNumber x $i = ${withNumber * i}"
-            if (i != 10) table += "\n"
-        }
-        return table
-    }
 
     override fun getExerciseInput(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseInput {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
+        val result = firstNumber + secondNumber
+        val exerciseCondition = "$firstNumber + $secondNumber ="
 
         return ExerciseInput(
             condition = exerciseCondition,
@@ -34,9 +26,9 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         val random = Random(System.currentTimeMillis())
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
-        val exerciseEquation = "$firstNumber x $secondNumber = ${firstNumber*secondNumber}"
+        val result = firstNumber + secondNumber
+        val exerciseCondition = "$firstNumber + $secondNumber ="
+        val exerciseEquation = "$firstNumber + $secondNumber = $result"
         val positionRightAnswer = random.nextInt(1, 5)
 
         val wrongResult1 = when (result) {
@@ -100,8 +92,8 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$firstNumber x $secondNumber ="
+        val result = firstNumber + secondNumber
+        val exerciseCondition = "$firstNumber + $secondNumber ="
         val isTrue = random.nextBoolean()
 
         val wrongAnswer = when (result) {

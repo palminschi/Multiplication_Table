@@ -95,11 +95,10 @@ class ExerciseTrueOrFalseFragment : Fragment() {
                 viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
             Operation.DIVISION ->
                 viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
-            // TODO: Plus and minus
             Operation.ADDITION ->
-                viewModel.getMultiplicationExercise(withNumber, minNumber, maxNumber)
+                viewModel.getAdditionExercise(withNumber, minNumber, maxNumber)
             Operation.SUBTRACTION ->
-                viewModel.getDivisionExercise(withNumber, minNumber, maxNumber)
+                viewModel.getSubtractionExercise(withNumber, minNumber, maxNumber)
         }
         binding.layoutCorrectAnswer.visibility = View.INVISIBLE
         binding.btnTrue.isClickable = true

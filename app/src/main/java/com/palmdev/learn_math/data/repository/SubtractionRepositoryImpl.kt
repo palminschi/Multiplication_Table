@@ -5,24 +5,15 @@ import com.palmdev.learn_math.data.model.ExerciseInput
 import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
 import kotlin.random.Random
 
-class DivisionRepositoryImpl : DivisionRepository {
-
-    override fun getTable(withNumber: Int): String {
-        var table = ""
-        for (i in 0..10) {
-            table += "${withNumber * i} ÷ $withNumber = $i"
-            if (i != 10) table += "\n"
-        }
-        return table
-    }
+class SubtractionRepositoryImpl : SubtractionRepository {
 
     override fun getExerciseInput(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseInput {
         val random = Random(System.currentTimeMillis() + 1234)
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
         val firstNumber = if (withNumber == 0) 1 else withNumber
 
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$result ÷ $firstNumber ="
+        val result = firstNumber + secondNumber
+        val exerciseCondition = "$result - $firstNumber ="
 
         return ExerciseInput(
             condition = exerciseCondition,
@@ -39,8 +30,8 @@ class DivisionRepositoryImpl : DivisionRepository {
         val firstNumber = if (withNumber == 0) 1 else withNumber
         val max = if (maxNumber == 0) 1 else maxNumber
         val result = random.nextInt(minNumber, max + 1)
-        val exerciseCondition = "${firstNumber * result} ÷ $firstNumber ="
-        val exerciseEquation = "${firstNumber * result} ÷ $firstNumber = $result"
+        val exerciseCondition = "${firstNumber + result} - $firstNumber ="
+        val exerciseEquation = "${firstNumber + result} - $firstNumber = $result"
         val positionRightAnswer = random.nextInt(1, 5)
 
         var wrongResult1 = random.nextInt(minNumber, max + 1)
@@ -101,8 +92,8 @@ class DivisionRepositoryImpl : DivisionRepository {
         val firstNumber = if (withNumber == 0) 1 else withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
-        val result = firstNumber * secondNumber
-        val exerciseCondition = "$result ÷ $firstNumber ="
+        val result = firstNumber + secondNumber
+        val exerciseCondition = "$result - $firstNumber ="
         val isTrue = random.nextBoolean()
 
         var wrongAnswer = random.nextInt(minNumber, maxNumber + 1)

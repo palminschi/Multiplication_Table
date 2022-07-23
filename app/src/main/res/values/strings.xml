@@ -42,6 +42,9 @@
     <string name="back">Back</string>
     <string name="passed">Passed!</string>
     <string name="failed">Failed</string>
+    <string name="gameInput">Input</string>
+    <string name="gameSelect">Select</string>
+    <string name="gameTrueOrFalse">True or False</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

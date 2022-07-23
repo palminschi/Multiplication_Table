@@ -50,12 +50,22 @@ class StartExamFragment : Fragment() {
                     maxNumber = 10
                 }
                 Difficulty.MEDIUM -> {
-                    minNumber = 7
-                    maxNumber = 20
+                    if (operation == Operation.MULTIPLICATION || operation == Operation.DIVISION) {
+                        minNumber = 7
+                        maxNumber = 20
+                    } else {
+                        minNumber = 7
+                        maxNumber = 35
+                    }
                 }
                 Difficulty.HARD -> {
-                    minNumber = 15
-                    maxNumber = 50
+                    if (operation == Operation.MULTIPLICATION || operation == Operation.DIVISION) {
+                        minNumber = 15
+                        maxNumber = 50
+                    } else {
+                        minNumber = 50
+                        maxNumber = 200
+                    }
                 }
             }
 

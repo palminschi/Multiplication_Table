@@ -26,4 +26,11 @@ val dataModule = module {
         UserDataStorage(context = androidApplication())
     }
 
+    single<AdditionRepository> {
+        AdditionRepositoryImpl()
+    }
+    single<SubtractionRepository> {
+        SubtractionRepositoryImpl()
+    }
+
 }
