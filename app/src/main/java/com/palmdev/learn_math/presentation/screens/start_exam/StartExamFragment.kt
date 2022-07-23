@@ -10,11 +10,13 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentStartExamBinding
 import com.palmdev.learn_math.utils.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class StartExamFragment : Fragment() {
 
     private lateinit var binding: FragmentStartExamBinding
+    private val viewModel by viewModel<StartExamViewModel>()
     private var difficulty = Difficulty.EASY
     private var operation = Operation.MULTIPLICATION
     private var minNumber = 0
@@ -33,6 +35,12 @@ class StartExamFragment : Fragment() {
 
         binding.easy.isChecked = true
         binding.multiply.isChecked = true
+
+        viewModel.getResults()
+        viewModel.examResults.observe(viewLifecycleOwner) {
+            binding.tvCompletedExams.text ="${getText(R.string.completedExams)} ${it.totalAmount}"
+            binding.tvSuccessfully.text ="${getText(R.string.successfullyPassed)} ${it.passed}"
+        }
 
         binding.btnStart.setOnClickListener {
             if (binding.easy.isChecked) difficulty = Difficulty.EASY

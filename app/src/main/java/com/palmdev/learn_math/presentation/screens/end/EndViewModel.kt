@@ -32,6 +32,11 @@ class EndViewModel(
         }
     }
 
+    fun saveExamResult(correctAnswers: Int) {
+        if (correctAnswers < 5) resultsRepository.saveExamResult(false)
+        else resultsRepository.saveExamResult(true)
+    }
+
     fun addCoins(amount: Int) {
         resultsRepository.addCoins(amount = amount)
     }

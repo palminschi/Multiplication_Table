@@ -33,40 +33,40 @@ class MainFragment : Fragment() {
         viewModel.coins.observe(viewLifecycleOwner) {
             binding.coins.text = it.toString()
         }
-        viewModel.multiplicationCorrectAnswers.observe(viewLifecycleOwner) {
+        viewModel.multiplicationCorrectAnswersPercent.observe(viewLifecycleOwner) {
             if (it != 0) {
-                binding.tvMultiplication.text = "${getText(R.string.multiplicationPercent)} $it%"
+                binding.tvMultiplication.text = "${getText(R.string.multiplicationLine)} $it%"
                 binding.multiplicationProgress.progress = it
             } else {
                 binding.tvMultiplication.text =
-                    "${getText(R.string.multiplicationPercent)} ${getText(R.string.questionMark)}"
+                    "${getText(R.string.multiplicationLine)} ${getText(R.string.questionMark)}"
             }
         }
-        viewModel.divisionCorrectAnswers.observe(viewLifecycleOwner) {
+        viewModel.divisionCorrectAnswersPercent.observe(viewLifecycleOwner) {
             if (it != 0) {
-                binding.tvDivision.text = "${getText(R.string.divisionPercent)} $it%"
+                binding.tvDivision.text = "${getText(R.string.divisionLine)} $it%"
                 binding.divisionProgress.progress = it
             } else {
                 binding.tvDivision.text =
-                    "${getText(R.string.divisionPercent)} ${getText(R.string.questionMark)}"
+                    "${getText(R.string.divisionLine)} ${getText(R.string.questionMark)}"
             }
         }
-        viewModel.additionCorrectAnswers.observe(viewLifecycleOwner) {
+        viewModel.additionCorrectAnswersPercent.observe(viewLifecycleOwner) {
             if (it != 0) {
-                binding.tvAddition.text = "${getText(R.string.additionPercent)} $it%"
+                binding.tvAddition.text = "${getText(R.string.additionLine)} $it%"
                 binding.additionProgress.progress = it
             } else {
                 binding.tvAddition.text =
-                    "${getText(R.string.additionPercent)} ${getText(R.string.questionMark)}"
+                    "${getText(R.string.additionLine)} ${getText(R.string.questionMark)}"
             }
         }
-        viewModel.subtractionCorrectAnswers.observe(viewLifecycleOwner) {
+        viewModel.subtractionCorrectAnswersPercent.observe(viewLifecycleOwner) {
             if (it != 0) {
-                binding.tvSubtraction.text = "${getText(R.string.subtractionPercent)} $it%"
+                binding.tvSubtraction.text = "${getText(R.string.subtractionLine)} $it%"
                 binding.subtractionProgress.progress = it
             } else {
                 binding.tvSubtraction.text =
-                    "${getText(R.string.subtractionPercent)} ${getText(R.string.questionMark)}"
+                    "${getText(R.string.subtractionLine)} ${getText(R.string.questionMark)}"
             }
         }
         binding.btnLearnTable.setOnClickListener {
@@ -77,6 +77,9 @@ class MainFragment : Fragment() {
         }
         binding.btnExam.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_startExamFragment)
+        }
+        binding.btnDetails.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_statisticsFragment)
         }
     }
 }

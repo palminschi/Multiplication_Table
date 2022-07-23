@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_mainFragment_to_startExamFragment"
             app:destination="@id/startExamFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTableFragment"
@@ -94,4 +97,9 @@
             android:id="@+id/action_startExamFragment_to_exerciseInputFragment"
             app:destination="@id/exerciseInputFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
 </navigation>

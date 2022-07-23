@@ -6,6 +6,8 @@ import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelec
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
 import com.palmdev.learn_math.presentation.screens.learn_table.LearnTableViewModel
 import com.palmdev.learn_math.presentation.screens.main.MainViewModel
+import com.palmdev.learn_math.presentation.screens.start_exam.StartExamViewModel
+import com.palmdev.learn_math.presentation.screens.statistics.StatisticsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -48,6 +50,16 @@ val presentationModule = module {
     }
     viewModel {
         MainViewModel(
+            resultsRepository = get()
+        )
+    }
+    viewModel {
+        StartExamViewModel(
+            resultsRepository = get()
+        )
+    }
+    viewModel {
+        StatisticsViewModel(
             resultsRepository = get()
         )
     }

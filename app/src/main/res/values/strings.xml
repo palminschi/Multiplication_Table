@@ -2,12 +2,19 @@
     <string name="app_name">Multiplication Table</string>
     <string name="questionMark" translatable="false">\?</string>
 
+
+    <string name="multiplication">Multiplication</string>
+    <string name="division">Division</string>
+    <string name="addition">Addition</string>
+    <string name="subtraction">Subtraction</string>
+    <string name="multiplicationLine">Multiplication -</string>
+    <string name="divisionLine">Division -</string>
+    <string name="additionLine">Addition -</string>
+    <string name="subtractionLine">Subtraction -</string>
     <string name="learnTable">Learn Table</string>
     <string name="selectNumber">Select the number:</string>
     <string name="startMultiply">Start Multiply</string>
     <string name="startDivision">Start Division</string>
-    <string name="multiplication">Multiplication</string>
-    <string name="division">Division</string>
     <string name="training">Training</string>
     <string name="games">Games</string>
     <string name="setDifficulty">Set difficulty:</string>
@@ -24,10 +31,6 @@
     <string name="statistics">Statistics</string>
     <string name="passedExams">Passed exams: 2</string>
     <string name="correctAnswers">Correct answers:</string>
-    <string name="multiplicationPercent">Multiplication -</string>
-    <string name="divisionPercent">Division -</string>
-    <string name="additionPercent">Addition -</string>
-    <string name="subtractionPercent">Subtraction -</string>
     <string name="avgAnswerTime">Average answer time</string>
     <string name="details">Details</string>
     <string name="removeAds">Remove Ads</string>
@@ -45,6 +48,11 @@
     <string name="gameInput">Input</string>
     <string name="gameSelect">Select</string>
     <string name="gameTrueOrFalse">True or False</string>
+    <string name="completedExams">Completed exams:</string>
+    <string name="successfullyPassed">Successfully passed:</string>
+    <string name="failedExams">Failed exams:</string>
+    <string name="correctAnswersPercent">Percentage of correct answers</string>
+    <string name="completedExercises">Completed exercises</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

@@ -64,7 +64,7 @@
                 android:id="@+id/tvMultiplication"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/multiplicationPercent"
+                android:text="@string/multiplicationLine"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/divisionPercent"
+                android:text="@string/divisionLine"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/additionPercent"
+                android:text="@string/additionLine"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -121,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/subtractionPercent"
+                android:text="@string/subtractionLine"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

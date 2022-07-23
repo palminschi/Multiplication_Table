@@ -9,7 +9,7 @@ class AdditionRepositoryImpl : AdditionRepository {
 
 
     override fun getExerciseInput(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseInput {
-        val random = Random(System.currentTimeMillis())
+        val random = Random(System.currentTimeMillis() + 1234)
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 
@@ -23,7 +23,7 @@ class AdditionRepositoryImpl : AdditionRepository {
     }
 
     override fun getExerciseSelect(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseSelect {
-        val random = Random(System.currentTimeMillis())
+        val random = Random(System.currentTimeMillis() + 1234)
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
         val result = firstNumber + secondNumber
@@ -88,7 +88,7 @@ class AdditionRepositoryImpl : AdditionRepository {
     }
 
     override fun getExerciseTrueOrFalse(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseTrueOrFalse {
-        val random = Random(System.currentTimeMillis())
+        val random = Random(System.currentTimeMillis() + 1234)
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
 

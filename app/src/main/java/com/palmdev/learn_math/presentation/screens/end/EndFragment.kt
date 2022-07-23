@@ -85,6 +85,9 @@ class EndFragment : Fragment() {
             wrongAnswers = wrongAnswers,
             avgAnswerTime = avgAnswerTime
         )
+        if (examOrTraining == EXAM) {
+            viewModel.saveExamResult(correctAnswers)
+        }
         viewModel.addCoins(amount = earnedCoins)
         viewModel.getCoins()
     }
