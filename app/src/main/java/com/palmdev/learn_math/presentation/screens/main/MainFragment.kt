@@ -31,7 +31,7 @@ class MainFragment : Fragment() {
     }
 
     private fun init() {
-        viewModel.getResults()
+        viewModel.initData()
         viewModel.coins.observe(viewLifecycleOwner) {
             binding.coins.text = it.toString()
         }
@@ -87,10 +87,14 @@ class MainFragment : Fragment() {
             // TODO:
             Snackbar.make(it, "Coming soon", Snackbar.LENGTH_SHORT).show()
         }
-        binding.btnRemoveAds.setOnClickListener {
-            // TODO:
-            Snackbar.make(it, "Coming soon", Snackbar.LENGTH_SHORT).show()
+        viewModel.isPremiumUser.observe(viewLifecycleOwner) { isPremium ->
+            if (isPremium) binding.btnRemoveAds.visibility = View.GONE
+            else {
+                binding.btnRemoveAds.visibility = View.VISIBLE
+                binding.btnRemoveAds.setOnClickListener {
+                    findNavController().navigate(R.id.action_mainFragment_to_purchaseFragment)
+                }
+            }
         }
-
     }
 }

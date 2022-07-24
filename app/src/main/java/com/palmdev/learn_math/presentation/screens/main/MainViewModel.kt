@@ -4,30 +4,31 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.local.repository.ResultsRepository
+import com.palmdev.learn_math.data.local.repository.UserDataRepository
 import com.palmdev.learn_math.data.remote.repository.AdsRepository
 import com.palmdev.learn_math.utils.Operation
 import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val resultsRepository: ResultsRepository,
-    private val adsRepository: AdsRepository
+    private val adsRepository: AdsRepository,
+    private val userDataRepository: UserDataRepository
 ) : ViewModel() {
 
     val coins = MutableLiveData<Int>()
+    val isPremiumUser = MutableLiveData<Boolean>()
     val multiplicationCorrectAnswersPercent = MutableLiveData<Int>()
     val divisionCorrectAnswersPercent = MutableLiveData<Int>()
     val additionCorrectAnswersPercent = MutableLiveData<Int>()
     val subtractionCorrectAnswersPercent = MutableLiveData<Int>()
 
-    init {
-        coins.value = resultsRepository.getCoins()
-    }
-
     fun loadAds(){
         adsRepository.loadInterstitialAd()
     }
 
-    fun getResults() {
+    fun initData() {
+        isPremiumUser.value = userDataRepository.isPremiumUser
+        coins.value = userDataRepository.coins
         viewModelScope.launch {
             resultsRepository.getResultsByOperation(operation = Operation.SUBTRACTION)
                 .collect { listOfResults ->

@@ -9,8 +9,6 @@ interface ResultsRepository {
     suspend fun saveResult(resultExercise: ResultExercise)
     suspend fun getResults(): Flow<List<ResultExercise>>
     suspend fun getResultsByOperation(operation: Operation): Flow<List<ResultExercise>>
-    fun addCoins(amount: Int)
-    fun getCoins(): Int
     fun saveExamResult(isPassed: Boolean)
     fun getExamResults(): ExamResults
 }

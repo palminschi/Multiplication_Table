@@ -9,15 +9,20 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.palmdev.learn_math.R
+import com.palmdev.learn_math.data.local.repository.UserDataRepository
 import com.palmdev.learn_math.utils.MAIN
 
 const val TAG = "ADS"
 
-class AdsRepositoryImpl(private val context: Context) : AdsRepository {
+class AdsRepositoryImpl(
+    private val context: Context,
+    private val userDataRepository: UserDataRepository
+    ) : AdsRepository {
 
     private var mInterstitialAd: InterstitialAd? = null
 
     override fun loadInterstitialAd() {
+        if (userDataRepository.isPremiumUser) return
         val adRequest = AdRequest.Builder().build()
 
         InterstitialAd.load(
@@ -40,6 +45,7 @@ class AdsRepositoryImpl(private val context: Context) : AdsRepository {
     }
 
     override fun showInterstitialAd() {
+        if (userDataRepository.isPremiumUser) return
         if (mInterstitialAd != null) {
             mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {

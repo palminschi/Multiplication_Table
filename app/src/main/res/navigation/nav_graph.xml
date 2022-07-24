@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_statisticsFragment"
             app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTableFragment"
@@ -111,4 +114,9 @@
         android:name="com.palmdev.learn_math.presentation.dialogs.review.ReviewDialogFragment"
         android:label="fragment_review_dialog"
         tools:layout="@layout/fragment_review_dialog" />
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.purchase.PurchaseFragment"
+        android:label="fragment_purchase"
+        tools:layout="@layout/fragment_purchase" />
 </navigation>

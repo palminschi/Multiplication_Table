@@ -43,14 +43,6 @@ class ResultsRepositoryImpl(
         }
     }
 
-    override fun addCoins(amount: Int) {
-        userDataStorage.addCoins(amount)
-    }
-
-    override fun getCoins(): Int {
-        return userDataStorage.getCoins()
-    }
-
     override fun saveExamResult(isPassed: Boolean) {
         userDataStorage.saveExamResult(isPassed)
     }

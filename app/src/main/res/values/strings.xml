@@ -3,6 +3,8 @@
     <string name="questionMark" translatable="false">\?</string>
     <string name="AD_MOB_APP_ID" translatable="false">ca-app-pub-6012847014470005~9976216654</string>
     <string name="AD_INTERSTITIAL_ID" translatable="false">ca-app-pub-6012847014470005/3410808300</string>
+    <string name="premiumCoinsCost" translatable="false">50.000</string>
+    <string name="premiumCost" translatable="false">1.99$</string>
 
     <string name="thanks">Thanks!</string>
     <string name="multiplication">Multiplication</string>
@@ -56,6 +58,12 @@
     <string name="correctAnswersPercent">Percentage of correct answers</string>
     <string name="completedExercises">Completed exercises</string>
     <string name="rateTheApp">Rate the App,\nPlease!</string>
+    <string name="getPremium">Get Premium Account</string>
+    <string name="youArePremiumUser">You are Premium-User</string>
+    <string name="disableAds">Disable Ads</string>
+    <string name="oneTimePayment">One-time payment (for ever)</string>
+    <string name="or">or</string>
+    <string name="toastNoCoins">Not enough coins</string>
 
 
     <string name="tableExample"> 1 x 0 = 0\n

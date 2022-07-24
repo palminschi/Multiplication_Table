@@ -16,6 +16,11 @@ class UserDataStorage(context: Context) {
         sharedPrefs.edit().putInt(COINS_KEY, currentAmount + amount).apply()
     }
 
+    fun removeCoins(amount: Int) {
+        val currentAmount = getCoins()
+        sharedPrefs.edit().putInt(COINS_KEY, currentAmount - amount).apply()
+    }
+
     fun getCoins(): Int {
         return sharedPrefs.getInt(COINS_KEY, 50)
     }
