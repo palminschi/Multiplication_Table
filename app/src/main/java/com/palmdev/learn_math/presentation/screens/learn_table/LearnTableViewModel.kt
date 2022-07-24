@@ -2,8 +2,8 @@ package com.palmdev.learn_math.presentation.screens.learn_table
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.palmdev.learn_math.data.repository.DivisionRepository
-import com.palmdev.learn_math.data.repository.MultiplicationRepository
+import com.palmdev.learn_math.data.local.repository.DivisionRepository
+import com.palmdev.learn_math.data.local.repository.MultiplicationRepository
 
 class LearnTableViewModel(
     private val multiplicationRepository: MultiplicationRepository,

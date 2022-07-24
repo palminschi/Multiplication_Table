@@ -1,6 +1,8 @@
 package com.palmdev.learn_math.presentation.screens.end
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +25,7 @@ class EndFragment : Fragment() {
     private var operation = Operation.MULTIPLICATION
     private var earnedCoins = 0
     private var examOrTraining = TRAINING
+    private val handler by lazy { Handler(Looper.getMainLooper()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,6 +79,17 @@ class EndFragment : Fragment() {
         binding.btnHome.setOnClickListener {
             findNavController().navigate(R.id.mainFragment)
         }
+
+        viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
+            if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)
+            else {
+                handler.postDelayed(
+                    { viewModel.showInterstitialAd() },
+                    1000
+                )
+            }
+
+        }
     }
 
     private fun saveData() {
@@ -90,6 +104,11 @@ class EndFragment : Fragment() {
         }
         viewModel.addCoins(amount = earnedCoins)
         viewModel.getCoins()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacksAndMessages(null)
     }
 
     private fun initCustomOnBackPressed() {

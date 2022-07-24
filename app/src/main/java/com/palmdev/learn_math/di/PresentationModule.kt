@@ -1,5 +1,6 @@
 package com.palmdev.learn_math.di
 
+import com.palmdev.learn_math.presentation.dialogs.review.ReviewDialogViewModel
 import com.palmdev.learn_math.presentation.screens.end.EndViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectViewModel
@@ -45,12 +46,15 @@ val presentationModule = module {
     }
     viewModel {
         EndViewModel(
-            resultsRepository = get()
+            resultsRepository = get(),
+            reviewRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
         MainViewModel(
-            resultsRepository = get()
+            resultsRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -60,7 +64,13 @@ val presentationModule = module {
     }
     viewModel {
         StatisticsViewModel(
-            resultsRepository = get()
+            resultsRepository = get(),
+            adsRepository = get()
+        )
+    }
+    viewModel {
+        ReviewDialogViewModel(
+            reviewRepository = get()
         )
     }
 }

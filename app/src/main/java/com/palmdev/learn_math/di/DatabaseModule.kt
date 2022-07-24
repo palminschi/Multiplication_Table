@@ -2,8 +2,8 @@ package com.palmdev.learn_math.di
 
 import android.app.Application
 import androidx.room.Room
-import com.palmdev.learn_math.data.database.ResultsDao
-import com.palmdev.learn_math.data.database.ResultsDatabase
+import com.palmdev.learn_math.data.local.database.ResultsDao
+import com.palmdev.learn_math.data.local.database.ResultsDatabase
 import com.palmdev.learn_math.utils.DATABASE_NAME
 import org.koin.dsl.module
 

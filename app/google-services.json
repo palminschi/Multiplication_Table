@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "96051651733",
+    "project_id": "multiplication-table-a2302",
+    "storage_bucket": "multiplication-table-a2302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96051651733:android:9e4ee37c213116ada9a79c",
+        "android_client_info": {
+          "package_name": "com.palmdev.learn_math"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96051651733-c3d38u737hukds3lgc2dgcdou5n1f0n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrGDdNWFXhUR4n2vVzKni4uLXkN_H8SvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96051651733-c3d38u737hukds3lgc2dgcdou5n1f0n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

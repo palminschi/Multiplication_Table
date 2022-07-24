@@ -4,12 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.model.ExamResults
-import com.palmdev.learn_math.data.repository.ResultsRepository
+import com.palmdev.learn_math.data.local.repository.ResultsRepository
+import com.palmdev.learn_math.data.remote.repository.AdsRepository
 import com.palmdev.learn_math.utils.Operation
 import kotlinx.coroutines.launch
 
 class StatisticsViewModel(
-    private val resultsRepository: ResultsRepository
+    private val resultsRepository: ResultsRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
     val multiplicationCorrectAnswersPercent = MutableLiveData<Int>()
     val divisionCorrectAnswersPercent = MutableLiveData<Int>()
@@ -29,6 +31,10 @@ class StatisticsViewModel(
     val examResults = MutableLiveData<ExamResults>()
 
 
+    fun showInterstitialAd(){
+        adsRepository.showInterstitialAd()
+    }
+
     fun getResults() {
         examResults.value = resultsRepository.getExamResults()
 
@@ -40,7 +46,9 @@ class StatisticsViewModel(
                     multiplicationCorrectAnswersPercent.value =
                         listOfCorrectAnswersPercent.average().toInt()
                     val listOfAvgTime = listOfResults.map { it.avgAnswerTime }
-                    multiplicationAvgTime.value = listOfAvgTime.average()
+                    multiplicationAvgTime.value =
+                        if (listOfAvgTime.isEmpty()) 0.0
+                        else listOfAvgTime.average()
                 }
         }
         viewModelScope.launch {
@@ -51,7 +59,9 @@ class StatisticsViewModel(
                     divisionCorrectAnswersPercent.value =
                         listOfCorrectAnswersPercent.average().toInt()
                     val listOfAvgTime = listOfResults.map { it.avgAnswerTime }
-                    divisionAvgTime.value = listOfAvgTime.average()
+                    divisionAvgTime.value =
+                        if (listOfAvgTime.isEmpty()) 0.0
+                        else listOfAvgTime.average()
                 }
         }
         viewModelScope.launch {
@@ -62,7 +72,9 @@ class StatisticsViewModel(
                     additionCorrectAnswersPercent.value =
                         listOfCorrectAnswersPercent.average().toInt()
                     val listOfAvgTime = listOfResults.map { it.avgAnswerTime }
-                    additionAvgTime.value = listOfAvgTime.average()
+                    additionAvgTime.value =
+                        if (listOfAvgTime.isEmpty()) 0.0
+                        else listOfAvgTime.average()
                 }
         }
         viewModelScope.launch {
@@ -73,7 +85,9 @@ class StatisticsViewModel(
                     subtractionCorrectAnswersPercent.value =
                         listOfCorrectAnswersPercent.average().toInt()
                     val listOfAvgTime = listOfResults.map { it.avgAnswerTime }
-                    subtractionAvgTime.value = listOfAvgTime.average()
+                    subtractionAvgTime.value =
+                        if (listOfAvgTime.isEmpty()) 0.0
+                        else listOfAvgTime.average()
                 }
         }
     }

@@ -4,10 +4,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.model.ExerciseSelect
-import com.palmdev.learn_math.data.repository.AdditionRepository
-import com.palmdev.learn_math.data.repository.DivisionRepository
-import com.palmdev.learn_math.data.repository.MultiplicationRepository
-import com.palmdev.learn_math.data.repository.SubtractionRepository
+import com.palmdev.learn_math.data.local.repository.AdditionRepository
+import com.palmdev.learn_math.data.local.repository.DivisionRepository
+import com.palmdev.learn_math.data.local.repository.MultiplicationRepository
+import com.palmdev.learn_math.data.local.repository.SubtractionRepository
 import kotlinx.coroutines.launch
 
 class ExerciseSelectViewModel(

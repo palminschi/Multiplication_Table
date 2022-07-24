@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -26,6 +27,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+        viewModel.loadAds()
     }
 
     private fun init() {
@@ -81,5 +83,14 @@ class MainFragment : Fragment() {
         binding.btnDetails.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_statisticsFragment)
         }
+        binding.btnGames.setOnClickListener {
+            // TODO:
+            Snackbar.make(it, "Coming soon", Snackbar.LENGTH_SHORT).show()
+        }
+        binding.btnRemoveAds.setOnClickListener {
+            // TODO:
+            Snackbar.make(it, "Coming soon", Snackbar.LENGTH_SHORT).show()
+        }
+
     }
 }

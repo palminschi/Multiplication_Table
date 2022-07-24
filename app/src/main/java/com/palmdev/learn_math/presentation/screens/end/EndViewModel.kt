@@ -4,16 +4,25 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.model.ResultExercise
-import com.palmdev.learn_math.data.repository.ResultsRepository
+import com.palmdev.learn_math.data.local.repository.ResultsRepository
+import com.palmdev.learn_math.data.remote.repository.AdsRepository
+import com.palmdev.learn_math.data.remote.repository.ReviewRepository
 import com.palmdev.learn_math.utils.Operation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class EndViewModel(
-    private val resultsRepository: ResultsRepository
+    private val resultsRepository: ResultsRepository,
+    reviewRepository: ReviewRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
 
     val coins = MutableLiveData<Int>()
+    val userRatedApp = MutableLiveData<Boolean>()
+
+    init {
+        userRatedApp.value = reviewRepository.hasUserRatedApp()
+    }
 
     fun saveResults(
         operation: Operation,
@@ -43,6 +52,10 @@ class EndViewModel(
 
     fun getCoins() {
         coins.value = resultsRepository.getCoins()
+    }
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
     }
 
 }

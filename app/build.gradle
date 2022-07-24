@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -63,4 +64,15 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation"androidx.room:room-ktx:$room_version"
+
+    // Google Play Review
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    // Firebase Analytics and Messaging
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging'
+
+    // AdMob
+    implementation 'com.google.android.gms:play-services-ads:21.1.0'
 }

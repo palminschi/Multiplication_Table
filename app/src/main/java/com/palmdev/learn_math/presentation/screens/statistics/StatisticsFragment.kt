@@ -81,4 +81,9 @@ class StatisticsFragment : Fragment() {
             binding.subtractionProgress.progress = it
         }
     }
+
+    override fun onDestroyView() {
+        viewModel.showInterstitialAd()
+        super.onDestroyView()
+    }
 }
