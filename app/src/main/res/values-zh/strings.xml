@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">谢谢！</string>
+    <string name="multiplication">乘法</string>
+    <string name="division">事业部</string>
+    <string name="addition">加成</string>
+    <string name="subtraction">减法</string>
+    <string name="multiplicationLine">乘法 -</string>
+    <string name="divisionLine">师 -</string>
+    <string name="additionLine">加法 -</string>
+    <string name="subtractionLine">减法 -</string>
+    <string name="multiplicationTable">乘法表</string>
+    <string name="selectNumber">选择号码：</string>
+    <string name="startMultiply">开始乘法</string>
+    <string name="startDivision">开始分区</string>
+    <string name="training">锻炼</string>
+    <string name="games">游戏</string>
+    <string name="setDifficulty">设置难度：</string>
+    <string name="minNumber">最低限度</string>
+    <string name="maxNumber">最大</string>
+    <string name="selectGame">选择游戏：</string>
+    <string name="selectOperation">选择操作：</string>
+    <string name="exam">考试</string>
+    <string name="selectDifficulty">选择难度：</string>
+    <string name="start">开始</string>
+    <string name="easy">简单的</string>
+    <string name="medium">中等的</string>
+    <string name="hard">难的</string>
+    <string name="statistics">统计数据</string>
+    <string name="passedExams">通过考试：2</string>
+    <string name="correctAnswers">正确答案：</string>
+    <string name="avgAnswerTime">平均回答时间</string>
+    <string name="details">细节</string>
+    <string name="removeAds">移除广告</string>
+    <string name="perfect">完美的！</string>
+    <string name="great">伟大的！</string>
+    <string name="good">好的</string>
+    <string name="notBad">不错！</string>
+    <string name="tryAgain">再试一次</string>
+    <string name="correct">正确的</string>
+    <string name="wrong">错误的</string>
+    <string name="home">主页</string>
+    <string name="back">后退</string>
+    <string name="passed">通过！</string>
+    <string name="failed">失败的</string>
+    <string name="gameInput">输入</string>
+    <string name="gameSelect">选择</string>
+    <string name="gameTrueOrFalse">对或错</string>
+    <string name="completedExams">已完成的考试：</string>
+    <string name="successfullyPassed">顺利通过：</string>
+    <string name="failedExams">考试不及格：</string>
+    <string name="correctAnswersPercent">正确答案的百分比</string>
+    <string name="completedExercises">完成的练习</string>
+    <string name="rateTheApp">请给应用评分！</string>
+    <string name="getPremium">获取高级帐户</string>
+    <string name="youArePremiumUser">您是高级用户</string>
+    <string name="disableAds">禁用广告</string>
+    <string name="oneTimePayment">一次性付款（永久）</string>
+    <string name="or">或者</string>
+    <string name="toastNoCoins">硬币不够</string>
+    <string name="play">玩</string>
+    <string name="gameDuel">决斗</string>
+    <string name="gameDuelInfo">（2名球员）</string>
+    <string name="finished">完成的</string>
+    <string name="app_name">乘法表</string>
+    <string name="redWins">红队赢了！</string>
+    <string name="blueWins">蓝队赢了！</string>
+    <string name="red">红色的</string>
+    <string name="blue">蓝色的</string>
+    <string name="bothWon">你们俩都赢了！</string>
+
+</resources>

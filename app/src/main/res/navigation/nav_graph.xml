@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_mainFragment_to_purchaseFragment"
             app:destination="@id/purchaseFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_selectGameFragment"
+            app:destination="@id/selectGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTableFragment"
@@ -119,4 +122,36 @@
         android:name="com.palmdev.learn_math.presentation.screens.purchase.PurchaseFragment"
         android:label="fragment_purchase"
         tools:layout="@layout/fragment_purchase" />
+    <fragment
+        android:id="@+id/selectGameFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.select_game.SelectGameFragment"
+        android:label="fragment_select_game"
+        tools:layout="@layout/fragment_select_game" >
+        <action
+            android:id="@+id/action_selectGameFragment_to_gameDuelStartFragment"
+            app:destination="@id/gameDuelStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDuelStartFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelStartFragment"
+        android:label="fragment_game_duel_start"
+        tools:layout="@layout/fragment_game_duel_start" >
+        <action
+            android:id="@+id/action_gameDuelStartFragment_to_gameDuelFragment"
+            app:destination="@id/gameDuelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDuelFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelFragment"
+        android:label="fragment_game_duel"
+        tools:layout="@layout/fragment_game_duel" >
+        <action
+            android:id="@+id/action_gameDuelFragment_to_gameDuelEndFragment"
+            app:destination="@id/gameDuelEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDuelEndFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelEndFragment"
+        android:label="fragment_game_duel_end"
+        tools:layout="@layout/fragment_game_duel_end" />
 </navigation>

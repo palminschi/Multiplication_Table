@@ -7,7 +7,14 @@ import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
 interface AdditionRepository {
 
     fun getExerciseInput(withNumber: Int, minNumber: Int = 0, maxNumber: Int = 10): ExerciseInput
-    fun getExerciseSelect(withNumber: Int, minNumber: Int = 0, maxNumber: Int = 10): ExerciseSelect
-    fun getExerciseTrueOrFalse(withNumber: Int, minNumber: Int = 0, maxNumber: Int = 10): ExerciseTrueOrFalse
+    fun getExerciseSelect(
+        withNumber: Int, minNumber: Int = 0, maxNumber: Int = 10, randomNumber: Int? = null
+    ): ExerciseSelect
+
+    fun getExerciseTrueOrFalse(
+        withNumber: Int,
+        minNumber: Int = 0,
+        maxNumber: Int = 10
+    ): ExerciseTrueOrFalse
 
 }

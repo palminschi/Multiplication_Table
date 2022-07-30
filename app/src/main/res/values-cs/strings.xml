@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Děkuji!</string>
+    <string name="multiplication">Násobení</string>
+    <string name="division">Divize</string>
+    <string name="addition">Přidání</string>
+    <string name="subtraction">Odčítání</string>
+    <string name="multiplicationLine">Násobení -</string>
+    <string name="divisionLine">Divize -</string>
+    <string name="additionLine">Přidání -</string>
+    <string name="subtractionLine">Odečítání -</string>
+    <string name="multiplicationTable">Násobilka</string>
+    <string name="selectNumber">Vyberte číslo:</string>
+    <string name="startMultiply">spustit násobení</string>
+    <string name="startDivision">Začněte rozdělovat</string>
+    <string name="training">Cvičení</string>
+    <string name="games">Hry</string>
+    <string name="setDifficulty">Složitost:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">"max. "</string>
+    <string name="selectGame">Vyberte hru:</string>
+    <string name="selectOperation">Vyberte operaci:</string>
+    <string name="exam">Zkouška</string>
+    <string name="selectDifficulty">Složitost:</string>
+    <string name="start">Start</string>
+    <string name="easy">Snadno</string>
+    <string name="medium">Střední</string>
+    <string name="hard">Obtížný</string>
+    <string name="statistics">Statistika</string>
+    <string name="passedExams">Složené zkoušky:</string>
+    <string name="correctAnswers">Správné odpovědi:</string>
+    <string name="avgAnswerTime">Průměrná doba odezvy</string>
+    <string name="details">Více</string>
+    <string name="removeAds">Odebrat reklamy</string>
+    <string name="perfect">Perfektní!</string>
+    <string name="great">Vynikající!</string>
+    <string name="good">Dobrý</string>
+    <string name="notBad">Není špatné!</string>
+    <string name="tryAgain">Zkus to znovu</string>
+    <string name="correct">Správně</string>
+    <string name="wrong">Ne správně</string>
+    <string name="home">Domov</string>
+    <string name="back">Zadní</string>
+    <string name="passed">Úspěšně!</string>
+    <string name="failed">Selhání</string>
+    <string name="gameInput">Vstup</string>
+    <string name="gameSelect">Vybrat</string>
+    <string name="gameTrueOrFalse">Pravda nebo lež</string>
+    <string name="completedExams">Absolvované zkoušky:</string>
+    <string name="successfullyPassed">Úspěšně:</string>
+    <string name="failedExams">Selhalo:</string>
+    <string name="correctAnswersPercent">Procento správných odpovědí</string>
+    <string name="completedExercises">Vyrobené ovládací prvky</string>
+    <string name="rateTheApp">Ohodnoťte aplikaci,\\nProsím!</string>
+    <string name="getPremium">Získejte Premium</string>
+    <string name="youArePremiumUser">Máte Premium</string>
+    <string name="disableAds">Zakázat reklamy</string>
+    <string name="oneTimePayment">Jednorázová platba (navždy)</string>
+    <string name="or">nebo</string>
+    <string name="toastNoCoins">Nedostatek mincí</string>
+    <string name="play">Hrát si</string>
+    <string name="gameDuel">Souboj</string>
+    <string name="gameDuelInfo">(2 hráči)</string>
+    <string name="finished">Dokončeno</string>
+    <string name="app_name">Násobilka</string>
+    <string name="redWins">Červený hráč vyhrál!</string>
+    <string name="blueWins">Modrý hráč vyhrál!</string>
+    <string name="red">Červené</string>
+    <string name="blue">Modrý</string>
+    <string name="bothWon">Vyhráli jste oba!</string>
+
+</resources>

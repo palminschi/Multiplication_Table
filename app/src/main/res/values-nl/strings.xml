@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Bedankt!</string>
+    <string name="multiplication">Vermenigvuldiging</string>
+    <string name="division">Divisie</string>
+    <string name="addition">Toevoeging</string>
+    <string name="subtraction">Aftrekken</string>
+    <string name="multiplicationLine">Vermenigvuldiging -</string>
+    <string name="divisionLine">Divisie -</string>
+    <string name="additionLine">Toevoeging -</string>
+    <string name="subtractionLine">Aftrekken -</string>
+    <string name="multiplicationTable">Tafel van vermenigvuldiging</string>
+    <string name="selectNumber">Selecteer het nummer:</string>
+    <string name="startMultiply">Start Vermenigvuldigen</string>
+    <string name="startDivision">Start Divisie</string>
+    <string name="training">Oefening</string>
+    <string name="games">Spellen</string>
+    <string name="setDifficulty">Moeilijkheidsgraad instellen:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">max.</string>
+    <string name="selectGame">Selecteer het spel:</string>
+    <string name="selectOperation">Selecteer de bewerking:</string>
+    <string name="exam">Examen</string>
+    <string name="selectDifficulty">Selecteer moeilijkheidsgraad:</string>
+    <string name="start">Begin</string>
+    <string name="easy">Eenvoudig</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Moeilijk</string>
+    <string name="statistics">Statistieken</string>
+    <string name="passedExams">Geslaagde examens: 2</string>
+    <string name="correctAnswers">Juiste antwoorden:</string>
+    <string name="avgAnswerTime">Gemiddelde antwoordtijd</string>
+    <string name="details">Details</string>
+    <string name="removeAds">Verwijder advertenties</string>
+    <string name="perfect">Perfect!</string>
+    <string name="great">Super goed!</string>
+    <string name="good">Mooi zo</string>
+    <string name="notBad">Niet slecht!</string>
+    <string name="tryAgain">Probeer het opnieuw</string>
+    <string name="correct">Juist</string>
+    <string name="wrong">Mis</string>
+    <string name="home">Huis</string>
+    <string name="back">Rug</string>
+    <string name="passed">Geslaagd!</string>
+    <string name="failed">mislukt</string>
+    <string name="gameInput">Invoer</string>
+    <string name="gameSelect">Selecteer</string>
+    <string name="gameTrueOrFalse">Waar of niet waar</string>
+    <string name="completedExams">Afgeronde examens:</string>
+    <string name="successfullyPassed">Succesvol geslaagd:</string>
+    <string name="failedExams">Mislukte examens:</string>
+    <string name="correctAnswersPercent">Percentage juiste antwoorden</string>
+    <string name="completedExercises">Voltooide oefeningen</string>
+    <string name="rateTheApp">Beoordeel de app,\\nAlsjeblieft!</string>
+    <string name="getPremium">Premium-account krijgen</string>
+    <string name="youArePremiumUser">U bent Premium-gebruiker</string>
+    <string name="disableAds">Advertenties uitschakelen</string>
+    <string name="oneTimePayment">Eenmalige betaling (voor altijd)</string>
+    <string name="or">of</string>
+    <string name="toastNoCoins">Niet genoeg munten</string>
+    <string name="play">Toneelstuk</string>
+    <string name="gameDuel">Duel</string>
+    <string name="gameDuelInfo">(2 spelers)</string>
+    <string name="finished">Afgerond</string>
+    <string name="app_name">Tafel van vermenigvuldiging</string>
+    <string name="redWins">De rode speler heeft gewonnen!</string>
+    <string name="blueWins">De blauwe speler heeft gewonnen!</string>
+    <string name="red">Rood</string>
+    <string name="blue">Blauw</string>
+    <string name="bothWon">Jullie hebben allebei gewonnen!</string>
+
+</resources>

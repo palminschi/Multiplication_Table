@@ -13,17 +13,35 @@
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/drawable/ic_table_24.xml" value="0.2235" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/drawable/rounded_horizontal_progress_bar.xml" value="0.2235" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/drawable/shape_edit_text.xml" value="0.197" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/drawable/shape_games_ic_border.xml" value="0.2175" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/drawable/style_radio_button.xml" value="0.197" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_end.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_exercise_input.xml" value="0.1483636312185242" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_exercise_select.xml" value="0.14635416666666667" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_exercise_true_or_false.xml" value="0.14635416666666667" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_learn_table.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_main.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_purchase.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_review_dialog.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_select_table.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_select_training.xml" value="0.1483636312185242" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_start_exam.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/fragment_statistics.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout-large/item_number.xml" value="0.29270833333333335" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/activity_main.xml" value="0.29270833333333335" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_end.xml" value="0.4363636212309535" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_end_exam.xml" value="0.29270833333333335" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_exercise_input.xml" value="0.24027362120564344" />
-        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_exercise_select.xml" value="0.2879999900124293" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_exercise_select.xml" value="0.21818181061547676" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_exercise_true_or_false.xml" value="0.29270833333333335" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_game_duel.xml" value="0.24027362120564344" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_game_duel_end.xml" value="0.24027362120564344" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_game_duel_start.xml" value="0.21818181061547676" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_learn_table.xml" value="0.2879999900124293" />
-        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_main.xml" value="0.2879999900124293" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_main.xml" value="0.21818181061547676" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_purchase.xml" value="0.24027362120564344" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_review_dialog.xml" value="0.21818181061547676" />
+        <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_select_game.xml" value="0.2879999900124293" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_select_table.xml" value="0.2879999900124293" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_select_training.xml" value="0.2879999900124293" />
         <entry key="..\:/Projects/Multiplication_Table/app/src/main/res/layout/fragment_start_exam.xml" value="0.2879999900124293" />

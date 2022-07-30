@@ -152,7 +152,7 @@ class ExerciseSelectFragment : Fragment() {
                 updateViews()
                 progressCounter++
             }
-        }, 2000)
+        }, 1200)
     }
 
     private fun answeredWrongly(view: View) {

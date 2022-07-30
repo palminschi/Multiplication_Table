@@ -30,13 +30,20 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         )
     }
 
-    override fun getExerciseSelect(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseSelect {
-        val random = Random(System.currentTimeMillis() + 1234)
+    override fun getExerciseSelect(
+        withNumber: Int,
+        minNumber: Int,
+        maxNumber: Int,
+        randomNumber: Int?
+    ): ExerciseSelect {
+        val random =
+            if (randomNumber != null) Random(randomNumber + 1234)
+            else Random(System.currentTimeMillis() + 1234)
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)
         val result = firstNumber * secondNumber
         val exerciseCondition = "$firstNumber x $secondNumber ="
-        val exerciseEquation = "$firstNumber x $secondNumber = ${firstNumber*secondNumber}"
+        val exerciseEquation = "$firstNumber x $secondNumber = ${firstNumber * secondNumber}"
         val positionRightAnswer = random.nextInt(1, 5)
 
         val wrongResult1 = when (result) {
@@ -95,7 +102,11 @@ class MultiplicationRepositoryImpl : MultiplicationRepository {
         )
     }
 
-    override fun getExerciseTrueOrFalse(withNumber: Int, minNumber: Int, maxNumber: Int): ExerciseTrueOrFalse {
+    override fun getExerciseTrueOrFalse(
+        withNumber: Int,
+        minNumber: Int,
+        maxNumber: Int
+    ): ExerciseTrueOrFalse {
         val random = Random(System.currentTimeMillis() + 1234)
         val firstNumber = withNumber
         val secondNumber = random.nextInt(minNumber, maxNumber + 1)

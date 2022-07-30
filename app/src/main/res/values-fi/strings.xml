@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Kiitos!</string>
+    <string name="multiplication">Kertolasku</string>
+    <string name="division">Division</string>
+    <string name="addition">Lisäys</string>
+    <string name="subtraction">Subtraktion</string>
+    <string name="multiplicationLine">Kertolasku -</string>
+    <string name="divisionLine">Division -</string>
+    <string name="additionLine">Lisäys -</string>
+    <string name="subtractionLine">Subtraktion -</string>
+    <string name="multiplicationTable">Kertotaulu</string>
+    <string name="selectNumber">Valitse numero:</string>
+    <string name="startMultiply">Aloita Kertolasku</string>
+    <string name="startDivision">Aloita Divisioona</string>
+    <string name="training">Koulutus</string>
+    <string name="games">Pelit</string>
+    <string name="setDifficulty">Aseta vaikeusaste:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">"max. "</string>
+    <string name="selectGame">Valitse peli:</string>
+    <string name="selectOperation">Valitse toimenpide:</string>
+    <string name="exam">Koe</string>
+    <string name="selectDifficulty">Valitse vaikeusaste:</string>
+    <string name="start">Alkaa</string>
+    <string name="easy">Helppo</string>
+    <string name="medium">Keskikokoinen</string>
+    <string name="hard">Kovaa</string>
+    <string name="statistics">Tilastot</string>
+    <string name="passedExams">Hyväksytyt kokeet: 2</string>
+    <string name="correctAnswers">Oikeat vastaukset:</string>
+    <string name="avgAnswerTime">Keskimääräinen vastausaika</string>
+    <string name="details">Yksityiskohdat</string>
+    <string name="removeAds">Poista mainokset</string>
+    <string name="perfect">Täydellinen!</string>
+    <string name="great">Loistava!</string>
+    <string name="good">Hyvä</string>
+    <string name="notBad">Ei paha!</string>
+    <string name="tryAgain">Yritä uudelleen</string>
+    <string name="correct">Oikea</string>
+    <string name="wrong">Väärä</string>
+    <string name="home">Koti</string>
+    <string name="back">Takaisin</string>
+    <string name="passed">Läpäisty!</string>
+    <string name="failed">Epäonnistui</string>
+    <string name="gameInput">Syöte</string>
+    <string name="gameSelect">Valitse</string>
+    <string name="gameTrueOrFalse">Totta vai tarua</string>
+    <string name="completedExams">Suoritetut kokeet:</string>
+    <string name="successfullyPassed">Onnistuneesti läpäissyt:</string>
+    <string name="failedExams">Epäonnistuneet kokeet:</string>
+    <string name="correctAnswersPercent">Oikeiden vastausten prosenttiosuus</string>
+    <string name="completedExercises">Tehdyt harjoitukset</string>
+    <string name="rateTheApp">Arvioi sovellus,\\nOle hyvä!</string>
+    <string name="getPremium">Hanki Premium-tili</string>
+    <string name="youArePremiumUser">Olet Premium-käyttäjä</string>
+    <string name="disableAds">Poista mainokset käytöstä</string>
+    <string name="oneTimePayment">Kertamaksu (ikuisesti)</string>
+    <string name="or">tai</string>
+    <string name="toastNoCoins">Ei tarpeeksi kolikoita</string>
+    <string name="play">Pelaa</string>
+    <string name="gameDuel">Kaksintaistelu</string>
+    <string name="gameDuelInfo">(2 pelaajaa)</string>
+    <string name="finished">Valmis</string>
+    <string name="app_name">Kertotaulu</string>
+    <string name="redWins">Punainen pelaaja voitti!</string>
+    <string name="blueWins">Sininen pelaaja voitti!</string>
+    <string name="red">Punainen</string>
+    <string name="blue">Sininen</string>
+    <string name="bothWon">Voititte molemmat!</string>
+
+</resources>

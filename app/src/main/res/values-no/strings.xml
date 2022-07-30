@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Takk!</string>
+    <string name="multiplication">Multiplikasjon</string>
+    <string name="division">Divisjon</string>
+    <string name="addition">Addisjon</string>
+    <string name="subtraction">Subtraksjon</string>
+    <string name="multiplicationLine">Multiplikasjon -</string>
+    <string name="divisionLine">Divisjon -</string>
+    <string name="additionLine">Tillegg -</string>
+    <string name="subtractionLine">Subtraksjon -</string>
+    <string name="multiplicationTable">Gangetabell</string>
+    <string name="selectNumber">Velg nummeret:</string>
+    <string name="startMultiply">Start multiplikasjon</string>
+    <string name="startDivision">Start divisjon</string>
+    <string name="training">Trening</string>
+    <string name="games">Spill</string>
+    <string name="setDifficulty">Angi vanskelighetsgrad:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">maks.</string>
+    <string name="selectGame">Velg spillet:</string>
+    <string name="selectOperation">Velg operasjonen:</string>
+    <string name="exam">Eksamen</string>
+    <string name="selectDifficulty">Velg vanskelighetsgrad:</string>
+    <string name="start">Start</string>
+    <string name="easy">Lett</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="statistics">Statistikk</string>
+    <string name="passedExams">Bestått eksamen: 2</string>
+    <string name="correctAnswers">Riktige svar:</string>
+    <string name="avgAnswerTime">Gjennomsnittlig svartid</string>
+    <string name="details">Detaljer</string>
+    <string name="removeAds">Fjern annonser</string>
+    <string name="perfect">Perfekt!</string>
+    <string name="great">Kjempebra!</string>
+    <string name="good">God</string>
+    <string name="notBad">Ikke verst!</string>
+    <string name="tryAgain">Prøv igjen</string>
+    <string name="correct">Riktig</string>
+    <string name="wrong">Feil</string>
+    <string name="home">Hjem</string>
+    <string name="back">Tilbake</string>
+    <string name="passed">Godkjent!</string>
+    <string name="failed">Mislyktes</string>
+    <string name="gameInput">Innspill</string>
+    <string name="gameSelect">Velge</string>
+    <string name="gameTrueOrFalse">Sant eller usant</string>
+    <string name="completedExams">Fullførte eksamener:</string>
+    <string name="successfullyPassed">Vellykket bestått:</string>
+    <string name="failedExams">Ikke bestått eksamen:</string>
+    <string name="correctAnswersPercent">Andel riktige svar</string>
+    <string name="completedExercises">Gjennomførte øvelser</string>
+    <string name="rateTheApp">Vurder appen, vær så snill!</string>
+    <string name="getPremium">Få Premium-konto</string>
+    <string name="youArePremiumUser">Du er Premium-bruker</string>
+    <string name="disableAds">Deaktiver annonser</string>
+    <string name="oneTimePayment">Engangsbetaling (for alltid)</string>
+    <string name="or">eller</string>
+    <string name="toastNoCoins">Ikke nok mynter</string>
+    <string name="play">Spille</string>
+    <string name="gameDuel">Duell</string>
+    <string name="gameDuelInfo">(2 spillere)</string>
+    <string name="finished">Ferdig</string>
+    <string name="app_name">Gangetabell</string>
+    <string name="redWins">Den røde spilleren vant!</string>
+    <string name="blueWins">Den blå spilleren vant!</string>
+    <string name="red">rød</string>
+    <string name="blue">Blå</string>
+    <string name="bothWon">Dere vant begge!</string>
+
+</resources>

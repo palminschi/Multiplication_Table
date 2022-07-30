@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.main.MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="4dp"
+            tools:text="1050"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@null"
+            android:src="@drawable/img_coins" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/img_einstein"
+            tools:ignore="NestedWeights" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:id="@+id/tvMultiplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplicationLine"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/multiplicationProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:progress="3"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:id="@+id/tvDivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="@string/divisionLine"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/divisionProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:progress="3"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:id="@+id/tvAddition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="@string/additionLine"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/additionProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:progress="3"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+            <TextView
+                android:id="@+id/tvSubtraction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:text="@string/subtractionLine"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/subtractionProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:progress="3"
+                android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
+                android:progressTint="@color/second_background" />
+
+
+            <Button
+                android:id="@+id/btnDetails"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_games_34"
+            android:paddingVertical="10dp"
+            android:text="@string/games"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_brain_34"
+            android:paddingVertical="10dp"
+            android:text="@string/training"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLearnTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_table_34"
+            android:paddingVertical="10dp"
+            android:text="@string/multiplicationTable"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_exam_34"
+            android:paddingVertical="10dp"
+            android:text="@string/exam"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRemoveAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_no_ads_34"
+            android:paddingVertical="10dp"
+            android:text="@string/removeAds"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

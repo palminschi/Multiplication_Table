@@ -33,9 +33,12 @@ class DivisionRepositoryImpl : DivisionRepository {
     override fun getExerciseSelect(
         withNumber: Int,
         minNumber: Int,
-        maxNumber: Int
+        maxNumber: Int,
+        randomNumber: Int?
     ): ExerciseSelect {
-        val random = Random(System.currentTimeMillis() + 1234)
+        val random =
+            if (randomNumber != null) Random(randomNumber + 1234)
+            else Random(System.currentTimeMillis() + 1234)
         val firstNumber = if (withNumber == 0) 1 else withNumber
         val max = if (maxNumber == 0) 1 else maxNumber
         val result = random.nextInt(minNumber, max + 1)

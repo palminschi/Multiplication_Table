@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="thanks">شكرًا!</string>
+    <string name="multiplication">عمليه الضرب</string>
+    <string name="division">قسم</string>
+    <string name="addition">إضافة</string>
+    <string name="subtraction">الطرح</string>
+    <string name="multiplicationLine">عمليه الضرب -</string>
+    <string name="divisionLine">قسم -</string>
+    <string name="additionLine">إضافة -</string>
+    <string name="subtractionLine">الطرح -</string>
+    <string name="multiplicationTable">جدول الضرب</string>
+    <string name="selectNumber">حدد الرقم:</string>
+    <string name="startMultiply">ابدأ الضرب</string>
+    <string name="startDivision">بدء القسمة</string>
+    <string name="training">ممارسه الرياضه</string>
+    <string name="games">ألعاب</string>
+    <string name="setDifficulty">ضبط الصعوبة:</string>
+    <string name="minNumber">دقيقة.</string>
+    <string name="maxNumber">الأعلى.</string>
+    <string name="selectGame">اختر اللعبة:</string>
+    <string name="selectOperation">حدد العملية:</string>
+    <string name="exam">امتحان</string>
+    <string name="selectDifficulty">حدد مستوى الصعوبة:</string>
+    <string name="start">بداية</string>
+    <string name="easy">سهل</string>
+    <string name="medium">متوسط</string>
+    <string name="hard">الصعب</string>
+    <string name="statistics">إحصائيات</string>
+    <string name="passedExams">الامتحانات التي تم اجتيازها: 2</string>
+    <string name="correctAnswers">الإجابات الصحيحة:</string>
+    <string name="avgAnswerTime">متوسط وقت الإجابة</string>
+    <string name="details">تفاصيل</string>
+    <string name="removeAds">ازالة الاعلانات</string>
+    <string name="perfect">في احسن الاحوال!</string>
+    <string name="great">رائعة!</string>
+    <string name="good">جيد</string>
+    <string name="notBad">ليس سيئًا!</string>
+    <string name="tryAgain">حاول مرة أخرى</string>
+    <string name="correct">صحيح</string>
+    <string name="wrong">خاطئة</string>
+    <string name="home">مسكن</string>
+    <string name="back">خلف</string>
+    <string name="passed">تم الاجتياز بنجاح!</string>
+    <string name="failed">باءت بالفشل</string>
+    <string name="gameInput">إدخال</string>
+    <string name="gameSelect">يختار</string>
+    <string name="gameTrueOrFalse">صحيحة أو خاطئة</string>
+    <string name="completedExams">الامتحانات المكتملة:</string>
+    <string name="successfullyPassed">اجتاز بنجاح:</string>
+    <string name="failedExams">الامتحانات الفاشلة:</string>
+    <string name="correctAnswersPercent">نسبة الإجابات الصحيحة</string>
+    <string name="completedExercises">تمارين كاملة</string>
+    <string name="rateTheApp">قيم التطبيق من فضلك!</string>
+    <string name="getPremium">احصل على حساب بريميوم</string>
+    <string name="youArePremiumUser">أنت مستخدم مميز</string>
+    <string name="disableAds">عطل الاعلانات</string>
+    <string name="oneTimePayment">دفعة لمرة واحدة (إلى الأبد)</string>
+    <string name="or">أو</string>
+    <string name="toastNoCoins">لا توجد عملات كافية</string>
+    <string name="play">لعب</string>
+    <string name="gameDuel">مبارزة</string>
+    <string name="gameDuelInfo">(لاعبان)</string>
+    <string name="finished">تم الانتهاء من</string>
+    <string name="app_name">جدول الضرب</string>
+    <string name="redWins">فاز اللاعب الأحمر!</string>
+    <string name="blueWins">فاز اللاعب الأزرق!</string>
+    <string name="red">أحمر</string>
+    <string name="blue">أزرق</string>
+    <string name="bothWon">كلاكما فاز!</string>
+
+
+</resources>

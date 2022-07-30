@@ -5,6 +5,7 @@ import com.palmdev.learn_math.presentation.screens.end.EndViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelViewModel
 import com.palmdev.learn_math.presentation.screens.learn_table.LearnTableViewModel
 import com.palmdev.learn_math.presentation.screens.main.MainViewModel
 import com.palmdev.learn_math.presentation.screens.purchase.PurchaseViewModel
@@ -80,6 +81,14 @@ val presentationModule = module {
         PurchaseViewModel(
             userDataRepository = get(),
             purchaseRepository = get()
+        )
+    }
+    viewModel {
+        GameDuelViewModel(
+            multiplicationRepository = get(),
+            divisionRepository = get(),
+            additionRepository = get(),
+            subtractionRepository = get()
         )
     }
 }

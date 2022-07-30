@@ -84,8 +84,7 @@ class MainFragment : Fragment() {
             findNavController().navigate(R.id.action_mainFragment_to_statisticsFragment)
         }
         binding.btnGames.setOnClickListener {
-            // TODO:
-            Snackbar.make(it, "Coming soon", Snackbar.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_mainFragment_to_selectGameFragment)
         }
         viewModel.isPremiumUser.observe(viewLifecycleOwner) { isPremium ->
             if (isPremium) binding.btnRemoveAds.visibility = View.GONE

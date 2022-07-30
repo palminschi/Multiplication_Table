@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Hvala vam!</string>
+    <string name="multiplication">Množenje</string>
+    <string name="division">Podjela</string>
+    <string name="addition">Dodatak</string>
+    <string name="subtraction">Oduzimanje</string>
+    <string name="multiplicationLine">Množenje -</string>
+    <string name="divisionLine">Podjela -</string>
+    <string name="additionLine">Dodavanje -</string>
+    <string name="subtractionLine">Oduzimanje -</string>
+    <string name="multiplicationTable">Tablica množenja</string>
+    <string name="selectNumber">Odaberite broj:</string>
+    <string name="startMultiply">započeti množenje</string>
+    <string name="startDivision">Počnite dijeliti</string>
+    <string name="training">Vježbe</string>
+    <string name="games">Igre</string>
+    <string name="setDifficulty">Složenost:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">maks.</string>
+    <string name="selectGame">Odaberite igru:</string>
+    <string name="selectOperation">Odaberite operaciju:</string>
+    <string name="exam">Ispit</string>
+    <string name="selectDifficulty">Složenost:</string>
+    <string name="start">Početak</string>
+    <string name="easy">Lako</string>
+    <string name="medium">Srednji</string>
+    <string name="hard">teško</string>
+    <string name="statistics">Statistika</string>
+    <string name="passedExams">Položeni ispiti:</string>
+    <string name="correctAnswers">Točni odgovori:</string>
+    <string name="avgAnswerTime">Prosječno vrijeme odgovora</string>
+    <string name="details">Više</string>
+    <string name="removeAds">Makni reklame</string>
+    <string name="perfect">Savršen!</string>
+    <string name="great">izvrsno!</string>
+    <string name="good">Dobro</string>
+    <string name="notBad">Nije loše!</string>
+    <string name="tryAgain">Pokušajte ponovno</string>
+    <string name="correct">Ispravno</string>
+    <string name="wrong">Pogrešni</string>
+    <string name="home">Dom</string>
+    <string name="back">leđa</string>
+    <string name="passed">Uspješno!</string>
+    <string name="failed">Neuspjeh</string>
+    <string name="gameInput">Ulazni</string>
+    <string name="gameSelect">Odaberite</string>
+    <string name="gameTrueOrFalse">Istina ili laž</string>
+    <string name="completedExams">Položeni ispiti:</string>
+    <string name="successfullyPassed">Uspješno:</string>
+    <string name="failedExams">Neuspjeh:</string>
+    <string name="correctAnswersPercent">Postotak točnih odgovora</string>
+    <string name="completedExercises">Napravljene kontrole</string>
+    <string name="rateTheApp">Ocijenite aplikaciju,\\nMolim!</string>
+    <string name="getPremium">Nabavite Premium</string>
+    <string name="youArePremiumUser">Imate Premium</string>
+    <string name="disableAds">Onemogući oglase</string>
+    <string name="oneTimePayment">Jednokratno plaćanje (zauvijek)</string>
+    <string name="or">ili</string>
+    <string name="toastNoCoins">Nema dovoljno novčića</string>
+    <string name="play">igra</string>
+    <string name="gameDuel">Dvoboj</string>
+    <string name="gameDuelInfo">(2 igrača)</string>
+    <string name="finished">Završeno</string>
+    <string name="app_name">Tablica množenja</string>
+    <string name="redWins">Crveni igrač je pobijedio!</string>
+    <string name="blueWins">Plavi igrač je pobijedio!</string>
+    <string name="red">Crvena</string>
+    <string name="blue">Plava</string>
+    <string name="bothWon">Obojica ste pobijedili!</string>
+
+</resources>

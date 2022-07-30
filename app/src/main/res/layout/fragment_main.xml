@@ -189,7 +189,7 @@
             android:layout_marginHorizontal="40dp"
             android:drawableEnd="@drawable/ic_table_34"
             android:paddingVertical="6dp"
-            android:text="@string/learnTable"
+            android:text="@string/multiplicationTable"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textSize="16sp"

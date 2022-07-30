@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Дякую!</string>
+    <string name="multiplication">Множення</string>
+    <string name="division">Поділ</string>
+    <string name="addition">Додавання</string>
+    <string name="subtraction">Віднімання</string>
+    <string name="multiplicationLine">Множення -</string>
+    <string name="divisionLine">Поділ -</string>
+    <string name="additionLine">Додавання -</string>
+    <string name="subtractionLine">Віднімання -</string>
+    <string name="multiplicationTable">Таблиця множення</string>
+    <string name="selectNumber">Виберіть номер:</string>
+    <string name="startMultiply">Почати множення</string>
+    <string name="startDivision">Почати поділ</string>
+    <string name="training">Вправи</string>
+    <string name="games">Ігри</string>
+    <string name="setDifficulty">Складність:</string>
+    <string name="minNumber">мин.</string>
+    <string name="maxNumber">макс.</string>
+    <string name="selectGame">Виберіть гру:</string>
+    <string name="selectOperation">Виберіть операцію:</string>
+    <string name="exam">Іспит</string>
+    <string name="selectDifficulty">Складність:</string>
+    <string name="start">Старт</string>
+    <string name="easy">Легко</string>
+    <string name="medium">Середньо</string>
+    <string name="hard">Важко</string>
+    <string name="statistics">Статистика</string>
+    <string name="passedExams">Пройдених іспитів:</string>
+    <string name="correctAnswers">Правильних відповідей:</string>
+    <string name="avgAnswerTime">Середній час на відповідь</string>
+    <string name="details">Докладніше</string>
+    <string name="removeAds">Прибрати рекламу</string>
+    <string name="perfect">Ідеально!</string>
+    <string name="great">Чудово!</string>
+    <string name="good">добре</string>
+    <string name="notBad">Не погано!</string>
+    <string name="tryAgain">Спробуй ще</string>
+    <string name="correct">Правильно</string>
+    <string name="wrong">Неправильно</string>
+    <string name="home">Головна</string>
+    <string name="back">назад</string>
+    <string name="passed">Успішно!</string>
+    <string name="failed">Провал</string>
+    <string name="gameInput">Введення</string>
+    <string name="gameSelect">Вибрати</string>
+    <string name="gameTrueOrFalse">Правда чи брехня</string>
+    <string name="completedExams">Завершено іспитів:</string>
+    <string name="successfullyPassed">Успішно:</string>
+    <string name="failedExams">Провалено:</string>
+    <string name="correctAnswersPercent">Відсоток правильних відповідей</string>
+    <string name="completedExercises">Зроблених управлінь</string>
+    <string name="rateTheApp">Оцініть програму,\\nБудь ласка!</string>
+    <string name="getPremium">Отримай Преміум</string>
+    <string name="youArePremiumUser">У вас Преміум</string>
+    <string name="disableAds">Вимкнути рекламу</string>
+    <string name="oneTimePayment">Одноразовий платіж (назавжди)</string>
+    <string name="or">або</string>
+    <string name="toastNoCoins">Недостатньо монет</string>
+    <string name="play">Грати</string>
+    <string name="gameDuel">Дуель</string>
+    <string name="gameDuelInfo">(2 гравці)</string>
+    <string name="finished">Завершено</string>
+    <string name="app_name">Таблиця множення</string>
+    <string name="redWins">Червоний гравець переміг!</string>
+    <string name="blueWins">Синій гравець переміг!</string>
+    <string name="red">Червоний</string>
+    <string name="blue">Синій</string>
+    <string name="bothWon">Ви обидва виграли!</string>
+
+</resources>

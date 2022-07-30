@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">ありがとう！</string>
+    <string name="multiplication">掛け算</string>
+    <string name="division">除算</string>
+    <string name="addition">添加</string>
+    <string name="subtraction">減算</string>
+    <string name="multiplicationLine">掛け算-</string>
+    <string name="divisionLine">除算-</string>
+    <string name="additionLine">添加 -</string>
+    <string name="subtractionLine">減算-</string>
+    <string name="multiplicationTable">九九</string>
+    <string name="selectNumber">番号を選択してください：</string>
+    <string name="startMultiply">乗算を開始します</string>
+    <string name="startDivision">部門を開始</string>
+    <string name="training">エクササイズ</string>
+    <string name="games">ゲーム</string>
+    <string name="setDifficulty">難易度を設定する：</string>
+    <string name="minNumber">最小</string>
+    <string name="maxNumber">最大</string>
+    <string name="selectGame">ゲームを選択します。</string>
+    <string name="selectOperation">操作を選択します。</string>
+    <string name="exam">テスト</string>
+    <string name="selectDifficulty">難易度を選択してください：</string>
+    <string name="start">始める</string>
+    <string name="easy">簡単</string>
+    <string name="medium">中くらい</string>
+    <string name="hard">難しい</string>
+    <string name="statistics">統計学</string>
+    <string name="passedExams">合格した試験：2</string>
+    <string name="correctAnswers">正解：</string>
+    <string name="avgAnswerTime">平均回答時間</string>
+    <string name="details">詳細</string>
+    <string name="removeAds">広告を削除</string>
+    <string name="perfect">完全！</string>
+    <string name="great">すごい！</string>
+    <string name="good">良い</string>
+    <string name="notBad">悪くない！</string>
+    <string name="tryAgain">再試行</string>
+    <string name="correct">正しい</string>
+    <string name="wrong">違う</string>
+    <string name="home">ホームページ</string>
+    <string name="back">戻る</string>
+    <string name="passed">合格した！</string>
+    <string name="failed">失敗した</string>
+    <string name="gameInput">入力</string>
+    <string name="gameSelect">選択する</string>
+    <string name="gameTrueOrFalse">正しいか間違っているか</string>
+    <string name="completedExams">完了した試験：</string>
+    <string name="successfullyPassed">合格：</string>
+    <string name="failedExams">不合格の試験：</string>
+    <string name="correctAnswersPercent">正解の割合</string>
+    <string name="completedExercises">完了した演習</string>
+    <string name="rateTheApp">アプリを評価してください！</string>
+    <string name="getPremium">プレミアムアカウントを取得する</string>
+    <string name="youArePremiumUser">あなたはプレミアムユーザーです</string>
+    <string name="disableAds">広告を無効にする</string>
+    <string name="oneTimePayment">一回払い（永久）</string>
+    <string name="or">また</string>
+    <string name="toastNoCoins">コインが足りない</string>
+    <string name="play">遊ぶ</string>
+    <string name="gameDuel">決闘</string>
+    <string name="gameDuelInfo">（2人）</string>
+    <string name="finished">終了した</string>
+    <string name="app_name">九九</string>
+    <string name="redWins">レッドプレイヤーが勝った！</string>
+    <string name="blueWins">ブループレイヤーが勝った！</string>
+    <string name="red">赤</string>
+    <string name="blue">青い</string>
+    <string name="bothWon">お二人とも勝った！</string>
+
+</resources>

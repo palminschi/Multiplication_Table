@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Dziękuję Ci!</string>
+    <string name="multiplication">Mnożenie</string>
+    <string name="division">Podział</string>
+    <string name="addition">Dodatek</string>
+    <string name="subtraction">Odejmowanie</string>
+    <string name="multiplicationLine">Mnożenie -</string>
+    <string name="divisionLine">Podział -</string>
+    <string name="additionLine">Dodatek -</string>
+    <string name="subtractionLine">Odejmowanie -</string>
+    <string name="multiplicationTable">Tabliczka mnożenia</string>
+    <string name="selectNumber">Wybierz numer:</string>
+    <string name="startMultiply">rozpocznij mnożenie</string>
+    <string name="startDivision">Zacznij dzielić</string>
+    <string name="training">Ćwiczenia</string>
+    <string name="games">Gry</string>
+    <string name="setDifficulty">Złożoność:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">"max. "</string>
+    <string name="selectGame">Wybierz grę:</string>
+    <string name="selectOperation">Wybierz operację:</string>
+    <string name="exam">Egzamin</string>
+    <string name="selectDifficulty">Złożoność:</string>
+    <string name="start">Początek</string>
+    <string name="easy">Łatwo</string>
+    <string name="medium">Średni</string>
+    <string name="hard">Trudny</string>
+    <string name="statistics">Statystyka</string>
+    <string name="passedExams">Zdane egzaminy:</string>
+    <string name="correctAnswers">Poprawne odpowiedzi:</string>
+    <string name="avgAnswerTime">Średni czas odpowiedzi</string>
+    <string name="details">Więcej</string>
+    <string name="removeAds">Usuń reklamy</string>
+    <string name="perfect">Idealny!</string>
+    <string name="great">Doskonały!</string>
+    <string name="good">Dobrze</string>
+    <string name="notBad">Nie jest zły!</string>
+    <string name="tryAgain">Spróbuj ponownie</string>
+    <string name="correct">Prawidłowo</string>
+    <string name="wrong">Niewłaściwie</string>
+    <string name="home">Dom</string>
+    <string name="back">Z powrotem</string>
+    <string name="passed">Z powodzeniem!</string>
+    <string name="failed">Awaria</string>
+    <string name="gameInput">Wejście</string>
+    <string name="gameSelect">Wybierać</string>
+    <string name="gameTrueOrFalse">Prawda czy kłamstwo</string>
+    <string name="completedExams">Ukończone egzaminy:</string>
+    <string name="successfullyPassed">Z powodzeniem:</string>
+    <string name="failedExams">Przegrany:</string>
+    <string name="correctAnswersPercent">Procent poprawnych odpowiedzi</string>
+    <string name="completedExercises">Wykonane kontrole</string>
+    <string name="rateTheApp">Oceń aplikację,\\nProszę!</string>
+    <string name="getPremium">Uzyskaj Premium</string>
+    <string name="youArePremiumUser">Masz Premium</string>
+    <string name="disableAds">Wyłącz reklamy</string>
+    <string name="oneTimePayment">Płatność jednorazowa (na zawsze)</string>
+    <string name="or">lub</string>
+    <string name="toastNoCoins">Zbyt mało monet</string>
+    <string name="play">Bawić się</string>
+    <string name="gameDuel">Pojedynek</string>
+    <string name="gameDuelInfo">(2 graczy)</string>
+    <string name="finished">Zakończony</string>
+    <string name="app_name">Tabliczka mnożenia</string>
+    <string name="redWins">Czerwony gracz wygrał!</string>
+    <string name="blueWins">Wygrał Niebieski Gracz!</string>
+    <string name="red">Czerwony</string>
+    <string name="blue">Niebieski</string>
+    <string name="bothWon">Oboje wygraliście!</string>
+
+</resources>

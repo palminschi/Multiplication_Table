@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Спасибо!</string>
+    <string name="multiplication">Умножение</string>
+    <string name="division">Деление</string>
+    <string name="addition">Сложение</string>
+    <string name="subtraction">Вычитание</string>
+    <string name="multiplicationLine">Умножение -</string>
+    <string name="divisionLine">Деление -</string>
+    <string name="additionLine">Сложение -</string>
+    <string name="subtractionLine">Вычитание -</string>
+    <string name="multiplicationTable">Таблица умножения</string>
+    <string name="selectNumber">Выберите номер:</string>
+    <string name="startMultiply">Начать умножение</string>
+    <string name="startDivision">Начать деление</string>
+    <string name="training">Упражнения</string>
+    <string name="games">Игры</string>
+    <string name="setDifficulty">Сложность:</string>
+    <string name="minNumber">мин.</string>
+    <string name="maxNumber">макс.</string>
+    <string name="selectGame">Выберите игру:</string>
+    <string name="selectOperation">Выберите операцию:</string>
+    <string name="exam">Экзамен</string>
+    <string name="selectDifficulty">Сложность:</string>
+    <string name="start">Старт</string>
+    <string name="easy">Легко</string>
+    <string name="medium">Средне</string>
+    <string name="hard">Сложно</string>
+    <string name="statistics">Статистика</string>
+    <string name="passedExams">Пройденных экзаменов:</string>
+    <string name="correctAnswers">Правильных ответов:</string>
+    <string name="avgAnswerTime">Среднее время на ответ</string>
+    <string name="details">Подробнее</string>
+    <string name="removeAds">Убрать рекламу</string>
+    <string name="perfect">Идеально!</string>
+    <string name="great">Отлично!</string>
+    <string name="good">Хорошо</string>
+    <string name="notBad">Не плохо!</string>
+    <string name="tryAgain">Попробуй ещё</string>
+    <string name="correct">Правильно</string>
+    <string name="wrong">Неправильно</string>
+    <string name="home">Главная</string>
+    <string name="back">Назад</string>
+    <string name="passed">Успешно!</string>
+    <string name="failed">Провал</string>
+    <string name="gameInput">Ввод</string>
+    <string name="gameSelect">Выбрать</string>
+    <string name="gameTrueOrFalse">Правда или ложь</string>
+    <string name="completedExams">Завершено экзаменов:</string>
+    <string name="successfullyPassed">Успешно:</string>
+    <string name="failedExams">Провалено:</string>
+    <string name="correctAnswersPercent">Процент правильных ответов</string>
+    <string name="completedExercises">Сделанных управлений</string>
+    <string name="rateTheApp">Оцените приложение,\\nПожалуйста!</string>
+    <string name="getPremium">Получи Премиум</string>
+    <string name="youArePremiumUser">У вас Премиум</string>
+    <string name="disableAds">Отключить рекламу</string>
+    <string name="oneTimePayment">Единоразовый платёж (навсегда)</string>
+    <string name="or">или</string>
+    <string name="toastNoCoins">Недостаточно монет</string>
+    <string name="play">Играть</string>
+    <string name="gameDuel">Дуэль</string>
+    <string name="gameDuelInfo">(2 игрока)</string>
+    <string name="finished">Завершено</string>
+    <string name="app_name">Таблица Умножения</string>
+    <string name="redWins">Красный игрок выиграл!</string>
+    <string name="blueWins">Синий игрок выиграл!</string>
+    <string name="red">Красный</string>
+    <string name="blue">Синий</string>
+    <string name="bothWon">Вы оба выиграли!</string>
+
+</resources>

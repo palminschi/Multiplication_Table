@@ -40,6 +40,7 @@ class StartExamFragment : Fragment() {
         viewModel.examResults.observe(viewLifecycleOwner) {
             binding.tvCompletedExams.text ="${getText(R.string.completedExams)} ${it.totalAmount}"
             binding.tvSuccessfully.text ="${getText(R.string.successfullyPassed)} ${it.passed}"
+            binding.tvFailedExams.text = "${getText(R.string.failedExams)} ${it.totalAmount - it.passed}"
         }
 
         binding.btnStart.setOnClickListener {

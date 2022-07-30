@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="thanks">Obrigada!</string>
+    <string name="multiplication">Multiplicação</string>
+    <string name="division">Divisão</string>
+    <string name="addition">Adição</string>
+    <string name="subtraction">Subtração</string>
+    <string name="multiplicationLine">Multiplicação -</string>
+    <string name="divisionLine">Divisão -</string>
+    <string name="additionLine">Adição -</string>
+    <string name="subtractionLine">Subtração -</string>
+    <string name="multiplicationTable">Tabela de multiplicação</string>
+    <string name="selectNumber">Selecione o número:</string>
+    <string name="startMultiply">Iniciar multiplicação</string>
+    <string name="startDivision">Iniciar divisão</string>
+    <string name="training">Treinamento</string>
+    <string name="games">Jogos</string>
+    <string name="setDifficulty">Definir dificuldade:</string>
+    <string name="minNumber">min.</string>
+    <string name="maxNumber">max.</string>
+    <string name="selectGame">Selecione o jogo:</string>
+    <string name="selectOperation">Selecione a operação:</string>
+    <string name="exam">Teste</string>
+    <string name="selectDifficulty">Selecione a dificuldade:</string>
+    <string name="start">Começar</string>
+    <string name="easy">Fácil</string>
+    <string name="medium">Médio</string>
+    <string name="hard">Duro</string>
+    <string name="statistics">Estatisticas</string>
+    <string name="passedExams">Exames aprovados: 2</string>
+    <string name="correctAnswers">Respostas corretas:</string>
+    <string name="avgAnswerTime">Tempo médio de resposta</string>
+    <string name="details">Detalhes</string>
+    <string name="removeAds">remover propagandas</string>
+    <string name="perfect">Perfeito!</string>
+    <string name="great">Legal!</string>
+    <string name="good">Bom</string>
+    <string name="notBad">Não é ruim!</string>
+    <string name="tryAgain">Tenta de novo</string>
+    <string name="correct">Correto</string>
+    <string name="wrong">Incorreta</string>
+    <string name="home">Inicial</string>
+    <string name="back">Voltar</string>
+    <string name="passed">Sucesso!</string>
+    <string name="failed">Falha</string>
+    <string name="gameInput">Entrada</string>
+    <string name="gameSelect">Selecionar</string>
+    <string name="gameTrueOrFalse">Verdadeiro ou falso</string>
+    <string name="completedExams">Exames concluídos:</string>
+    <string name="successfullyPassed">Aprovado com sucesso:</string>
+    <string name="failedExams">Fracassado:</string>
+    <string name="correctAnswersPercent">Porcentagem de respostas corretas</string>
+    <string name="completedExercises">exercícios concluídos</string>
+    <string name="rateTheApp">Avalie o aplicativo por favor.</string>
+    <string name="getPremium">Obtenha uma conta Premium</string>
+    <string name="youArePremiumUser">Você é um usuário Premium</string>
+    <string name="disableAds">desativar anúncios</string>
+    <string name="oneTimePayment">Pagamento único (para sempre)</string>
+    <string name="or">ou</string>
+    <string name="toastNoCoins">Não há moedas suficientes</string>
+    <string name="play">Toque</string>
+    <string name="gameDuel">Duelo</string>
+    <string name="gameDuelInfo">(2 jogadores)</string>
+    <string name="finished">Finalizado</string>
+    <string name="app_name">Tabela de multiplicação</string>
+    <string name="redWins">O jogador vermelho ganhou!</string>
+    <string name="blueWins">O jogador azul ganhou!</string>
+    <string name="red">Vermelho</string>
+    <string name="blue">Azul</string>
+    <string name="bothWon">Vocês dois ganharam!</string>
+
+</resources>
