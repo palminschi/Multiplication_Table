@@ -58,6 +58,9 @@ class PurchaseFragment : Fragment() {
         binding.btnBuyPremiumByCoins.setOnClickListener {
             viewModel.buyPremiumByCoins()
         }
+        binding.btnGetCoins.setOnClickListener {
+            viewModel.showRewardedAd()
+        }
     }
 
 }

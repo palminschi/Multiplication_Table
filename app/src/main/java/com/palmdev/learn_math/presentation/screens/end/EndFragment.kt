@@ -79,20 +79,20 @@ class EndFragment : Fragment() {
         binding.btnHome.setOnClickListener {
             findNavController().navigate(R.id.action_endFragment_to_mainFragment)
         }
-        binding.btnAgain?.setOnClickListener {
+        binding.btnAgain.setOnClickListener {
             findNavController().popBackStack()
             findNavController().popBackStack()
         }
         if (withNumber != null && withNumber != 0) {
-            binding.btnGoTo?.visibility = View.VISIBLE
-            binding.btnGoTo?.text = "${getText(R.string.goToNextNumber)}${withNumber!! + 1}"
-            binding.btnGoTo?.setOnClickListener {
+            binding.btnGoTo.visibility = View.VISIBLE
+            binding.btnGoTo.text = "${getText(R.string.goToNextNumber)}${withNumber!! + 1}"
+            binding.btnGoTo.setOnClickListener {
                 findNavController().navigate(
                     R.id.action_endFragment_to_learnTableFragment,
                     bundleOf(ARG_SELECTED_NUMBER to withNumber!! + 1)
                 )
             }
-        } else binding.btnGoTo?.visibility = View.GONE
+        } else binding.btnGoTo.visibility = View.GONE
 
         viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
             if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)

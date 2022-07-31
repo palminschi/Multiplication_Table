@@ -3,6 +3,7 @@
     <string name="questionMark" translatable="false">\?</string>
     <string name="AD_MOB_APP_ID" translatable="false">ca-app-pub-6012847014470005~9976216654</string>
     <string name="AD_INTERSTITIAL_ID" translatable="false">ca-app-pub-6012847014470005/3410808300</string>
+    <string name="AD_REWARDED_ID" translatable="false">ca-app-pub-6012847014470005/8189960870</string>
     <string name="premiumCoinsCost" translatable="false">50.000</string>
     <string name="premiumCost" translatable="false">1.99$</string>
 
@@ -77,6 +78,9 @@
     <string name="bothWon">You both won!</string>
 
     <string name="goToNextNumber">Go to x</string>
+    <string name="coinsReceived">Coins received:</string>
+    <string name="getCoins">Get +500</string>
+    <string name="notEnoughCoins">not enough coins?</string>
 
 
     <string name="tableExample" translatable="false"> 1 x 0 = 0\n

@@ -80,7 +80,8 @@ val presentationModule = module {
     viewModel {
         PurchaseViewModel(
             userDataRepository = get(),
-            purchaseRepository = get()
+            purchaseRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
