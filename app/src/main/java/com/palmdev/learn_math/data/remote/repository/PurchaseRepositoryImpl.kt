@@ -13,6 +13,8 @@ class PurchaseRepositoryImpl(
     private val userDataRepository: UserDataRepository
 ) : PurchaseRepository, PurchasesUpdatedListener {
 
+    private val sharedPrefs = context.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
+
     private var billingClient: BillingClient? = null
 
     override fun buyPremiumAccount() {
@@ -48,6 +50,23 @@ class PurchaseRepositoryImpl(
             true
         } else {
             false
+        }
+    }
+
+    init {
+        getPrice()
+    }
+
+    private fun getPrice() {
+        // TODO: Price
+        val skuList: MutableList<String> = ArrayList()
+        skuList.add(PURCHASE_PRODUCT_ID)
+        val params = SkuDetailsParams.newBuilder()
+        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP)
+        billingClient?.querySkuDetailsAsync(params.build()) { _, skuDetailsList ->
+            skuDetailsList?.get(0)?.price?.let {
+                sharedPrefs.edit().putString(PREMIUM_PRICE, it)
+            }
         }
     }
 

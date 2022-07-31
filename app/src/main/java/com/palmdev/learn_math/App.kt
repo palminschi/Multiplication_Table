@@ -42,7 +42,5 @@ class App : Application() {
                 val token = task.result
                 Log.d("TAG", "Token ->$token")
             }
-
     }
-
 }

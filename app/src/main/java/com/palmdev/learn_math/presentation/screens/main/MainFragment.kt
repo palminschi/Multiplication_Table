@@ -1,14 +1,18 @@
 package com.palmdev.learn_math.presentation.screens.main
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentMainBinding
+import com.palmdev.learn_math.utils.PREMIUM_PRICE
+import com.palmdev.learn_math.utils.SHARED_PREFS
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment() {
@@ -27,7 +31,11 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+        initCustomOnBackPressed()
         viewModel.loadAds()
+        val sharedPrefs = context?.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
+        val price = sharedPrefs?.getString(PREMIUM_PRICE, "unknown")
+        price
     }
 
     private fun init() {
@@ -95,5 +103,8 @@ class MainFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun initCustomOnBackPressed() {
     }
 }

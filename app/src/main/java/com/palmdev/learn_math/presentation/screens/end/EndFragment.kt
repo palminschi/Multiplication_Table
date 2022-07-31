@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentEndBinding
@@ -25,6 +27,7 @@ class EndFragment : Fragment() {
     private var operation = Operation.MULTIPLICATION
     private var earnedCoins = 0
     private var examOrTraining = TRAINING
+    private var withNumber: Int? = null
     private val handler by lazy { Handler(Looper.getMainLooper()) }
 
     override fun onCreateView(
@@ -37,6 +40,7 @@ class EndFragment : Fragment() {
         wrongAnswers = arguments?.getInt(ARG_WRONG_ANSWERS) ?: 0
         operation = arguments?.getSerializable(ARG_OPERATION) as Operation
         examOrTraining = arguments?.getString(ARG_EXAM_OR_TRAINING) ?: TRAINING
+        withNumber = arguments?.getInt(ARG_WITH_NUMBER)
         return binding.root
     }
 
@@ -72,13 +76,23 @@ class EndFragment : Fragment() {
             binding.coins.text = it.toString()
         }
 
-        binding.btnBack.setOnClickListener {
-            findNavController().popBackStack()
-            findNavController().popBackStack()
-        }
         binding.btnHome.setOnClickListener {
-            findNavController().navigate(R.id.mainFragment)
+            findNavController().navigate(R.id.action_endFragment_to_mainFragment)
         }
+        binding.btnAgain?.setOnClickListener {
+            findNavController().popBackStack()
+            findNavController().popBackStack()
+        }
+        if (withNumber != null && withNumber != 0) {
+            binding.btnGoTo?.visibility = View.VISIBLE
+            binding.btnGoTo?.text = "${getText(R.string.goToNextNumber)}${withNumber!! + 1}"
+            binding.btnGoTo?.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_endFragment_to_learnTableFragment,
+                    bundleOf(ARG_SELECTED_NUMBER to withNumber!! + 1)
+                )
+            }
+        } else binding.btnGoTo?.visibility = View.GONE
 
         viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
             if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)

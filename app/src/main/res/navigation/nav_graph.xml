@@ -64,6 +64,16 @@
         <action
             android:id="@+id/action_endFragment_to_reviewDialogFragment"
             app:destination="@id/reviewDialogFragment" />
+        <action
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_endFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            app:popUpTo="@id/learnTableFragment"
+            app:popUpToInclusive="false"
+            android:id="@+id/action_endFragment_to_learnTableFragment"
+            app:destination="@id/learnTableFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTrainingFragment"

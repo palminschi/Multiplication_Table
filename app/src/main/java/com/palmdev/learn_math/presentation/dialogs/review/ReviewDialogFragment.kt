@@ -1,12 +1,10 @@
 package com.palmdev.learn_math.presentation.dialogs.review
 
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.google.android.material.snackbar.Snackbar
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentReviewDialogBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -29,6 +27,8 @@ class ReviewDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        dialog?.setCancelable(false)
 
         binding.star1.setOnClickListener {
             dialog?.dismiss()

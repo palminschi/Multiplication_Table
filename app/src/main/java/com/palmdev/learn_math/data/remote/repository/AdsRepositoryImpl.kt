@@ -12,7 +12,7 @@ import com.palmdev.learn_math.R
 import com.palmdev.learn_math.data.local.repository.UserDataRepository
 import com.palmdev.learn_math.utils.MAIN
 
-const val TAG = "ADS"
+private const val TAG = "ADS"
 
 class AdsRepositoryImpl(
     private val context: Context,

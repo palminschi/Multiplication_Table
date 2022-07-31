@@ -185,15 +185,28 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun finishExercise() {
-        findNavController().navigate(
-            R.id.action_exerciseSelectFragment_to_endFragment,
-            bundleOf(
-                ARG_OPERATION to operation,
-                ARG_AVG_TIME to avgAnswerTime,
-                ARG_RIGHT_ANSWERS to correctAnswers,
-                ARG_WRONG_ANSWERS to wrongAnswers
+        if (numberType == NumberType.FIXED) {
+            findNavController().navigate(
+                R.id.action_exerciseSelectFragment_to_endFragment,
+                bundleOf(
+                    ARG_OPERATION to operation,
+                    ARG_AVG_TIME to avgAnswerTime,
+                    ARG_RIGHT_ANSWERS to correctAnswers,
+                    ARG_WRONG_ANSWERS to wrongAnswers,
+                    ARG_WITH_NUMBER to withNumber
+                )
             )
-        )
+        } else {
+            findNavController().navigate(
+                R.id.action_exerciseSelectFragment_to_endFragment,
+                bundleOf(
+                    ARG_OPERATION to operation,
+                    ARG_AVG_TIME to avgAnswerTime,
+                    ARG_RIGHT_ANSWERS to correctAnswers,
+                    ARG_WRONG_ANSWERS to wrongAnswers
+                )
+            )
+        }
     }
 
     override fun onDestroyView() {
