@@ -103,6 +103,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         binding.layoutCorrectAnswer.visibility = View.INVISIBLE
         binding.btnTrue.isClickable = true
         binding.btnFalse.isClickable = true
+        initHint()
     }
 
     private fun answeredCorrectly() {
@@ -155,6 +156,25 @@ class ExerciseTrueOrFalseFragment : Fragment() {
                 ARG_WRONG_ANSWERS to wrongAnswers
             )
         )
+    }
+
+    private fun initHint() {
+        if (withNumber <= 10 &&
+            operation == Operation.MULTIPLICATION || operation == Operation.DIVISION
+        ) {
+            binding.btnHint.visibility = View.VISIBLE
+            binding.btnHint.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_exerciseTrueOrFalseFragment_to_hintTableDialogFragment,
+                    bundleOf(
+                        ARG_WITH_NUMBER to withNumber,
+                        ARG_OPERATION to operation
+                    )
+                )
+            }
+        } else {
+            binding.btnHint.visibility = View.GONE
+        }
     }
 
     override fun onDestroyView() {

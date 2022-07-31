@@ -116,6 +116,18 @@
             tools:text="2" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/btnHint"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/img_circle_background"
+        android:gravity="center"
+        android:text="@string/questionMark"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
     <LinearLayout
         android:layout_marginBottom="80dp"
         android:layout_width="match_parent"

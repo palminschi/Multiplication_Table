@@ -101,6 +101,7 @@ class ExerciseInputFragment : Fragment() {
         userInput.value = ""
         keyboardButtons.forEach { it.isClickable = true }
         binding.tvAnswer.setTextColor(resources.getColor(R.color.white, null))
+        initHint()
     }
 
     private fun checkAnswer() {
@@ -185,15 +186,37 @@ class ExerciseInputFragment : Fragment() {
     }
 
     private fun finishExercise() {
-            findNavController().navigate(
-                R.id.action_exerciseInputFragment_to_endFragment,
-                bundleOf(
-                    ARG_OPERATION to operation,
-                    ARG_RIGHT_ANSWERS to correctAnswers,
-                    ARG_WRONG_ANSWERS to wrongAnswers,
-                    ARG_AVG_TIME to avgAnswerTime,
-                    ARG_EXAM_OR_TRAINING to examOrTraining
-                )
+        findNavController().navigate(
+            R.id.action_exerciseInputFragment_to_endFragment,
+            bundleOf(
+                ARG_OPERATION to operation,
+                ARG_RIGHT_ANSWERS to correctAnswers,
+                ARG_WRONG_ANSWERS to wrongAnswers,
+                ARG_AVG_TIME to avgAnswerTime,
+                ARG_EXAM_OR_TRAINING to examOrTraining
             )
+        )
+    }
+
+    private fun initHint() {
+        if (withNumber <= 10 &&
+            examOrTraining != EXAM &&
+            operation == Operation.MULTIPLICATION ||
+            operation == Operation.DIVISION
+
+        ) {
+            binding.btnHint.visibility = View.VISIBLE
+            binding.btnHint.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_exerciseInputFragment_to_hintTableDialogFragment,
+                    bundleOf(
+                        ARG_WITH_NUMBER to withNumber,
+                        ARG_OPERATION to operation
+                    )
+                )
+            }
+        } else {
+            binding.btnHint.visibility = View.GONE
+        }
     }
 }

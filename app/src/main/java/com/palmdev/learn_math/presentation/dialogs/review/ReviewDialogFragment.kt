@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.palmdev.learn_math.R
-import com.palmdev.learn_math.databinding.FragmentReviewDialogBinding
+import com.palmdev.learn_math.databinding.DialogFragmentReviewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ReviewDialogFragment : DialogFragment() {
 
 
     private val viewModel: ReviewDialogViewModel by viewModel()
-    private lateinit var binding: FragmentReviewDialogBinding
+    private lateinit var binding: DialogFragmentReviewBinding
 
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class ReviewDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         dialog?.window?.decorView?.setBackgroundColor(resources.getColor(R.color.transparent, null))
-        binding = FragmentReviewDialogBinding.inflate(layoutInflater, container, false)
+        binding = DialogFragmentReviewBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 

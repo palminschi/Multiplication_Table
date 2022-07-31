@@ -131,6 +131,7 @@ class ExerciseSelectFragment : Fragment() {
             Operation.SUBTRACTION ->
                 viewModel.getSubtractionExercise(withNumber, minNumber, maxNumber)
         }
+        initHint()
     }
 
     private fun answeredCorrectly(view: View) {
@@ -206,6 +207,25 @@ class ExerciseSelectFragment : Fragment() {
                     ARG_WRONG_ANSWERS to wrongAnswers
                 )
             )
+        }
+    }
+
+    private fun initHint() {
+        if (withNumber <= 10 &&
+            operation == Operation.MULTIPLICATION || operation == Operation.DIVISION
+        ) {
+            binding.btnHint.visibility = View.VISIBLE
+            binding.btnHint.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_exerciseSelectFragment_to_hintTableDialogFragment,
+                    bundleOf(
+                        ARG_WITH_NUMBER to withNumber,
+                        ARG_OPERATION to operation
+                    )
+                )
+            }
+        } else {
+            binding.btnHint.visibility = View.GONE
         }
     }
 

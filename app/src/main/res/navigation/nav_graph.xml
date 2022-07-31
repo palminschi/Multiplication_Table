@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_exerciseSelectFragment_to_endFragment"
             app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_exerciseSelectFragment_to_hintTableDialogFragment"
+            app:destination="@id/hintTableDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/endFragment"
@@ -98,6 +101,9 @@
         <action
             android:id="@+id/action_exerciseTrueOrFalseFragment_to_endFragment"
             app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_exerciseTrueOrFalseFragment_to_hintTableDialogFragment"
+            app:destination="@id/hintTableDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/exerciseInputFragment"
@@ -107,6 +113,9 @@
         <action
             android:id="@+id/action_exerciseInputFragment_to_endFragment"
             app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_exerciseInputFragment_to_hintTableDialogFragment"
+            app:destination="@id/hintTableDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/startExamFragment"
@@ -126,7 +135,7 @@
         android:id="@+id/reviewDialogFragment"
         android:name="com.palmdev.learn_math.presentation.dialogs.review.ReviewDialogFragment"
         android:label="fragment_review_dialog"
-        tools:layout="@layout/fragment_review_dialog" />
+        tools:layout="@layout/dialog_fragment_review" />
     <fragment
         android:id="@+id/purchaseFragment"
         android:name="com.palmdev.learn_math.presentation.screens.purchase.PurchaseFragment"
@@ -164,4 +173,9 @@
         android:name="com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelEndFragment"
         android:label="fragment_game_duel_end"
         tools:layout="@layout/fragment_game_duel_end" />
+    <dialog
+        android:id="@+id/hintTableDialogFragment"
+        android:name="com.palmdev.learn_math.presentation.dialogs.hint_table.HintTableDialogFragment"
+        android:label="dialog_fragment_hint_table"
+        tools:layout="@layout/dialog_fragment_hint_table" />
 </navigation>

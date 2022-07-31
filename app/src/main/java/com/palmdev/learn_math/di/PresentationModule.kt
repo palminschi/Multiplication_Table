@@ -1,5 +1,6 @@
 package com.palmdev.learn_math.di
 
+import com.palmdev.learn_math.presentation.dialogs.hint_table.HintTableViewModel
 import com.palmdev.learn_math.presentation.dialogs.review.ReviewDialogViewModel
 import com.palmdev.learn_math.presentation.screens.end.EndViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
@@ -90,6 +91,12 @@ val presentationModule = module {
             divisionRepository = get(),
             additionRepository = get(),
             subtractionRepository = get()
+        )
+    }
+    viewModel {
+        HintTableViewModel(
+            multiplicationRepository = get(),
+            divisionRepository = get()
         )
     }
 }
