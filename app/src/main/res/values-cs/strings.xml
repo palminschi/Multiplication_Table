@@ -70,5 +70,9 @@
     <string name="red">Červené</string>
     <string name="blue">Modrý</string>
     <string name="bothWon">Vyhráli jste oba!</string>
+    <string name="goToNextNumber">Přejděte na x</string>
+    <string name="coinsReceived">Přijaté mince:</string>
+    <string name="getCoins">Získejte +500</string>
+    <string name="notEnoughCoins">nedostatek mincí?</string>
 
 </resources>

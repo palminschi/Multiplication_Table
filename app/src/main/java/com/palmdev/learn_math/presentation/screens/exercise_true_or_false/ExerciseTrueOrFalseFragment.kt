@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseTrueOrFalseBinding
+import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
@@ -39,6 +41,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
             binding.progress9, binding.progress10
         )
     }
+    private val sounds by lazy { Sounds(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -70,15 +73,15 @@ class ExerciseTrueOrFalseFragment : Fragment() {
 
         binding.btnTrue.setOnClickListener {
             when (isTrueOrFalse) {
-                true -> answeredCorrectly()
-                false -> answeredWrongly()
+                true -> answeredCorrectly(it)
+                false -> answeredWrongly(it)
             }
             progressCounter++
         }
         binding.btnFalse.setOnClickListener {
             when (isTrueOrFalse) {
-                true -> answeredWrongly()
-                false -> answeredCorrectly()
+                true -> answeredWrongly(it)
+                false -> answeredCorrectly(it)
             }
             progressCounter++
         }
@@ -106,7 +109,9 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         initHint()
     }
 
-    private fun answeredCorrectly() {
+    private fun answeredCorrectly(view: View) {
+        ClickExpansionAnim.anim(view)
+        sounds.playClick()
         setAnswerTime()
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
@@ -122,7 +127,9 @@ class ExerciseTrueOrFalseFragment : Fragment() {
         }, 200)
     }
 
-    private fun answeredWrongly() {
+    private fun answeredWrongly(view: View) {
+        ShakingAnim.anim(view)
+        sounds.playWrongAnswer()
         setAnswerTime()
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()

@@ -164,43 +164,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/option_1"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_margin="3dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
-            app:cardCornerRadius="6dp">
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="6dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="1"
+            tools:ignore="ButtonStyle" />
 
-            <TextView
-                android:id="@+id/option_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/second_background"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                tools:text="3" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/option_2"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_margin="3dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
-            app:cardCornerRadius="6dp">
-
-            <TextView
-                android:id="@+id/option_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/second_background"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                tools:text="2" />
-        </androidx.cardview.widget.CardView>
+            android:layout_marginHorizontal="6dp"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="3"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
     <LinearLayout
@@ -208,43 +194,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/option_3"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_margin="3dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
-            app:cardCornerRadius="6dp">
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="6dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="3"
+            tools:ignore="ButtonStyle" />
 
-            <TextView
-                android:id="@+id/option_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/second_background"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                tools:text="4" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/option_4"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_margin="3dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
-            app:cardCornerRadius="6dp">
-
-            <TextView
-                android:id="@+id/option_4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/second_background"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                tools:text="0" />
-        </androidx.cardview.widget.CardView>
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="6dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="4"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </LinearLayout>

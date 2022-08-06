@@ -70,5 +70,9 @@
     <string name="red">Rood</string>
     <string name="blue">Blauw</string>
     <string name="bothWon">Jullie hebben allebei gewonnen!</string>
+    <string name="goToNextNumber">Ga naar x</string>
+    <string name="coinsReceived">Ontvangen munten:</string>
+    <string name="getCoins">Krijg +500</string>
+    <string name="notEnoughCoins">niet genoeg munten?</string>
 
 </resources>

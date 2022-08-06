@@ -70,5 +70,9 @@
     <string name="red">Röd</string>
     <string name="blue">Blå</string>
     <string name="bothWon">Ni vann båda!</string>
+    <string name="goToNextNumber">Gå till x</string>
+    <string name="coinsReceived">Mottagna mynt:</string>
+    <string name="getCoins">Få +500</string>
+    <string name="notEnoughCoins">inte tillräckligt med pengar?</string>
 
 </resources>

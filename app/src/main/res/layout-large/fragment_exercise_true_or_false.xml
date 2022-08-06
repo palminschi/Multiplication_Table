@@ -190,16 +190,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginBottom="100dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="180dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnTrue"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:foreground="@drawable/ic_true"
             android:foregroundTint="@color/white"
             app:cardBackgroundColor="@color/green"
-            app:cardCornerRadius="55dp"
+            app:cardCornerRadius="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnFalse"
             app:layout_constraintStart_toStartOf="parent"
@@ -207,12 +207,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnFalse"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:foreground="@drawable/ic_false"
             android:foregroundTint="@color/white"
             app:cardBackgroundColor="@color/red"
-            app:cardCornerRadius="55dp"
+            app:cardCornerRadius="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btnTrue"

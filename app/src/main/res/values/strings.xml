@@ -65,18 +65,15 @@
     <string name="oneTimePayment">One-time payment (for ever)</string>
     <string name="or">or</string>
     <string name="toastNoCoins">Not enough coins</string>
-
     <string name="play">Play</string>
     <string name="gameDuel">Duel</string>
     <string name="gameDuelInfo">(2 players)</string>
     <string name="finished">Finished</string>
-
     <string name="redWins">Red Player Won!</string>
     <string name="blueWins">Blue Player Won!</string>
     <string name="red">Red</string>
     <string name="blue">Blue</string>
     <string name="bothWon">You both won!</string>
-
     <string name="goToNextNumber">Go to x</string>
     <string name="coinsReceived">Coins received:</string>
     <string name="getCoins">Get +500</string>

@@ -70,5 +70,9 @@
     <string name="red">Crvena</string>
     <string name="blue">Plava</string>
     <string name="bothWon">Obojica ste pobijedili!</string>
+    <string name="goToNextNumber">Idi na x</string>
+    <string name="coinsReceived">Dobiveni novčići:</string>
+    <string name="getCoins">Dobijte +500</string>
+    <string name="notEnoughCoins">nema dovoljno novčića?</string>
 
 </resources>

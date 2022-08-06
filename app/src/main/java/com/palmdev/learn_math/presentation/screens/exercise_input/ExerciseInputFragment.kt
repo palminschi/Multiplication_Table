@@ -12,6 +12,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseInputBinding
+import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
@@ -49,6 +51,7 @@ class ExerciseInputFragment : Fragment() {
             binding.btnNumber8, binding.btnNumber9, binding.btnRemove
         )
     }
+    private val sounds by lazy { Sounds(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -112,6 +115,8 @@ class ExerciseInputFragment : Fragment() {
     }
 
     private fun answeredCorrectly() {
+        sounds.playClick()
+        ClickExpansionAnim.anim(binding.tvAnswer)
         binding.tvAnswer.setTextColor(resources.getColor(R.color.green, null))
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.green, null))
         correctAnswers++
@@ -127,6 +132,8 @@ class ExerciseInputFragment : Fragment() {
     }
 
     private fun answeredWrongly() {
+        sounds.playWrongAnswer()
+        ShakingAnim.anim(binding.tvAnswer)
         binding.tvCorrectAnswer.visibility = View.VISIBLE
         binding.tvAnswer.setTextColor(resources.getColor(R.color.red, null))
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.red, null))

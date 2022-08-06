@@ -70,5 +70,9 @@
     <string name="red">Rosso</string>
     <string name="blue">Blu</string>
     <string name="bothWon">Avete vinto entrambi!</string>
+    <string name="goToNextNumber">Vai a x</string>
+    <string name="coinsReceived">Monete ricevute:</string>
+    <string name="getCoins">Ottieni +500</string>
+    <string name="notEnoughCoins">non abbastanza monete?</string>
 
 </resources>

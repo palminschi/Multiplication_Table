@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentPurchaseBinding
+import com.palmdev.learn_math.presentation.animations.ExpansionReductionAnim
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PurchaseFragment : Fragment() {
@@ -61,6 +62,7 @@ class PurchaseFragment : Fragment() {
         binding.btnGetCoins.setOnClickListener {
             viewModel.showRewardedAd()
         }
+        ExpansionReductionAnim.anim(view = binding.btnGetCoins, infinitely = true)
     }
 
 }

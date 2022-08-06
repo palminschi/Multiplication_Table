@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseSelectBinding
+import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
@@ -43,6 +45,7 @@ class ExerciseSelectFragment : Fragment() {
     private var answerEndTime: Long = 0
     private var listAnswersTime = ArrayList<Long>()
     private var avgAnswerTime = 0.0
+    private val sounds by lazy { Sounds(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -135,6 +138,8 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun answeredCorrectly(view: View) {
+        ClickExpansionAnim.anim(view)
+        sounds.playClick()
         setAnswerTime()
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
@@ -157,6 +162,8 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun answeredWrongly(view: View) {
+        ShakingAnim.anim(view)
+        sounds.playWrongAnswer()
         setAnswerTime()
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()

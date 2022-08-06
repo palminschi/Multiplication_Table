@@ -3,6 +3,7 @@ package com.palmdev.learn_math.presentation
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.ump.ConsentForm
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hideStatusBar() {
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         if (Build.VERSION.SDK_INT < 30) {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         } else if (Build.VERSION.SDK_INT >= 30) {

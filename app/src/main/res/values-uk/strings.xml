@@ -70,5 +70,9 @@
     <string name="red">Червоний</string>
     <string name="blue">Синій</string>
     <string name="bothWon">Ви обидва виграли!</string>
+    <string name="goToNextNumber">Перейти до х</string>
+    <string name="coinsReceived">Отримано монет:</string>
+    <string name="getCoins">Отримайте +500</string>
+    <string name="notEnoughCoins">не вистачає монет?</string>
 
 </resources>

@@ -158,10 +158,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginBottom="30dp"
         android:id="@+id/layoutCorrectAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -190,7 +190,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="180dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnTrue"

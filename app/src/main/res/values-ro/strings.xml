@@ -68,5 +68,9 @@
     <string name="red">Rosul</string>
     <string name="blue">Albastrul</string>
     <string name="bothWon">Ambii au biruit!</string>
+    <string name="goToNextNumber">Treci la x</string>
+    <string name="coinsReceived">Monede primite:</string>
+    <string name="getCoins">Primește +500</string>
+    <string name="notEnoughCoins">nu aveti suficient?</string>
 
 </resources>

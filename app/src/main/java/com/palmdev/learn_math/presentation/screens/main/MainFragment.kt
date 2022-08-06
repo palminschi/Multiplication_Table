@@ -1,16 +1,17 @@
 package com.palmdev.learn_math.presentation.screens.main
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentMainBinding
+import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ExpansionReductionAnim
 import com.palmdev.learn_math.utils.PREMIUM_PRICE
 import com.palmdev.learn_math.utils.SHARED_PREFS
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -38,6 +39,7 @@ class MainFragment : Fragment() {
         price
     }
 
+    @SuppressLint("SetTextI18n")
     private fun init() {
         viewModel.initData()
         viewModel.coins.observe(viewLifecycleOwner) {
@@ -101,6 +103,7 @@ class MainFragment : Fragment() {
                 binding.btnRemoveAds.setOnClickListener {
                     findNavController().navigate(R.id.action_mainFragment_to_purchaseFragment)
                 }
+                ExpansionReductionAnim.anim(view = binding.btnRemoveAds, infinitely = false)
             }
         }
     }

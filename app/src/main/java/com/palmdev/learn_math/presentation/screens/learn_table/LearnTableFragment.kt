@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentLearnTableBinding
-import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectFragment
+import com.palmdev.learn_math.presentation.animations.TurnOverAnim
 import com.palmdev.learn_math.utils.ARG_OPERATION
 import com.palmdev.learn_math.utils.ARG_SELECTED_NUMBER
 import com.palmdev.learn_math.utils.ARG_WITH_NUMBER
@@ -64,11 +63,12 @@ class LearnTableFragment : Fragment() {
             )
         }
 
-        // TODO: Animation
         binding.btnSwitchTable.setOnClickListener {
-            when (isDivision) {
-                true -> setMultiplication()
-                false -> setDivision()
+            TurnOverAnim.anim(binding.cardView) {
+                when (isDivision) {
+                    true -> setMultiplication()
+                    false -> setDivision()
+                }
             }
         }
     }

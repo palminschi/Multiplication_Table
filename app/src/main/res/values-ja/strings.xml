@@ -70,5 +70,9 @@
     <string name="red">赤</string>
     <string name="blue">青い</string>
     <string name="bothWon">お二人とも勝った！</string>
+    <string name="goToNextNumber">に行く</string>
+    <string name="coinsReceived">受け取ったコイン:</string>
+    <string name="getCoins">を獲得 +500</string>
+    <string name="notEnoughCoins">コインが足りない？</string>
 
 </resources>

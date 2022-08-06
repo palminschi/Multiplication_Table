@@ -70,5 +70,9 @@
     <string name="red">빨간색</string>
     <string name="blue">푸른</string>
     <string name="bothWon">둘 다 이겼어!</string>
+    <string name="goToNextNumber">"이동 "</string>
+    <string name="coinsReceived">받은 코인:</string>
+    <string name="getCoins">받기 +500</string>
+    <string name="notEnoughCoins">동전이 부족합니까?</string>
 
 </resources>

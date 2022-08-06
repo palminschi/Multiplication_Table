@@ -70,5 +70,9 @@
     <string name="red">红色的</string>
     <string name="blue">蓝色的</string>
     <string name="bothWon">你们俩都赢了！</string>
+    <string name="goToNextNumber">转到 x</string>
+    <string name="coinsReceived">收到的硬币：</string>
+    <string name="getCoins">获得 +500</string>
+    <string name="notEnoughCoins">硬币不够？</string>
 
 </resources>

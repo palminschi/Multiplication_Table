@@ -69,6 +69,10 @@
     <string name="red">أحمر</string>
     <string name="blue">أزرق</string>
     <string name="bothWon">كلاكما فاز!</string>
+    <string name="goToNextNumber">اذهب إلى x</string>
+    <string name="coinsReceived">العملات المستلمة:</string>
+    <string name="getCoins">احصل على +500</string>
+    <string name="notEnoughCoins">لا يكفي عملات؟</string>
 
 
 </resources>

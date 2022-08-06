@@ -70,5 +70,9 @@
     <string name="red">Punainen</string>
     <string name="blue">Sininen</string>
     <string name="bothWon">Voititte molemmat!</string>
+    <string name="goToNextNumber">Siirry kohtaan x</string>
+    <string name="coinsReceived">Saadut kolikot:</string>
+    <string name="getCoins">Hanki +500</string>
+    <string name="notEnoughCoins">ei tarpeeksi kolikoita?</string>
 
 </resources>
