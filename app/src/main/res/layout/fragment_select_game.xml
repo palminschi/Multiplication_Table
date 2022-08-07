@@ -18,6 +18,7 @@
             android:id="@+id/btnGameDuel"
             android:layout_width="match_parent"
             android:layout_height="110dp"
+            android:layout_marginBottom="12dp"
             app:cardBackgroundColor="@color/third_background"
             app:cardCornerRadius="5dp">
 
@@ -74,5 +75,86 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnGame60sec"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:cardBackgroundColor="@color/third_background"
+            app:cardCornerRadius="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ic_game_60sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_games_ic_border"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_game_timer"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvGame60sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/game60sec"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ic_game_60sec"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintStart_toEndOf="@id/ic_game_60sec"
+                    app:layout_constraintTop_toBottomOf="@id/tvGame60sec">
+
+                    <TextView
+                        android:id="@+id/recordGame60sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/best"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/play"
+                    android:textAlignment="viewEnd"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:drawableEndCompat="@drawable/ic_arrow_forward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newGamesSoon"
+            android:textColor="@color/second_background"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </ScrollView>

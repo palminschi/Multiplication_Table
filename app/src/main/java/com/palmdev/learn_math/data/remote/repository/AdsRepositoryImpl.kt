@@ -8,7 +8,8 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.palmdev.learn_math.R
-import com.palmdev.learn_math.data.local.repository.UserDataRepository
+import com.palmdev.learn_math.domain.repository.UserDataRepository
+import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.utils.MAIN
 
 private const val TAG = "ADS"

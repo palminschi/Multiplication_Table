@@ -74,5 +74,9 @@
     <string name="coinsReceived">Ontvangen munten:</string>
     <string name="getCoins">Krijg +500</string>
     <string name="notEnoughCoins">niet genoeg munten?</string>
+    <string name="newGamesSoon">Binnenkort nieuwe spellen!</string>
+    <string name="best">Het beste:</string>
+    <string name="maximum">Maximaal</string>
+    <string name="moreOrLess">Min of meer</string>
 
 </resources>

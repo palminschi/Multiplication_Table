@@ -74,5 +74,9 @@
     <string name="coinsReceived">Modtagne mønter:</string>
     <string name="getCoins">Få +500</string>
     <string name="notEnoughCoins">ikke nok mønter?</string>
+    <string name="newGamesSoon">Nye spil kommer snart!</string>
+    <string name="best">Bedst:</string>
+    <string name="maximum">Maksimum</string>
+    <string name="moreOrLess">Mere eller mindre</string>
 
 </resources>

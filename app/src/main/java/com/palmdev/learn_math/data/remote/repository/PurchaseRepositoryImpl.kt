@@ -3,8 +3,9 @@ package com.palmdev.learn_math.data.remote.repository
 import android.content.Context
 import android.widget.Toast
 import com.android.billingclient.api.*
-import com.palmdev.learn_math.data.local.repository.UserDataRepository
+import com.palmdev.learn_math.domain.repository.UserDataRepository
 import com.palmdev.learn_math.data.remote.utils.BillingSecurity
+import com.palmdev.learn_math.domain.repository.PurchaseRepository
 import com.palmdev.learn_math.utils.*
 import java.io.IOException
 
@@ -54,18 +55,21 @@ class PurchaseRepositoryImpl(
     }
 
     init {
-        getPrice()
+        initPrice()
     }
 
-    private fun getPrice() {
-        // TODO: Price
+    override fun getPrice(): String {
+        return sharedPrefs.getString(PREMIUM_PRICE, "1.99$") ?: "1.99$"
+    }
+
+    private fun initPrice() {
         val skuList: MutableList<String> = ArrayList()
         skuList.add(PURCHASE_PRODUCT_ID)
         val params = SkuDetailsParams.newBuilder()
         params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP)
         billingClient?.querySkuDetailsAsync(params.build()) { _, skuDetailsList ->
             skuDetailsList?.get(0)?.price?.let {
-                sharedPrefs.edit().putString(PREMIUM_PRICE, it)
+                sharedPrefs.edit().putString(PREMIUM_PRICE, it).apply()
             }
         }
     }

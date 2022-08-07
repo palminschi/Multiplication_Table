@@ -92,6 +92,9 @@
         <action
             android:id="@+id/action_selectTrainingFragment_to_exerciseInputFragment"
             app:destination="@id/exerciseInputFragment" />
+        <action
+            android:id="@+id/action_selectTrainingFragment_to_game60secFragment"
+            app:destination="@id/game60secFragment" />
     </fragment>
     <fragment
         android:id="@+id/exerciseTrueOrFalseFragment"
@@ -149,6 +152,9 @@
         <action
             android:id="@+id/action_selectGameFragment_to_gameDuelStartFragment"
             app:destination="@id/gameDuelStartFragment" />
+        <action
+            android:id="@+id/action_selectGameFragment_to_game60secFragment"
+            app:destination="@id/game60secFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameDuelStartFragment"
@@ -178,4 +184,18 @@
         android:name="com.palmdev.learn_math.presentation.dialogs.hint_table.HintTableDialogFragment"
         android:label="dialog_fragment_hint_table"
         tools:layout="@layout/dialog_fragment_hint_table" />
+    <fragment
+        android:id="@+id/game60secFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secFragment"
+        android:label="fragment_game60sec"
+        tools:layout="@layout/fragment_game60sec" >
+        <action
+            android:id="@+id/action_game60secFragment_to_game60secEndFragment"
+            app:destination="@id/game60secEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/game60secEndFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secEndFragment"
+        android:label="fragment_game60sec_end"
+        tools:layout="@layout/fragment_game60sec_end" />
 </navigation>

@@ -74,5 +74,9 @@
     <string name="coinsReceived">收到的硬币：</string>
     <string name="getCoins">获得 +500</string>
     <string name="notEnoughCoins">硬币不够？</string>
+    <string name="newGamesSoon">新游戏即将推出！</string>
+    <string name="best">最好的：</string>
+    <string name="maximum">最大</string>
+    <string name="moreOrLess">或多或少</string>
 
 </resources>

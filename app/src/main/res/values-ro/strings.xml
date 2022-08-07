@@ -72,5 +72,9 @@
     <string name="coinsReceived">Monede primite:</string>
     <string name="getCoins">Primește +500</string>
     <string name="notEnoughCoins">nu aveti suficient?</string>
+    <string name="newGamesSoon">Jocuri noi în curând!</string>
+    <string name="best">Cel mai bun:</string>
+    <string name="maximum">Maxim</string>
+    <string name="moreOrLess">Mai mult sau mai putin</string>
 
 </resources>

@@ -74,5 +74,9 @@
     <string name="coinsReceived">받은 코인:</string>
     <string name="getCoins">받기 +500</string>
     <string name="notEnoughCoins">동전이 부족합니까?</string>
+    <string name="newGamesSoon">새로운 게임이 곧 출시됩니다!</string>
+    <string name="best">최고:</string>
+    <string name="maximum">최고</string>
+    <string name="moreOrLess">더 많거나 적게</string>
 
 </resources>

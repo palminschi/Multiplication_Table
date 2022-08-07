@@ -53,7 +53,7 @@
     <string name="failedExams">Underkända prov:</string>
     <string name="correctAnswersPercent">Andel rätt svar</string>
     <string name="completedExercises">Genomförda övningar</string>
-    <string name="rateTheApp">Betygsätt appen, snälla!</string>
+    <string name="rateTheApp">Betygsätt appen,\nsnälla!</string>
     <string name="getPremium">Skaffa ett premiumkonto</string>
     <string name="youArePremiumUser">Du är Premium-användare</string>
     <string name="disableAds">Inaktivera annonser</string>
@@ -74,5 +74,9 @@
     <string name="coinsReceived">Mottagna mynt:</string>
     <string name="getCoins">Få +500</string>
     <string name="notEnoughCoins">inte tillräckligt med pengar?</string>
+    <string name="newGamesSoon">Nya spel kommer snart!</string>
+    <string name="best">Bäst:</string>
+    <string name="maximum">Maximal</string>
+    <string name="moreOrLess">Mer eller mindre</string>
 
 </resources>

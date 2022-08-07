@@ -8,6 +8,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
 import com.palmdev.learn_math.di.dataModule
 import com.palmdev.learn_math.di.databaseModule
+import com.palmdev.learn_math.di.gamesModule
 import com.palmdev.learn_math.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -24,7 +25,8 @@ class App : Application() {
                 listOf(
                     presentationModule,
                     dataModule,
-                    databaseModule
+                    databaseModule,
+                    gamesModule
                 )
             )
         }

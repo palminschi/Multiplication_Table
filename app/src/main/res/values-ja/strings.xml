@@ -74,5 +74,9 @@
     <string name="coinsReceived">受け取ったコイン:</string>
     <string name="getCoins">を獲得 +500</string>
     <string name="notEnoughCoins">コインが足りない？</string>
+    <string name="newGamesSoon">新作ゲームが続々登場！</string>
+    <string name="best">一番：</string>
+    <string name="maximum">最大</string>
+    <string name="moreOrLess">多かれ少なかれ</string>
 
 </resources>

@@ -79,6 +79,12 @@
     <string name="getCoins">Get +500</string>
     <string name="notEnoughCoins">not enough coins?</string>
 
+    <string name="newGamesSoon">New games coming soon!</string>
+    <string name="game60sec" translatable="false">60 sec</string>
+    <string name="best">Best:</string>
+    <string name="maximum">Maximum</string>
+    <string name="moreOrLess">More or Less</string>
+
 
     <string name="tableExample" translatable="false"> 1 x 0 = 0\n
         1 x 1 = 1\n

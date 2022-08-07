@@ -1,14 +1,13 @@
 package com.palmdev.learn_math.presentation.screens.purchase
 
-import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.android.material.snackbar.Snackbar
 import com.palmdev.learn_math.R
-import com.palmdev.learn_math.data.local.repository.UserDataRepository
-import com.palmdev.learn_math.data.remote.repository.AdsRepository
-import com.palmdev.learn_math.data.remote.repository.PurchaseRepository
+import com.palmdev.learn_math.domain.repository.UserDataRepository
+import com.palmdev.learn_math.domain.repository.AdsRepository
+import com.palmdev.learn_math.domain.repository.PurchaseRepository
+import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.MAIN
 
 const val COINS_PRICE = 50000
@@ -21,10 +20,12 @@ class PurchaseViewModel(
 
     val coins = MutableLiveData<Int>()
     val isPremiumUser = MutableLiveData<Boolean>()
+    val price = MutableLiveData<String>()
 
     init {
         isPremiumUser.value = userDataRepository.isPremiumUser
         adsRepository.loadRewardedAd()
+        FirebaseEvents().setScreenViewEvent(screenName = "Purchase")
     }
 
     fun initCoins() {
@@ -58,5 +59,9 @@ class PurchaseViewModel(
                 ).show()
             }
         )
+    }
+
+    fun getPrice() {
+        price.value = purchaseRepository.getPrice()
     }
 }

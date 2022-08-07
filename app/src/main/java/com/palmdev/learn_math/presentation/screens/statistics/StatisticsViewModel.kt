@@ -4,8 +4,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.model.ExamResults
-import com.palmdev.learn_math.data.local.repository.ResultsRepository
-import com.palmdev.learn_math.data.remote.repository.AdsRepository
+import com.palmdev.learn_math.domain.repository.ResultsRepository
+import com.palmdev.learn_math.domain.repository.AdsRepository
+import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.Operation
 import kotlinx.coroutines.launch
 
@@ -30,6 +31,9 @@ class StatisticsViewModel(
 
     val examResults = MutableLiveData<ExamResults>()
 
+    init {
+        FirebaseEvents().setScreenViewEvent(screenName = "Statistics")
+    }
 
     fun showInterstitialAd(){
         adsRepository.showInterstitialAd()

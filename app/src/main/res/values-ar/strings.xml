@@ -73,6 +73,10 @@
     <string name="coinsReceived">العملات المستلمة:</string>
     <string name="getCoins">احصل على +500</string>
     <string name="notEnoughCoins">لا يكفي عملات؟</string>
+    <string name="newGamesSoon">ألعاب جديدة قريبا!</string>
+    <string name="best">الأفضل:</string>
+    <string name="maximum">أقصى</string>
+    <string name="moreOrLess">الى حد ما</string>
 
 
 </resources>

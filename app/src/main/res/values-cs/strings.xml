@@ -74,5 +74,9 @@
     <string name="coinsReceived">Přijaté mince:</string>
     <string name="getCoins">Získejte +500</string>
     <string name="notEnoughCoins">nedostatek mincí?</string>
+    <string name="newGamesSoon">Nové hry již brzy!</string>
+    <string name="best">Nejlepší:</string>
+    <string name="maximum">Maximum</string>
+    <string name="moreOrLess">Více či méně</string>
 
 </resources>

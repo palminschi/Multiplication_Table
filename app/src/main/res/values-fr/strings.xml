@@ -74,5 +74,9 @@
     <string name="coinsReceived">Pièces reçues :</string>
     <string name="getCoins">Obtenez +500</string>
     <string name="notEnoughCoins">pas assez de pièces?</string>
+    <string name="newGamesSoon">Bientôt de nouveaux jeux !</string>
+    <string name="best">Meilleur:</string>
+    <string name="maximum">Maximum</string>
+    <string name="moreOrLess">Plus ou moins</string>
 
 </resources>

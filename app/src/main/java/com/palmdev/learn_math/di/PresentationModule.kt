@@ -6,7 +6,10 @@ import com.palmdev.learn_math.presentation.screens.end.EndViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secEndViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelViewModel
+import com.palmdev.learn_math.presentation.screens.games.select_game.SelectGameViewModel
 import com.palmdev.learn_math.presentation.screens.learn_table.LearnTableViewModel
 import com.palmdev.learn_math.presentation.screens.main.MainViewModel
 import com.palmdev.learn_math.presentation.screens.purchase.PurchaseViewModel
@@ -97,6 +100,23 @@ val presentationModule = module {
         HintTableViewModel(
             multiplicationRepository = get(),
             divisionRepository = get()
+        )
+    }
+    viewModel {
+        Game60secViewModel(
+            game60secRepository = get()
+        )
+    }
+    viewModel {
+        Game60secEndViewModel(
+            adsRepository = get(),
+            userDataRepository = get(),
+            game60secRepository = get()
+        )
+    }
+    viewModel {
+        SelectGameViewModel(
+            gameRecordsRepository = get()
         )
     }
 }

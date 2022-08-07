@@ -18,6 +18,9 @@ class SelectTrainingFragment : Fragment() {
     private var maxNumber = 10
     private var operation = Operation.MULTIPLICATION
 
+    init {
+        FirebaseEvents().setScreenViewEvent(screenName = "Select Training")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,14 +38,9 @@ class SelectTrainingFragment : Fragment() {
     private fun init() {
         binding.multiply.isChecked = true
         binding.btnGameInput.setOnClickListener {
-            checkEnteredData()
             findNavController().navigate(
                 R.id.action_selectTrainingFragment_to_exerciseInputFragment,
-                bundleOf(
-                    ARG_OPERATION to operation,
-                    ARG_MAX_NUMBER to maxNumber,
-                    ARG_MIN_NUMBER to minNumber
-                )
+                getBundle()
             )
         }
         binding.btnGameSelect.setOnClickListener {
@@ -58,18 +56,27 @@ class SelectTrainingFragment : Fragment() {
             )
         }
         binding.btnGameTrueOrFalse.setOnClickListener {
-            checkEnteredData()
             findNavController().navigate(
                 R.id.action_selectTrainingFragment_to_exerciseTrueOrFalseFragment,
-                bundleOf(
-                    ARG_OPERATION to operation,
-                    ARG_MAX_NUMBER to maxNumber,
-                    ARG_MIN_NUMBER to minNumber,
-                )
+                getBundle()
+            )
+        }
+        binding.btnGame60sec?.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_selectTrainingFragment_to_game60secFragment,
+                getBundle()
             )
         }
     }
 
+    private fun getBundle(): Bundle {
+        checkEnteredData()
+        return bundleOf(
+            ARG_OPERATION to operation,
+            ARG_MAX_NUMBER to maxNumber,
+            ARG_MIN_NUMBER to minNumber
+        )
+    }
     private fun setData() {
         minNumber = if (binding.minNumber.text.isNullOrEmpty()) 0
         else binding.minNumber.text.toString().toInt()

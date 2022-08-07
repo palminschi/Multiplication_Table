@@ -53,7 +53,7 @@
     <string name="failedExams">Fracassado:</string>
     <string name="correctAnswersPercent">Porcentagem de respostas corretas</string>
     <string name="completedExercises">exercícios concluídos</string>
-    <string name="rateTheApp">Avalie o aplicativo por favor.</string>
+    <string name="rateTheApp">Avalie o aplicativo\npor favor.</string>
     <string name="getPremium">Obtenha uma conta Premium</string>
     <string name="youArePremiumUser">Você é um usuário Premium</string>
     <string name="disableAds">desativar anúncios</string>
@@ -74,5 +74,9 @@
     <string name="coinsReceived">Moedas recebidas:</string>
     <string name="getCoins">Receba +500</string>
     <string name="notEnoughCoins">não há moedas suficientes?</string>
+    <string name="newGamesSoon">Novos jogos em breve!</string>
+    <string name="best">Melhor:</string>
+    <string name="maximum">Máximo</string>
+    <string name="moreOrLess">Mais ou menos</string>
 
 </resources>

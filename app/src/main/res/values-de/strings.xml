@@ -73,6 +73,10 @@
     <string name="coinsReceived">Erhaltene Münzen:</string>
     <string name="getCoins">Erhalten Sie +500</string>
     <string name="notEnoughCoins">nicht genug Münzen?</string>
+    <string name="newGamesSoon">Neue Spiele folgen in Kürze!</string>
+    <string name="best">Am besten:</string>
+    <string name="maximum">Maximal</string>
+    <string name="moreOrLess">Mehr oder weniger</string>
 
 
 </resources>

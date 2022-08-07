@@ -34,9 +34,6 @@ class MainFragment : Fragment() {
         init()
         initCustomOnBackPressed()
         viewModel.loadAds()
-        val sharedPrefs = context?.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
-        val price = sharedPrefs?.getString(PREMIUM_PRICE, "unknown")
-        price
     }
 
     @SuppressLint("SetTextI18n")

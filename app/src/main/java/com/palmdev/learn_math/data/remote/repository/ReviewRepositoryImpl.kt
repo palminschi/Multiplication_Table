@@ -6,6 +6,7 @@ import com.google.android.play.core.review.ReviewInfo
 import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
 import com.google.android.play.core.tasks.Task
+import com.palmdev.learn_math.domain.repository.ReviewRepository
 import com.palmdev.learn_math.utils.MAIN
 import com.palmdev.learn_math.utils.REVIEW_KEY
 import com.palmdev.learn_math.utils.SHARED_PREFS

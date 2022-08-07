@@ -74,5 +74,9 @@
     <string name="coinsReceived">Dobiveni novčići:</string>
     <string name="getCoins">Dobijte +500</string>
     <string name="notEnoughCoins">nema dovoljno novčića?</string>
+    <string name="newGamesSoon">Uskoro nove igre!</string>
+    <string name="best">Najbolje:</string>
+    <string name="maximum">Maksimum</string>
+    <string name="moreOrLess">Više ili manje</string>
 
 </resources>

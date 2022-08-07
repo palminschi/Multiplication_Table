@@ -53,7 +53,7 @@
     <string name="failedExams">Epäonnistuneet kokeet:</string>
     <string name="correctAnswersPercent">Oikeiden vastausten prosenttiosuus</string>
     <string name="completedExercises">Tehdyt harjoitukset</string>
-    <string name="rateTheApp">Arvioi sovellus,\\nOle hyvä!</string>
+    <string name="rateTheApp">Arvioi sovellus,\nOle hyvä!</string>
     <string name="getPremium">Hanki Premium-tili</string>
     <string name="youArePremiumUser">Olet Premium-käyttäjä</string>
     <string name="disableAds">Poista mainokset käytöstä</string>
@@ -74,5 +74,9 @@
     <string name="coinsReceived">Saadut kolikot:</string>
     <string name="getCoins">Hanki +500</string>
     <string name="notEnoughCoins">ei tarpeeksi kolikoita?</string>
+    <string name="newGamesSoon">Uusia pelejä tulossa pian!</string>
+    <string name="best">Parhaat:</string>
+    <string name="maximum">Enimmäismäärä</string>
+    <string name="moreOrLess">Enemmän tai vähemmän</string>
 
 </resources>

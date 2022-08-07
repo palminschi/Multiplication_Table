@@ -3,10 +3,10 @@ package com.palmdev.learn_math.presentation.screens.games.game_duel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.palmdev.learn_math.data.local.repository.AdditionRepository
-import com.palmdev.learn_math.data.local.repository.DivisionRepository
-import com.palmdev.learn_math.data.local.repository.MultiplicationRepository
-import com.palmdev.learn_math.data.local.repository.SubtractionRepository
+import com.palmdev.learn_math.domain.repository.AdditionRepository
+import com.palmdev.learn_math.domain.repository.DivisionRepository
+import com.palmdev.learn_math.domain.repository.MultiplicationRepository
+import com.palmdev.learn_math.domain.repository.SubtractionRepository
 import com.palmdev.learn_math.data.model.ExerciseSelect
 import kotlinx.coroutines.launch
 import kotlin.random.Random

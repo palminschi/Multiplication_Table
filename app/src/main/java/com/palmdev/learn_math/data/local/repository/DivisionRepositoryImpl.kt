@@ -3,6 +3,7 @@ package com.palmdev.learn_math.data.local.repository
 import com.palmdev.learn_math.data.model.ExerciseSelect
 import com.palmdev.learn_math.data.model.ExerciseInput
 import com.palmdev.learn_math.data.model.ExerciseTrueOrFalse
+import com.palmdev.learn_math.domain.repository.DivisionRepository
 import kotlin.random.Random
 
 class DivisionRepositoryImpl : DivisionRepository {

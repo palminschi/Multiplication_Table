@@ -1,4 +1,4 @@
-package com.palmdev.learn_math.data.remote.repository
+package com.palmdev.learn_math.domain.repository
 
 interface PurchaseRepository {
 
@@ -6,4 +6,5 @@ interface PurchaseRepository {
 
     fun buyPremiumAccountByCoins(price: Int): Boolean
 
+    fun getPrice(): String
 }

@@ -1,5 +1,6 @@
 package com.palmdev.learn_math.presentation.screens.games.game_duel
 
+import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,6 +23,7 @@ class GameDuelStartFragment : Fragment() {
     ): View {
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         binding = FragmentGameDuelStartBinding.inflate(layoutInflater, container, false)
+        FirebaseEvents().setScreenViewEvent(screenName = "Duel Start")
         return binding.root
     }
 
@@ -65,6 +67,7 @@ class GameDuelStartFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onDestroyView() {
         super.onDestroyView()
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT

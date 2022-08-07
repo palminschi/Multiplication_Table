@@ -1,4 +1,4 @@
-package com.palmdev.learn_math.data.local.repository
+package com.palmdev.learn_math.domain.repository
 
 import com.palmdev.learn_math.data.model.ExamResults
 import com.palmdev.learn_math.data.model.ResultExercise

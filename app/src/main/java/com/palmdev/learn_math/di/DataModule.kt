@@ -3,6 +3,7 @@ package com.palmdev.learn_math.di
 import com.palmdev.learn_math.data.local.repository.*
 import com.palmdev.learn_math.data.local.storage.UserDataStorage
 import com.palmdev.learn_math.data.remote.repository.*
+import com.palmdev.learn_math.domain.repository.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 

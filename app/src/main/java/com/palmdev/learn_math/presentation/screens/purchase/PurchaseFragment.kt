@@ -63,6 +63,11 @@ class PurchaseFragment : Fragment() {
             viewModel.showRewardedAd()
         }
         ExpansionReductionAnim.anim(view = binding.btnGetCoins, infinitely = true)
+
+        viewModel.getPrice()
+        viewModel.price.observe(viewLifecycleOwner) {
+            binding.tvPrice.text = it
+        }
     }
 
 }

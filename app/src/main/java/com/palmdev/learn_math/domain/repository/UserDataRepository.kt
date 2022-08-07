@@ -1,4 +1,4 @@
-package com.palmdev.learn_math.data.local.repository
+package com.palmdev.learn_math.domain.repository
 
 interface UserDataRepository {
 

@@ -53,7 +53,7 @@
     <string name="failedExams">Провалено:</string>
     <string name="correctAnswersPercent">Процент правильных ответов</string>
     <string name="completedExercises">Сделанных управлений</string>
-    <string name="rateTheApp">Оцените приложение,\\nПожалуйста!</string>
+    <string name="rateTheApp">Оцените приложение,\nПожалуйста!</string>
     <string name="getPremium">Получи Премиум</string>
     <string name="youArePremiumUser">У вас Премиум</string>
     <string name="disableAds">Отключить рекламу</string>
@@ -74,5 +74,9 @@
     <string name="coinsReceived">Монет получено:</string>
     <string name="getCoins">Получи +500</string>
     <string name="notEnoughCoins">недостаточно монет?</string>
+    <string name="newGamesSoon">Скоро новые игры!</string>
+    <string name="best">Лучший:</string>
+    <string name="maximum">Максимум</string>
+    <string name="moreOrLess">Больше или меньше</string>
 
 </resources>

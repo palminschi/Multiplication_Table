@@ -1,5 +1,6 @@
 package com.palmdev.learn_math.presentation.screens.end
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -38,7 +39,9 @@ class EndFragment : Fragment() {
         avgAnswerTime = arguments?.getDouble(ARG_AVG_TIME) ?: 0.0
         correctAnswers = arguments?.getInt(ARG_RIGHT_ANSWERS) ?: 0
         wrongAnswers = arguments?.getInt(ARG_WRONG_ANSWERS) ?: 0
-        operation = arguments?.getSerializable(ARG_OPERATION) as Operation
+        arguments?.getSerializable(ARG_OPERATION)?.let {
+            operation = it as Operation
+        }
         examOrTraining = arguments?.getString(ARG_EXAM_OR_TRAINING) ?: TRAINING
         withNumber = arguments?.getInt(ARG_WITH_NUMBER)
         return binding.root
@@ -51,6 +54,7 @@ class EndFragment : Fragment() {
         saveData()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun init() {
         binding.correctAnswers.text = correctAnswers.toString()
         binding.wrongAnswers.text = wrongAnswers.toString()

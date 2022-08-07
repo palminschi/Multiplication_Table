@@ -226,4 +226,9 @@ class ExerciseInputFragment : Fragment() {
             binding.btnHint.visibility = View.GONE
         }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacksAndMessages(null)
+    }
 }

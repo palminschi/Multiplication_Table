@@ -36,8 +36,8 @@
             android:text="@string/rateTheApp"/>
 
         <LinearLayout
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -45,51 +45,51 @@
 
             <ImageView
                 android:id="@+id/star_1"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_star_24"
                 android:background="@null"
                 android:padding="3dp"
-                app:tint="@color/gray"
+                app:tint="@color/blue_transparent"
                 android:contentDescription="@null"/>
             <ImageView
                 android:id="@+id/star_2"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_star_24"
                 android:background="@null"
                 android:padding="3dp"
-                app:tint="@color/gray"
+                app:tint="@color/blue_transparent"
                 android:contentDescription="@null"/>
 
             <ImageView
                 android:id="@+id/star_3"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_star_24"
                 android:background="@null"
                 android:padding="3dp"
-                app:tint="@color/gray"
+                app:tint="@color/blue_transparent"
                 android:contentDescription="@null"/>
 
             <ImageView
                 android:id="@+id/star_4"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_star_24"
                 android:background="@null"
                 android:padding="3dp"
-                app:tint="@color/gray"
+                app:tint="@color/blue_transparent"
                 android:contentDescription="@null"/>
 
             <ImageView
                 android:id="@+id/star_5"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/ic_star_24"
                 android:background="@null"
                 android:padding="3dp"
-                app:tint="@color/gray"
+                app:tint="@color/blue_transparent"
                 android:contentDescription="@null"/>
         </LinearLayout>
     </LinearLayout>
