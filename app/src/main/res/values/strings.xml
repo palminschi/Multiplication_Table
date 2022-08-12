@@ -3,7 +3,8 @@
     <string name="questionMark" translatable="false">\?</string>
     <string name="AD_MOB_APP_ID" translatable="false">ca-app-pub-6012847014470005~9976216654</string>
     <string name="AD_INTERSTITIAL_ID" translatable="false">ca-app-pub-6012847014470005/3410808300</string>
-    <string name="AD_REWARDED_ID" translatable="false">ca-app-pub-6012847014470005/8189960870</string>
+    <string name="AD_REWARDED_ID_500_COINS" translatable="false">ca-app-pub-6012847014470005/8189960870</string>
+    <string name="AD_REWARDED_ID_CONTINUE" translatable="false">ca-app-pub-6012847014470005/9869452590</string>
     <string name="premiumCoinsCost" translatable="false">50.000</string>
     <string name="premiumCost" translatable="false">1.99$</string>
 
@@ -67,7 +68,7 @@
     <string name="toastNoCoins">Not enough coins</string>
     <string name="play">Play</string>
     <string name="gameDuel">Duel</string>
-    <string name="gameDuelInfo">(2 players)</string>
+    <string name="twoPlayers">2 players</string>
     <string name="finished">Finished</string>
     <string name="redWins">Red Player Won!</string>
     <string name="blueWins">Blue Player Won!</string>
@@ -84,6 +85,13 @@
     <string name="best">Best:</string>
     <string name="maximum">Maximum</string>
     <string name="moreOrLess">More or Less</string>
+
+    <string name="wronglyAnswered">You answered wrongly</string>
+    <string name="continueQuestion">Continue?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hardMath">Hard Math</string>
+    <string name="catchAnswer">Catch the Answer!</string>
 
 
     <string name="tableExample" translatable="false"> 1 x 0 = 0\n

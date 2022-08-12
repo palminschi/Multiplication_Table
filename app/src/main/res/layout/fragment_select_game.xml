@@ -10,151 +10,203 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="12dp"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnGameDuel"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/third_background"
-            app:cardCornerRadius="5dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnGame60sec"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/third_background"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
 
-                <ImageView
-                    android:id="@+id/ic_game_duel"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/shape_games_ic_border"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_game_duel"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/gameDuelName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/gameDuel"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/ic_game_duel"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/gameDuelInfo"
-                    android:textColor="@color/gray"
-                    app:layout_constraintStart_toEndOf="@id/ic_game_duel"
-                    app:layout_constraintTop_toBottomOf="@id/gameDuelName" />
-
-                <Button
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:focusable="false"
-                    android:text="@string/play"
-                    android:textAlignment="viewEnd"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:drawableEndCompat="@drawable/ic_arrow_forward"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnGame60sec"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            app:cardBackgroundColor="@color/third_background"
-            app:cardCornerRadius="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/ic_game_60sec"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/shape_games_ic_border"
-                    android:contentDescription="@null"
-                    android:src="@drawable/icon_game_timer"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
-                    android:id="@+id/tvGame60sec"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/game60sec"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/ic_game_60sec"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    app:cardBackgroundColor="@color/background"
-                    app:cardCornerRadius="5dp"
-                    app:layout_constraintStart_toEndOf="@id/ic_game_60sec"
-                    app:layout_constraintTop_toBottomOf="@id/tvGame60sec">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/icon_game_timer"
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/recordGame60sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/game60sec"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_transparent" />
+
+                    <TextView
+                        android:id="@+id/scoreGame60sec"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@color/dark_blue"
+                        android:gravity="center|start"
                         android:paddingHorizontal="6dp"
                         android:paddingVertical="2dp"
                         android:text="@string/best"
                         android:textColor="@color/white"
+                        app:drawableEndCompat="@drawable/ic_rocket_24"
+                        app:drawableTint="@color/second_background" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnGameDuel"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/third_background"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_game_duel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/gameDuel"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_transparent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@color/dark_blue"
+                        android:gravity="center"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/twoPlayers"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnGameMoreOrLess"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/third_background"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/icon_game_more_or_less"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/moreOrLess"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_transparent" />
+
+                    <TextView
+                        android:id="@+id/scoreGameMoreOrLess"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:background="@color/dark_blue"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/best"
+                        android:textColor="@color/white"
+                        app:drawableEndCompat="@drawable/ic_rocket_24"
+                        app:drawableTint="@color/second_background" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
-                <Button
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:focusable="false"
-                    android:text="@string/play"
-                    android:textAlignment="viewEnd"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:drawableEndCompat="@drawable/ic_arrow_forward"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/newGamesSoon"
             android:textColor="@color/second_background"
-            android:textStyle="bold|italic"
-            android:layout_marginTop="12dp"
-            android:layout_gravity="center"/>
+            android:textStyle="bold|italic" />
     </LinearLayout>
+
 </ScrollView>

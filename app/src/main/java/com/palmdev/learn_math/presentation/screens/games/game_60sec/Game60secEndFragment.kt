@@ -60,6 +60,11 @@ class Game60secEndFragment : Fragment() {
 
     private fun init() {
         viewModel.record.observe(viewLifecycleOwner) {
+            if (it == null) {
+                binding.tvBest.visibility = View.GONE
+                binding.tvBestTitle.visibility = View.GONE
+                return@observe
+            }
             binding.tvBest.text = it.toString()
         }
         viewModel.coins.observe(viewLifecycleOwner) {

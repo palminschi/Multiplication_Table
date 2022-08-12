@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Ei tarpeeksi kolikoita</string>
     <string name="play">Pelaa</string>
     <string name="gameDuel">Kaksintaistelu</string>
-    <string name="gameDuelInfo">(2 pelaajaa)</string>
+    <string name="twoPlayers">2 pelaajaa</string>
     <string name="finished">Valmis</string>
     <string name="app_name">Kertotaulu</string>
     <string name="redWins">Punainen pelaaja voitti!</string>
@@ -78,5 +78,11 @@
     <string name="best">Parhaat:</string>
     <string name="maximum">Enimmäismäärä</string>
     <string name="moreOrLess">Enemmän tai vähemmän</string>
+    <string name="wronglyAnswered">Vastasit väärin</string>
+    <string name="continueQuestion">Jatkaa?</string>
+    <string name="yes">Joo</string>
+    <string name="no">Ei</string>
+    <string name="hardMath">Kovaa matematiikkaa</string>
+    <string name="catchAnswer">Ota kiinni vastaus!</string>
 
 </resources>

@@ -6,14 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentGameDuelEndBinding
-import com.palmdev.learn_math.utils.ARG_BLUE_CORRECT_ANSWERS
-import com.palmdev.learn_math.utils.ARG_BLUE_WRONG_ANSWERS
-import com.palmdev.learn_math.utils.ARG_RED_CORRECT_ANSWERS
-import com.palmdev.learn_math.utils.ARG_RED_WRONG_ANSWERS
+import com.palmdev.learn_math.utils.*
 
 class GameDuelEndFragment : Fragment() {
 
@@ -22,17 +20,22 @@ class GameDuelEndFragment : Fragment() {
     private var redWrongAnswers = 0
     private var blueCorrectAnswers = 0
     private var blueWrongAnswers = 0
+    private var operation = Operation.MULTIPLICATION
+    private var minNumber = 0
+    private var maxNumber = 10
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentGameDuelEndBinding.inflate(layoutInflater, container, false)
-        activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         redCorrectAnswers = arguments?.getInt(ARG_RED_CORRECT_ANSWERS) ?: 0
         redWrongAnswers = arguments?.getInt(ARG_RED_WRONG_ANSWERS) ?: 0
         blueCorrectAnswers = arguments?.getInt(ARG_BLUE_CORRECT_ANSWERS) ?: 0
         blueWrongAnswers = arguments?.getInt(ARG_BLUE_WRONG_ANSWERS) ?: 0
+        operation = arguments?.getSerializable(ARG_OPERATION) as Operation
+        minNumber = arguments?.getInt(ARG_MIN_NUMBER) ?: 0
+        maxNumber = arguments?.getInt(ARG_MAX_NUMBER) ?: 10
         initOnBackPressedCallback()
         return binding.root
     }
@@ -64,6 +67,14 @@ class GameDuelEndFragment : Fragment() {
         binding.btnAgain.setOnClickListener {
             findNavController().popBackStack()
             findNavController().popBackStack()
+            findNavController().navigate(
+                R.id.action_gameDuelStartFragment_to_gameDuelFragment,
+                bundleOf(
+                    ARG_OPERATION to operation,
+                    ARG_MIN_NUMBER to minNumber,
+                    ARG_MAX_NUMBER to maxNumber
+                )
+            )
         }
     }
 
@@ -75,10 +86,5 @@ class GameDuelEndFragment : Fragment() {
             }
         }
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, customOnBackPressed)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 }

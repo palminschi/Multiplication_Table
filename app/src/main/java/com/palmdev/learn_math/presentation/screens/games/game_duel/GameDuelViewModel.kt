@@ -23,7 +23,7 @@ class GameDuelViewModel(
     fun getMultiplicationExercise(minNumber: Int = 0, maxNumber: Int = 10) {
         viewModelScope.launch {
             val list = ArrayList<ExerciseSelect>()
-            for (i in 0 until 10) {
+            for (i in 0..10) {
                 val random = Random(System.currentTimeMillis() + i)
                 val withNumber = random.nextInt(minNumber, maxNumber)
                 list.add(
@@ -35,14 +35,14 @@ class GameDuelViewModel(
                     )
                 )
             }
-            exercises.postValue(list)
+            exercises.setValue(list)
         }
     }
 
     fun getDivisionExercise(minNumber: Int = 0, maxNumber: Int = 10) {
         viewModelScope.launch {
             val list = ArrayList<ExerciseSelect>()
-            for (i in 0 until 10) {
+            for (i in 0..10) {
                 val random = Random(System.currentTimeMillis() + i)
                 val withNumber = random.nextInt(minNumber, maxNumber)
                 list.add(
@@ -54,7 +54,7 @@ class GameDuelViewModel(
                     )
                 )
             }
-            exercises.postValue(list)
+            exercises.setValue(list)
         }
     }
 
@@ -73,7 +73,7 @@ class GameDuelViewModel(
                     )
                 )
             }
-            exercises.postValue(list)
+            exercises.setValue(list)
         }
     }
 
@@ -92,7 +92,7 @@ class GameDuelViewModel(
                     )
                 )
             }
-            exercises.postValue(list)
+            exercises.setValue(list)
         }
     }
 

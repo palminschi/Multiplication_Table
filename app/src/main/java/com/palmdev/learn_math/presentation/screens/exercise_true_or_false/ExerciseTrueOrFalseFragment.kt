@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseTrueOrFalseBinding
-import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ClickAnim
 import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -110,7 +110,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
     }
 
     private fun answeredCorrectly(view: View) {
-        ClickExpansionAnim.anim(view)
+        ClickAnim.anim(view)
         sounds.playClick()
         setAnswerTime()
         correctAnswers++

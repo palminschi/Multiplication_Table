@@ -62,7 +62,7 @@
     <string name="toastNoCoins">コインが足りない</string>
     <string name="play">遊ぶ</string>
     <string name="gameDuel">決闘</string>
-    <string name="gameDuelInfo">（2人）</string>
+    <string name="twoPlayers">2人</string>
     <string name="finished">終了した</string>
     <string name="app_name">九九</string>
     <string name="redWins">レッドプレイヤーが勝った！</string>
@@ -78,5 +78,11 @@
     <string name="best">一番：</string>
     <string name="maximum">最大</string>
     <string name="moreOrLess">多かれ少なかれ</string>
+    <string name="wronglyAnswered">あなたは間違って答えた</string>
+    <string name="continueQuestion">継続する？</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="hardMath">難しい数学</string>
+    <string name="catchAnswer">答えをキャッチ！</string>
 
 </resources>

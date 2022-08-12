@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Ikke nok mynter</string>
     <string name="play">Spille</string>
     <string name="gameDuel">Duell</string>
-    <string name="gameDuelInfo">(2 spillere)</string>
+    <string name="twoPlayers">2 spillere</string>
     <string name="finished">Ferdig</string>
     <string name="app_name">Gangetabell</string>
     <string name="redWins">Den røde spilleren vant!</string>
@@ -78,5 +78,11 @@
     <string name="best">Beste:</string>
     <string name="maximum">Maksimum</string>
     <string name="moreOrLess">Mer eller mindre</string>
+    <string name="wronglyAnswered">Du svarte feil</string>
+    <string name="continueQuestion">Fortsette?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nei</string>
+    <string name="hardMath">Hard matte</string>
+    <string name="catchAnswer">Fang svaret</string>
 
 </resources>

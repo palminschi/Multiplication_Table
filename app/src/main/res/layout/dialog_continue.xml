@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/third_background"
+    app:cardCornerRadius="15dp"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".presentation.dialogs.continue_game.ContinueDialogFragment">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/ic_heart_24"
+            android:contentDescription="@null"
+            android:layout_marginVertical="24dp"
+            android:id="@+id/ivHeart"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wronglyAnswered"
+            android:textSize="16sp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvCorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correctAnswers"
+            android:textSize="16sp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/white"
+            android:textStyle=""/>
+
+        <TextView
+            android:id="@+id/tvBestScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/best"
+            android:textSize="16sp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/white"
+            android:textStyle=""/>
+
+        <TextView
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continueQuestion"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_marginTop="6dp"
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_video_24"
+            android:text="@string/yes"
+            android:textStyle="bold"/>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btnNo"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView >

@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Недостатньо монет</string>
     <string name="play">Грати</string>
     <string name="gameDuel">Дуель</string>
-    <string name="gameDuelInfo">(2 гравці)</string>
+    <string name="twoPlayers">2 гравці</string>
     <string name="finished">Завершено</string>
     <string name="app_name">Таблиця множення</string>
     <string name="redWins">Червоний гравець переміг!</string>
@@ -78,5 +78,11 @@
     <string name="best">Найкраще:</string>
     <string name="maximum">Максимум</string>
     <string name="moreOrLess">Більш-менш</string>
+    <string name="wronglyAnswered">Ви відповіли неправильно</string>
+    <string name="continueQuestion">Продовжити?</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="hardMath">Важка математика</string>
+    <string name="catchAnswer">Впіймайте відповідь</string>
 
 </resources>

@@ -62,7 +62,7 @@
     <string name="toastNoCoins">No hay suficientes monedas</string>
     <string name="play">Juega</string>
     <string name="gameDuel">Duelo</string>
-    <string name="gameDuelInfo">(2 jugadores)</string>
+    <string name="twoPlayers">2 jugadores</string>
     <string name="finished">Terminado</string>
     <string name="app_name">Tabla de multiplicación</string>
     <string name="redWins">¡El jugador rojo ganó!</string>
@@ -78,5 +78,11 @@
     <string name="best">Mejor:</string>
     <string name="maximum">Máximo</string>
     <string name="moreOrLess">Más o menos</string>
+    <string name="wronglyAnswered">Respondiste mal</string>
+    <string name="continueQuestion">¿Continuar?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="hardMath">Matemáticas difíciles</string>
+    <string name="catchAnswer">Atrapa la respuesta</string>
 
 </resources>

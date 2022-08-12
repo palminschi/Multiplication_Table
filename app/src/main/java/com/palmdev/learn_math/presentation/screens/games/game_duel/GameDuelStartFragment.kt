@@ -21,7 +21,6 @@ class GameDuelStartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         binding = FragmentGameDuelStartBinding.inflate(layoutInflater, container, false)
         FirebaseEvents().setScreenViewEvent(screenName = "Duel Start")
         return binding.root
@@ -65,11 +64,5 @@ class GameDuelStartFragment : Fragment() {
                 )
             )
         }
-    }
-
-    @SuppressLint("SourceLockedOrientationActivity")
-    override fun onDestroyView() {
-        super.onDestroyView()
-        activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 }

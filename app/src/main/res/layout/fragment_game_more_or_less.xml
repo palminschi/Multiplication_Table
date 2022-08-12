@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.screens.games.game_more_or_less.GameMoreOrLessFragment">
+
+    <ProgressBar
+        android:id="@+id/timeProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:max="20"
+        android:progress="10"
+        android:progressBackgroundTint="@color/gray_transparent"
+        android:progressTint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvSecondsRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="6dp"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/tvCondition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:gravity="bottom|center"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        tools:text="243 x 342 = 330 x 330" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnTrue"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:foreground="@drawable/ic_true"
+            android:foregroundTint="@color/white"
+            app:cardBackgroundColor="@color/green"
+            app:cardCornerRadius="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnFalse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnFalse"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:foreground="@drawable/ic_false"
+            android:foregroundTint="@color/white"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnTrue"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

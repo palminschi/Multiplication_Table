@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Nedostatek mincí</string>
     <string name="play">Hrát si</string>
     <string name="gameDuel">Souboj</string>
-    <string name="gameDuelInfo">(2 hráči)</string>
+    <string name="twoPlayers">2 hráči</string>
     <string name="finished">Dokončeno</string>
     <string name="app_name">Násobilka</string>
     <string name="redWins">Červený hráč vyhrál!</string>
@@ -78,5 +78,11 @@
     <string name="best">Nejlepší:</string>
     <string name="maximum">Maximum</string>
     <string name="moreOrLess">Více či méně</string>
+    <string name="wronglyAnswered">Odpověděl jsi špatně</string>
+    <string name="continueQuestion">Pokračovat?</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="hardMath">Těžká matematika</string>
+    <string name="catchAnswer">Chytit odpověď!</string>
 
 </resources>

@@ -12,7 +12,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseInputBinding
-import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ClickAnim
 import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -116,7 +116,7 @@ class ExerciseInputFragment : Fragment() {
 
     private fun answeredCorrectly() {
         sounds.playClick()
-        ClickExpansionAnim.anim(binding.tvAnswer)
+        ClickAnim.anim(binding.tvAnswer)
         binding.tvAnswer.setTextColor(resources.getColor(R.color.green, null))
         progressViews[progressCounter].setBackgroundColor(resources.getColor(R.color.green, null))
         correctAnswers++

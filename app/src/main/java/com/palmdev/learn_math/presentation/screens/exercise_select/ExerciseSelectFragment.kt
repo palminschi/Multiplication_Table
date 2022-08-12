@@ -11,11 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentExerciseSelectBinding
-import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ClickAnim
 import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.random.Random
 
@@ -63,12 +62,6 @@ class ExerciseSelectFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-
-        Timer().schedule(object : TimerTask() {
-            override fun run() {
-
-            }
-        }, 1000)
     }
 
     private fun init() {
@@ -138,7 +131,7 @@ class ExerciseSelectFragment : Fragment() {
     }
 
     private fun answeredCorrectly(view: View) {
-        ClickExpansionAnim.anim(view)
+        ClickAnim.anim(view)
         sounds.playClick()
         setAnswerTime()
         correctAnswers++
@@ -158,7 +151,7 @@ class ExerciseSelectFragment : Fragment() {
                 updateViews()
                 progressCounter++
             }
-        }, 1200)
+        }, 800)
     }
 
     private fun answeredWrongly(view: View) {

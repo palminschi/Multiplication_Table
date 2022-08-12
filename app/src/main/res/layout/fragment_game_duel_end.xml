@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/tvWhoWins"
+        app:layout_constraintVertical_bias="0.45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -16,28 +17,15 @@
         android:maxLines="3"
         android:text="@string/redWins"
         android:textColor="@color/red"
-        android:textSize="50sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnBack"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/back"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvWhoWins"
-        app:layout_constraintVertical_bias="0.35" />
-
-    <Button
+        android:layout_marginTop="12dp"
         android:id="@+id/btnAgain"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -46,130 +34,161 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        app:layout_constraintTop_toBottomOf="@id/tvWhoWins" />
 
-    <TextView
-        android:id="@+id/red"
-        android:layout_width="wrap_content"
+    <Button
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/btnBack"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/red"
-        android:textColor="@color/red"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tvWhoWins"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
-
-    <TextView
-        android:id="@+id/redCorrectAnswers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="80dp"
-        android:textColor="@color/green"
-        android:textSize="31sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/redWrongAnswers"
-        app:layout_constraintStart_toStartOf="@id/red"
-        app:layout_constraintTop_toBottomOf="@id/red"
-        tools:text="9" />
-
-    <TextView
-        android:id="@+id/redWrongAnswers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:textSize="31sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/red"
-        app:layout_constraintStart_toEndOf="@id/redCorrectAnswers"
-        app:layout_constraintTop_toTopOf="@id/redCorrectAnswers"
-        tools:text="1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/correct"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/redCorrectAnswers"
-        app:layout_constraintStart_toStartOf="@id/redCorrectAnswers"
-        app:layout_constraintTop_toBottomOf="@id/redCorrectAnswers" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wrong"
-        android:textColor="@color/red"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/redWrongAnswers"
-        app:layout_constraintStart_toStartOf="@id/redWrongAnswers"
-        app:layout_constraintTop_toBottomOf="@id/redWrongAnswers" />
-
-    <TextView
-        android:id="@+id/blue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/blue"
-        android:textColor="@color/second_background"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvWhoWins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAgain" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintBottom_toTopOf="@id/tvWhoWins"
+        android:rotation="180"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red"
+            android:textColor="@color/red"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
 
-    <TextView
-        android:id="@+id/blueCorrectAnswers"
+        <TextView
+            android:id="@+id/redCorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="80dp"
+            android:textColor="@color/green"
+            android:textSize="31sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/redWrongAnswers"
+            app:layout_constraintStart_toStartOf="@id/red"
+            app:layout_constraintTop_toBottomOf="@id/red"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/redWrongAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="31sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/red"
+            app:layout_constraintStart_toEndOf="@id/redCorrectAnswers"
+            app:layout_constraintTop_toTopOf="@id/redCorrectAnswers"
+            tools:text="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correct"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/redCorrectAnswers"
+            app:layout_constraintStart_toStartOf="@id/redCorrectAnswers"
+            app:layout_constraintTop_toBottomOf="@id/redCorrectAnswers" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wrong"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/redWrongAnswers"
+            app:layout_constraintStart_toStartOf="@id/redWrongAnswers"
+            app:layout_constraintTop_toBottomOf="@id/redWrongAnswers" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="80dp"
-        android:textColor="@color/green"
-        android:textSize="31sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/blueWrongAnswers"
-        app:layout_constraintStart_toStartOf="@id/blue"
-        app:layout_constraintTop_toBottomOf="@id/blue"
-        tools:text="9" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/blueWrongAnswers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:textSize="31sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/blue"
-        app:layout_constraintStart_toEndOf="@id/blueCorrectAnswers"
-        app:layout_constraintTop_toTopOf="@id/blueCorrectAnswers"
-        tools:text="1" />
+        <TextView
+            android:id="@+id/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blue"
+            android:textColor="@color/second_background"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/correct"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/blueCorrectAnswers"
-        app:layout_constraintStart_toStartOf="@id/blueCorrectAnswers"
-        app:layout_constraintTop_toBottomOf="@id/blueCorrectAnswers" />
+        <TextView
+            android:id="@+id/blueCorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="80dp"
+            android:textColor="@color/green"
+            android:textSize="31sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/blueWrongAnswers"
+            app:layout_constraintStart_toStartOf="@id/blue"
+            app:layout_constraintTop_toBottomOf="@id/blue"
+            tools:text="9" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wrong"
-        android:textColor="@color/red"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/blueWrongAnswers"
-        app:layout_constraintStart_toStartOf="@id/blueWrongAnswers"
-        app:layout_constraintTop_toBottomOf="@id/blueWrongAnswers" />
+        <TextView
+            android:id="@+id/blueWrongAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="31sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/blue"
+            app:layout_constraintStart_toEndOf="@id/blueCorrectAnswers"
+            app:layout_constraintTop_toTopOf="@id/blueCorrectAnswers"
+            tools:text="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correct"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/blueCorrectAnswers"
+            app:layout_constraintStart_toStartOf="@id/blueCorrectAnswers"
+            app:layout_constraintTop_toBottomOf="@id/blueCorrectAnswers" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wrong"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/blueWrongAnswers"
+            app:layout_constraintStart_toStartOf="@id/blueWrongAnswers"
+            app:layout_constraintTop_toBottomOf="@id/blueWrongAnswers" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

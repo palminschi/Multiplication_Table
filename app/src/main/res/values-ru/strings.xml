@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Недостаточно монет</string>
     <string name="play">Играть</string>
     <string name="gameDuel">Дуэль</string>
-    <string name="gameDuelInfo">(2 игрока)</string>
+    <string name="twoPlayers">2 игрока</string>
     <string name="finished">Завершено</string>
     <string name="app_name">Таблица Умножения</string>
     <string name="redWins">Красный игрок выиграл!</string>
@@ -78,5 +78,11 @@
     <string name="best">Лучший:</string>
     <string name="maximum">Максимум</string>
     <string name="moreOrLess">Больше или меньше</string>
+    <string name="wronglyAnswered">Вы ответили неправильно</string>
+    <string name="continueQuestion">Продолжить?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="hardMath">Тяжелая математика</string>
+    <string name="catchAnswer">Поймай ответ</string>
 
 </resources>

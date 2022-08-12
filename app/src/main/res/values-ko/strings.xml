@@ -62,7 +62,7 @@
     <string name="toastNoCoins">동전이 부족하다</string>
     <string name="play">놀다</string>
     <string name="gameDuel">결투</string>
-    <string name="gameDuelInfo">(2명의 플레이어)</string>
+    <string name="twoPlayers">2명의 플레이어</string>
     <string name="finished">완성된</string>
     <string name="app_name">곱셈 구구표</string>
     <string name="redWins">레드 플레이어가 이겼습니다!</string>
@@ -78,5 +78,11 @@
     <string name="best">최고:</string>
     <string name="maximum">최고</string>
     <string name="moreOrLess">더 많거나 적게</string>
+    <string name="wronglyAnswered">당신은 잘못 대답했다</string>
+    <string name="continueQuestion">계속하다?</string>
+    <string name="yes">예</string>
+    <string name="no">아니</string>
+    <string name="hardMath">어려운 수학</string>
+    <string name="catchAnswer">답을 잡아라!</string>
 
 </resources>

@@ -60,7 +60,7 @@
     <string name="toastNoCoins">Nu aveţi destul</string>
     <string name="play">Joacă</string>
     <string name="gameDuel">Duel</string>
-    <string name="gameDuelInfo">(2 jucători)</string>
+    <string name="twoPlayers">2 jucători</string>
     <string name="finished">Sfarşit</string>
     <string name="app_name">Tabla înmulţirii</string>
     <string name="redWins">Rosul a biruit!</string>
@@ -76,5 +76,11 @@
     <string name="best">Cel mai bun:</string>
     <string name="maximum">Maxim</string>
     <string name="moreOrLess">Mai mult sau mai putin</string>
+    <string name="wronglyAnswered">Ai raspuns gresit</string>
+    <string name="continueQuestion">Continuă?</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="hardMath">Matematică grea</string>
+    <string name="catchAnswer">Prinde răspunsul</string>
 
 </resources>

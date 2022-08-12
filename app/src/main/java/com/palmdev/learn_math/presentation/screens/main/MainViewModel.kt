@@ -25,6 +25,7 @@ class MainViewModel(
 
     fun loadAds(){
         adsRepository.loadInterstitialAd()
+        adsRepository.load500coinsRewardedAd()
     }
 
     init {

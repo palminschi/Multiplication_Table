@@ -62,7 +62,7 @@
     <string name="toastNoCoins">Inte tillräckligt med pengar</string>
     <string name="play">Spela</string>
     <string name="gameDuel">Duell</string>
-    <string name="gameDuelInfo">(2 spelare)</string>
+    <string name="twoPlayers">2 spelare</string>
     <string name="finished">Färdiga</string>
     <string name="app_name">Multiplikationstabell</string>
     <string name="redWins">Den röda spelaren vann!</string>
@@ -78,5 +78,11 @@
     <string name="best">Bäst:</string>
     <string name="maximum">Maximal</string>
     <string name="moreOrLess">Mer eller mindre</string>
+    <string name="wronglyAnswered">Du svarade fel</string>
+    <string name="continueQuestion">Fortsätta?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+    <string name="hardMath">Hård matte</string>
+    <string name="catchAnswer">Fånga svaret</string>
 
 </resources>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_marginHorizontal="20dp"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
+    android:layout_marginHorizontal="20dp"
     app:cardBackgroundColor="@color/third_background"
     app:cardCornerRadius="15dp"
     tools:context=".presentation.dialogs.review.ReviewDialogFragment">
@@ -17,29 +17,29 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_marginTop="20dp"
-            android:contentDescription="@null"
             android:layout_width="wrap_content"
-            android:layout_marginHorizontal="80dp"
-            android:adjustViewBounds="true"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_rate_app"/>
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_rate_app" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
+            android:text="@string/rateTheApp"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:text="@string/rateTheApp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -47,50 +47,51 @@
                 android:id="@+id/star_1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_star_24"
                 android:background="@null"
+                android:contentDescription="@null"
                 android:padding="3dp"
-                app:tint="@color/blue_transparent"
-                android:contentDescription="@null"/>
+                android:src="@drawable/ic_star_24"
+                app:tint="@color/blue_transparent" />
+
             <ImageView
                 android:id="@+id/star_2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_star_24"
                 android:background="@null"
+                android:contentDescription="@null"
                 android:padding="3dp"
-                app:tint="@color/blue_transparent"
-                android:contentDescription="@null"/>
+                android:src="@drawable/ic_star_24"
+                app:tint="@color/blue_transparent" />
 
             <ImageView
                 android:id="@+id/star_3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_star_24"
                 android:background="@null"
+                android:contentDescription="@null"
                 android:padding="3dp"
-                app:tint="@color/blue_transparent"
-                android:contentDescription="@null"/>
+                android:src="@drawable/ic_star_24"
+                app:tint="@color/blue_transparent" />
 
             <ImageView
                 android:id="@+id/star_4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_star_24"
                 android:background="@null"
+                android:contentDescription="@null"
                 android:padding="3dp"
-                app:tint="@color/blue_transparent"
-                android:contentDescription="@null"/>
+                android:src="@drawable/ic_star_24"
+                app:tint="@color/blue_transparent" />
 
             <ImageView
                 android:id="@+id/star_5"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_star_24"
                 android:background="@null"
+                android:contentDescription="@null"
                 android:padding="3dp"
-                app:tint="@color/blue_transparent"
-                android:contentDescription="@null"/>
+                android:src="@drawable/ic_star_24"
+                app:tint="@color/blue_transparent" />
         </LinearLayout>
     </LinearLayout>
 

@@ -24,7 +24,6 @@ class PurchaseViewModel(
 
     init {
         isPremiumUser.value = userDataRepository.isPremiumUser
-        adsRepository.loadRewardedAd()
         FirebaseEvents().setScreenViewEvent(screenName = "Purchase")
     }
 
@@ -48,7 +47,7 @@ class PurchaseViewModel(
     }
 
     fun showRewardedAd() {
-        adsRepository.showRewardedAd(
+        adsRepository.show500coinsRewardedAd(
             listener = { rewardItem ->
                 userDataRepository.addCoins(rewardItem.amount)
                 coins.value = userDataRepository.coins

@@ -22,9 +22,11 @@ class EndViewModel(
 
     val coins = MutableLiveData<Int>()
     val userRatedApp = MutableLiveData<Boolean>()
+    val isFirstEndGame = MutableLiveData<Boolean>()
 
     init {
         userRatedApp.value = reviewRepository.hasUserRatedApp()
+        isFirstEndGame.value = userDataRepository.isFirstEndGame
         FirebaseEvents().setScreenViewEvent(screenName = "End Exercise")
     }
 
@@ -60,6 +62,10 @@ class EndViewModel(
 
     fun showInterstitialAd() {
         adsRepository.showInterstitialAd()
+    }
+
+    fun setNotFirstEndGame() {
+        userDataRepository.setNotFirstEndGame()
     }
 
 }

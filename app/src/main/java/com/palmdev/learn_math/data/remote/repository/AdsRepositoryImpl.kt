@@ -20,7 +20,8 @@ class AdsRepositoryImpl(
 ) : AdsRepository {
 
     private var mInterstitialAd: InterstitialAd? = null
-    private var mRewardedAd: RewardedAd? = null
+    private var m500CoinsRewardedAd: RewardedAd? = null
+    private var mContinueRewardedAd: RewardedAd? = null
 
     override fun loadInterstitialAd() {
         if (userDataRepository.isPremiumUser) return
@@ -69,27 +70,26 @@ class AdsRepositoryImpl(
         }
     }
 
-    override fun loadRewardedAd() {
-
+    override fun load500coinsRewardedAd() {
         val adRequest = AdRequest.Builder().build()
 
-        RewardedAd.load(context, context.getString(R.string.AD_REWARDED_ID), adRequest,
+        RewardedAd.load(context, context.getString(R.string.AD_REWARDED_ID_500_COINS), adRequest,
             object : RewardedAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     Log.d(TAG, adError.message)
-                    mRewardedAd = null
+                    m500CoinsRewardedAd = null
                 }
 
                 override fun onAdLoaded(rewardedAd: RewardedAd) {
                     Log.d(TAG, "Ad was loaded.")
-                    mRewardedAd = rewardedAd
+                    m500CoinsRewardedAd = rewardedAd
                 }
             }
         )
     }
 
-    override fun showRewardedAd(listener: OnUserEarnedRewardListener) {
-        mRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+    override fun show500coinsRewardedAd(listener: OnUserEarnedRewardListener) {
+        m500CoinsRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
             override fun onAdShowedFullScreenContent() {
                 // Called when ad is shown.
                 Log.d(TAG, "Ad was shown.")
@@ -98,18 +98,61 @@ class AdsRepositoryImpl(
             override fun onAdFailedToShowFullScreenContent(adError: AdError) {
                 // Called when ad fails to show.
                 Log.d(TAG, "Ad failed to show.")
-                mRewardedAd = null
+                m500CoinsRewardedAd = null
             }
 
             override fun onAdDismissedFullScreenContent() {
                 // Called when ad is dismissed.
                 // Set the ad reference to null so you don't show the ad a second time.
                 Log.d(TAG, "Ad was dismissed.")
-                mRewardedAd = null
-                loadRewardedAd()
+                m500CoinsRewardedAd = null
+                load500coinsRewardedAd()
             }
         }
 
-        mRewardedAd?.show(MAIN, listener)
+        m500CoinsRewardedAd?.show(MAIN, listener)
+    }
+
+    override fun loadContinueRewardedAd() {
+        val adRequest = AdRequest.Builder().build()
+
+        RewardedAd.load(context, context.getString(R.string.AD_REWARDED_ID_CONTINUE), adRequest,
+            object : RewardedAdLoadCallback() {
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.d(TAG, adError.message)
+                    mContinueRewardedAd = null
+                }
+
+                override fun onAdLoaded(rewardedAd: RewardedAd) {
+                    Log.d(TAG, "Ad was loaded.")
+                    mContinueRewardedAd = rewardedAd
+                }
+            }
+        )
+    }
+
+    override fun showContinueRewardedAd(listener: OnUserEarnedRewardListener) {
+        mContinueRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdShowedFullScreenContent() {
+                // Called when ad is shown.
+                Log.d(TAG, "Ad was shown.")
+            }
+
+            override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                // Called when ad fails to show.
+                Log.d(TAG, "Ad failed to show.")
+                mContinueRewardedAd = null
+            }
+
+            override fun onAdDismissedFullScreenContent() {
+                // Called when ad is dismissed.
+                // Set the ad reference to null so you don't show the ad a second time.
+                Log.d(TAG, "Ad was dismissed.")
+                mContinueRewardedAd = null
+                loadContinueRewardedAd()
+            }
+        }
+
+        mContinueRewardedAd?.show(MAIN, listener)
     }
 }

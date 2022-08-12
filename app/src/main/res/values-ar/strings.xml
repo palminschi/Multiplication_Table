@@ -61,7 +61,7 @@
     <string name="toastNoCoins">لا توجد عملات كافية</string>
     <string name="play">لعب</string>
     <string name="gameDuel">مبارزة</string>
-    <string name="gameDuelInfo">(لاعبان)</string>
+    <string name="twoPlayers">(لاعبان)</string>
     <string name="finished">تم الانتهاء من</string>
     <string name="app_name">جدول الضرب</string>
     <string name="redWins">فاز اللاعب الأحمر!</string>
@@ -77,6 +77,12 @@
     <string name="best">الأفضل:</string>
     <string name="maximum">أقصى</string>
     <string name="moreOrLess">الى حد ما</string>
+    <string name="wronglyAnswered">لقد أخطأت في الإجابة</string>
+    <string name="continueQuestion">يكمل؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">رقم</string>
+    <string name="hardMath">الرياضيات الصعبة</string>
+    <string name="catchAnswer">قبض على الجواب!</string>
 
 
 </resources>

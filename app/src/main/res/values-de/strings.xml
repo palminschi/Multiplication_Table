@@ -61,7 +61,7 @@
     <string name="toastNoCoins">Nicht genug Münzen</string>
     <string name="play">Spielen</string>
     <string name="gameDuel">Duell</string>
-    <string name="gameDuelInfo">(2 Spieler)</string>
+    <string name="twoPlayers">2 Spieler</string>
     <string name="finished">Fertig</string>
     <string name="app_name">Multiplikations Tabelle</string>
     <string name="redWins">Der rote Spieler hat gewonnen!</string>
@@ -77,6 +77,12 @@
     <string name="best">Am besten:</string>
     <string name="maximum">Maximal</string>
     <string name="moreOrLess">Mehr oder weniger</string>
+    <string name="wronglyAnswered">Du hast falsch geantwortet</string>
+    <string name="continueQuestion">Fortsetzen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="hardMath">Harte Mathematik</string>
+    <string name="catchAnswer">Fang die Antwort!</string>
 
 
 </resources>

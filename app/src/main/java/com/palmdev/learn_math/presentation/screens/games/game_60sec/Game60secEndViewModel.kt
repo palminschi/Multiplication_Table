@@ -13,7 +13,7 @@ class Game60secEndViewModel(
 ) : ViewModel() {
 
     val coins = MutableLiveData<Int>()
-    val record = MutableLiveData<Int>()
+    val record = MutableLiveData<Int?>()
 
     init {
         coins.value = userDataRepository.coins

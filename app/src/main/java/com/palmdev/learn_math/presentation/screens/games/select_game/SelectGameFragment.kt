@@ -31,7 +31,7 @@ class SelectGameFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getRecords()
+        initRecords()
         binding.btnGameDuel.setOnClickListener {
             findNavController().navigate(R.id.action_selectGameFragment_to_gameDuelStartFragment)
         }
@@ -45,12 +45,24 @@ class SelectGameFragment : Fragment() {
                 )
             )
         }
-        viewModel.recordGame60sec.observe(viewLifecycleOwner) {
-            if (it != null) {
-                binding.recordGame60sec.text = "${getText(R.string.best)} $it"
-            } else {
-                binding.recordGame60sec.text = "${getText(R.string.best)} ${getText(R.string.questionMark)}"
-            }
+        binding.btnGameMoreOrLess.setOnClickListener {
+            findNavController().navigate(R.id.action_selectGameFragment_to_gameMoreOrLessFragment)
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun initRecords() {
+        viewModel.getRecords()
+        viewModel.bestScoreGame60sec.observe(viewLifecycleOwner) {
+            binding.scoreGame60sec.text =
+                if (it != null) "${getText(R.string.best)} $it"
+                else "${getText(R.string.best)} ${getText(R.string.questionMark)}"
+        }
+        viewModel.bestScoreGameMoreOrLess.observe(viewLifecycleOwner) {
+            binding.scoreGameMoreOrLess.text =
+                if (it != null) "${getText(R.string.best)} $it"
+                else "${getText(R.string.best)} ${getText(R.string.questionMark)}"
         }
     }
 }

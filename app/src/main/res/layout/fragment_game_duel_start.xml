@@ -4,24 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:gravity="center"
+    android:gravity="center|bottom"
     android:orientation="vertical"
     tools:context=".presentation.screens.games.game_duel.GameDuelStartFragment">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="140dp"
         android:adjustViewBounds="true"
         android:contentDescription="@null"
         android:maxWidth="200dp"
         android:src="@drawable/ic_game_duel" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gameDuel"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
-        android:layout_weight="1"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -80,17 +87,17 @@
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1"
+        android:layout_marginTop="48dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
             android:background="@drawable/style_radio_button"
             android:button="@null"
             android:gravity="center"
@@ -105,7 +112,7 @@
             android:id="@+id/medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
             android:background="@drawable/style_radio_button"
             android:button="@null"
             android:gravity="center"
@@ -120,7 +127,7 @@
             android:id="@+id/hard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
             android:background="@drawable/style_radio_button"
             android:button="@null"
             android:gravity="center"
@@ -131,6 +138,11 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/btnStart"

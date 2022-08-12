@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.palmdev.learn_math.data.model.ExerciseSelect
 import com.palmdev.learn_math.domain.repository.games.Game60secRepository
+import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.Operation
 import kotlin.random.Random
 
@@ -11,6 +12,9 @@ class Game60secViewModel(
     private val game60secRepository: Game60secRepository
 ) : ViewModel() {
 
+    init {
+        FirebaseEvents().setScreenViewEvent("Game 60 sec")
+    }
     val exercise = MutableLiveData<ExerciseSelect>()
 
     fun getExercise(minNumber: Int, maxNumber: Int, operation: Operation?) {

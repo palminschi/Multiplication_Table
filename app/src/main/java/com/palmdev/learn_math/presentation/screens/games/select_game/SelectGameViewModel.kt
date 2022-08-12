@@ -2,22 +2,25 @@ package com.palmdev.learn_math.presentation.screens.games.select_game
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.palmdev.learn_math.domain.repository.games.GameRecordsRepository
+import com.palmdev.learn_math.domain.repository.AdsRepository
+import com.palmdev.learn_math.domain.repository.games.GameScoresRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
 
 class SelectGameViewModel(
-    private val gameRecordsRepository: GameRecordsRepository
+    private val gameScoresRepository: GameScoresRepository,
+    adsRepository: AdsRepository
 ) : ViewModel() {
 
     init {
         FirebaseEvents().setScreenViewEvent(screenName = "Select Game")
+        adsRepository.loadContinueRewardedAd()
     }
 
-    val recordGame60sec = MutableLiveData<Int?>()
+    val bestScoreGame60sec = MutableLiveData<Int?>()
+    val bestScoreGameMoreOrLess = MutableLiveData<Int?>()
 
     fun getRecords() {
-        val game60sec = gameRecordsRepository.game60sec()
-        if (game60sec != null) recordGame60sec.value = game60sec
-        else recordGame60sec.value = null
+        bestScoreGame60sec.value = gameScoresRepository.game60sec()
+        bestScoreGameMoreOrLess.value = gameScoresRepository.gameMoreOrLess()
     }
 }

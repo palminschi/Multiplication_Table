@@ -62,7 +62,7 @@
     <string name="toastNoCoins">硬币不够</string>
     <string name="play">玩</string>
     <string name="gameDuel">决斗</string>
-    <string name="gameDuelInfo">（2名球员）</string>
+    <string name="twoPlayers">2名球员</string>
     <string name="finished">完成的</string>
     <string name="app_name">乘法表</string>
     <string name="redWins">红队赢了！</string>
@@ -78,5 +78,11 @@
     <string name="best">最好的：</string>
     <string name="maximum">最大</string>
     <string name="moreOrLess">或多或少</string>
+    <string name="wronglyAnswered">你答错了</string>
+    <string name="continueQuestion">继续？</string>
+    <string name="yes">是的</string>
+    <string name="no">不</string>
+    <string name="hardMath">硬数学</string>
+    <string name="catchAnswer">抓住答案！</string>
 
 </resources>

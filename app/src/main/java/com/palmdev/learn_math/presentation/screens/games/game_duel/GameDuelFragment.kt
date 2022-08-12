@@ -101,33 +101,37 @@ class GameDuelFragment : Fragment() {
     }
 
     private fun setNewExerciseTop() {
-        exercises[progressCounterTop].let {
-            binding.option1Top.text = it.choice_1.toString()
-            binding.option2Top.text = it.choice_2.toString()
-            binding.option3Top.text = it.choice_3.toString()
-            binding.option4Top.text = it.choice_4.toString()
-            binding.tvConditionTop.text = it.condition
-            correctNumberTop = it.correctAnswer
-            correctAnswerPositionTop = it.correctAnswerPosition
-        }
+        if (exercises.isNotEmpty() && progressCounterTop < 10) {
+            exercises[progressCounterTop].let {
+                binding.option1Top.text = it.choice_1.toString()
+                binding.option2Top.text = it.choice_2.toString()
+                binding.option3Top.text = it.choice_3.toString()
+                binding.option4Top.text = it.choice_4.toString()
+                binding.tvConditionTop.text = it.condition
+                correctNumberTop = it.correctAnswer
+                correctAnswerPositionTop = it.correctAnswerPosition
+            }
+        } else finishExercise()
     }
 
     private fun setNewExerciseBottom() {
-        exercises[progressCounterBottom].let {
-            binding.option1Bottom.text = it.choice_1.toString()
-            binding.option2Bottom.text = it.choice_2.toString()
-            binding.option3Bottom.text = it.choice_3.toString()
-            binding.option4Bottom.text = it.choice_4.toString()
-            binding.tvConditionBottom.text = it.condition
-            correctNumberBottom = it.correctAnswer
-            correctAnswerPositionBottom = it.correctAnswerPosition
-        }
+        if (exercises.isNotEmpty() && progressCounterBottom < 10) {
+            exercises[progressCounterBottom].let {
+                binding.option1Bottom.text = it.choice_1.toString()
+                binding.option2Bottom.text = it.choice_2.toString()
+                binding.option3Bottom.text = it.choice_3.toString()
+                binding.option4Bottom.text = it.choice_4.toString()
+                binding.tvConditionBottom.text = it.condition
+                correctNumberBottom = it.correctAnswer
+                correctAnswerPositionBottom = it.correctAnswerPosition
+            }
+        } else finishExercise()
     }
 
     private fun topPlayerAnswered(correctly: Boolean) {
         if (correctly) correctAnswersTop++ else wrongAnswersTop++
         progressCounterTop++
-        if (progressCounterTop == 10) {
+        if (progressCounterTop >= 10) {
             topUserFinished = true
             finishExercise()
         } else setNewExerciseTop()
@@ -136,7 +140,7 @@ class GameDuelFragment : Fragment() {
     private fun bottomPlayerAnswered(correctly: Boolean) {
         if (correctly) correctAnswersBottom++ else wrongAnswersBottom++
         progressCounterBottom++
-        if (progressCounterBottom == 10) {
+        if (progressCounterBottom >= 10) {
             bottomUserFinished = true
             finishExercise()
         } else setNewExerciseBottom()
@@ -158,7 +162,10 @@ class GameDuelFragment : Fragment() {
                     ARG_RED_CORRECT_ANSWERS to correctAnswersTop,
                     ARG_RED_WRONG_ANSWERS to wrongAnswersTop,
                     ARG_BLUE_CORRECT_ANSWERS to correctAnswersBottom,
-                    ARG_BLUE_WRONG_ANSWERS to wrongAnswersBottom
+                    ARG_BLUE_WRONG_ANSWERS to wrongAnswersBottom,
+                    ARG_MIN_NUMBER to minNumber,
+                    ARG_MAX_NUMBER to maxNumber,
+                    ARG_OPERATION to operation
                 )
             )
         }

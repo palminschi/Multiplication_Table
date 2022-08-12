@@ -3,6 +3,7 @@ package com.palmdev.learn_math.data.local.repository
 import android.content.Context
 import com.palmdev.learn_math.data.local.storage.UserDataStorage
 import com.palmdev.learn_math.domain.repository.UserDataRepository
+import com.palmdev.learn_math.utils.FIRST_END_GAME_KEY
 import com.palmdev.learn_math.utils.PREMIUM_USER_KEY
 import com.palmdev.learn_math.utils.SHARED_PREFS
 
@@ -26,4 +27,10 @@ class UserDataRepositoryImpl(
         sharedPrefs.edit().putBoolean(PREMIUM_USER_KEY, boolean).apply()
     }
 
+    override val isFirstEndGame: Boolean
+        get() = sharedPrefs.getBoolean(FIRST_END_GAME_KEY, true)
+
+    override fun setNotFirstEndGame() {
+        sharedPrefs.edit().putBoolean(FIRST_END_GAME_KEY, false).apply()
+    }
 }

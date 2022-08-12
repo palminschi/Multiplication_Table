@@ -6,7 +6,8 @@ interface AdsRepository {
 
     fun loadInterstitialAd()
     fun showInterstitialAd()
-    fun loadRewardedAd()
-    fun showRewardedAd(listener: OnUserEarnedRewardListener)
-
+    fun load500coinsRewardedAd()
+    fun show500coinsRewardedAd(listener: OnUserEarnedRewardListener)
+    fun loadContinueRewardedAd()
+    fun showContinueRewardedAd(listener: OnUserEarnedRewardListener)
 }

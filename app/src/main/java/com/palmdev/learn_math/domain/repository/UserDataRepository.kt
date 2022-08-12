@@ -7,5 +7,7 @@ interface UserDataRepository {
     fun removeCoins(amount: Int)
     val isPremiumUser: Boolean
     fun setIsPremiumUser(boolean: Boolean)
+    val isFirstEndGame: Boolean
+    fun setNotFirstEndGame()
 
 }

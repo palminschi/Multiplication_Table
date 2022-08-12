@@ -98,16 +98,28 @@ class EndFragment : Fragment() {
             }
         } else binding.btnGoTo.visibility = View.GONE
 
-        viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
-            if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)
-            else {
+        viewModel.isFirstEndGame.observe(viewLifecycleOwner) { isFirst ->
+            if (isFirst) {
                 handler.postDelayed(
-                    { viewModel.showInterstitialAd() },
+                    {
+                        viewModel.showInterstitialAd()
+                        viewModel.setNotFirstEndGame()
+                    },
                     1000
                 )
+            } else {
+                viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
+                    if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)
+                    else {
+                        handler.postDelayed(
+                            { viewModel.showInterstitialAd() },
+                            1000
+                        )
+                    }
+                }
             }
-
         }
+
     }
 
     private fun saveData() {

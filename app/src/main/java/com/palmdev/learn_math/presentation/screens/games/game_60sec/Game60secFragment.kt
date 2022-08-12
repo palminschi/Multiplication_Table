@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentGame60secBinding
-import com.palmdev.learn_math.presentation.animations.ClickExpansionAnim
+import com.palmdev.learn_math.presentation.animations.ClickAnim
 import com.palmdev.learn_math.presentation.animations.ShakingAnim
 import com.palmdev.learn_math.utils.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -29,6 +29,7 @@ class Game60secFragment : Fragment() {
     private val sounds by lazy { Sounds(requireContext()) }
     private var isGame = false
     private var countDownTimer: CountDownTimer? = null
+    private var timerTimeRemaining: Long = 60000
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +48,16 @@ class Game60secFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+    }
+
+    override fun onResume() {
+        super.onResume()
         initCountDownTimer()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        countDownTimer?.cancel()
     }
 
     private fun init() {
@@ -83,12 +93,12 @@ class Game60secFragment : Fragment() {
     }
 
     private fun initCountDownTimer() {
-        var secondsRemaining = 60
-        countDownTimer = object : CountDownTimer(60000, 1000) {
+        val timerInterval: Long = 1000
+        countDownTimer = object : CountDownTimer(timerTimeRemaining, timerInterval) {
             override fun onTick(millisUntilFinished: Long) {
-                secondsRemaining--
-                binding.timeProgress.progress = secondsRemaining
-                binding.tvSecondsRemaining.text = secondsRemaining.toString()
+                timerTimeRemaining -= timerInterval
+                binding.timeProgress.progress = (timerTimeRemaining / 1000).toInt()
+                binding.tvSecondsRemaining.text = (timerTimeRemaining / 1000).toString()
             }
 
             override fun onFinish() {
@@ -99,11 +109,11 @@ class Game60secFragment : Fragment() {
     }
 
     private fun answeredCorrectly(view: View) {
-        ClickExpansionAnim.anim(view)
+        ClickAnim.anim(view)
         sounds.playClick()
         correctAnswers++
         binding.tvCorrectAnswers.text = correctAnswers.toString()
-        ClickExpansionAnim.anim(binding.tvCorrectAnswers)
+        ClickAnim.anim(binding.tvCorrectAnswers)
         if (isGame) {
             maxNumber++
         }
@@ -115,7 +125,7 @@ class Game60secFragment : Fragment() {
         sounds.playWrongAnswer()
         wrongAnswers++
         binding.tvWrongAnswers.text = wrongAnswers.toString()
-        ClickExpansionAnim.anim(binding.tvWrongAnswers)
+        ClickAnim.anim(binding.tvWrongAnswers)
         if (isGame && maxNumber > 1) {
             maxNumber--
         }
@@ -143,6 +153,7 @@ class Game60secFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         countDownTimer?.cancel()
+        countDownTimer = null
     }
 
 }
