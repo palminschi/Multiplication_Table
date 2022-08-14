@@ -10,6 +10,7 @@ import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.Exerci
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secEndViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_catch.GameCatchViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelEndViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_hard_math.GameHardMathViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_more_or_less.GameMoreOrLessViewModel
@@ -35,7 +36,8 @@ val presentationModule = module {
             multiplicationRepository = get(),
             divisionRepository = get(),
             additionRepository = get(),
-            subtractionRepository = get()
+            subtractionRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -43,7 +45,8 @@ val presentationModule = module {
             multiplicationRepository = get(),
             divisionRepository = get(),
             additionRepository = get(),
-            subtractionRepository = get()
+            subtractionRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -51,7 +54,8 @@ val presentationModule = module {
             multiplicationRepository = get(),
             divisionRepository = get(),
             additionRepository = get(),
-            subtractionRepository = get()
+            subtractionRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -97,7 +101,8 @@ val presentationModule = module {
             multiplicationRepository = get(),
             divisionRepository = get(),
             additionRepository = get(),
-            subtractionRepository = get()
+            subtractionRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -108,7 +113,8 @@ val presentationModule = module {
     }
     viewModel {
         Game60secViewModel(
-            game60secRepository = get()
+            game60secRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -126,7 +132,8 @@ val presentationModule = module {
     }
     viewModel {
         GameMoreOrLessViewModel(
-            gameMoreOrLessRepository = get()
+            gameMoreOrLessRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
@@ -136,12 +143,19 @@ val presentationModule = module {
     }
     viewModel {
         GameHardMathViewModel(
-            gameGameHardMathRepository = get()
+            gameGameHardMathRepository = get(),
+            adsRepository = get()
         )
     }
     viewModel {
         GameCatchViewModel(
-            gameCatchRepository = get()
+            gameCatchRepository = get(),
+            adsRepository = get()
+        )
+    }
+    viewModel {
+        GameDuelEndViewModel(
+            adsRepository = get()
         )
     }
 

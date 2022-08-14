@@ -3,11 +3,13 @@ package com.palmdev.learn_math.presentation.screens.games.game_more_or_less
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.palmdev.learn_math.data.model.ExerciseMoreOrLess
+import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.domain.repository.games.GameMoreOrLessRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
 
 class GameMoreOrLessViewModel(
-    private val gameMoreOrLessRepository: GameMoreOrLessRepository
+    private val gameMoreOrLessRepository: GameMoreOrLessRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
 
     val exercise = MutableLiveData<ExerciseMoreOrLess>()
@@ -24,5 +26,9 @@ class GameMoreOrLessViewModel(
 
     fun saveResults(correctAnswers: Int) {
         gameMoreOrLessRepository.saveBestScore(correctAnswers)
+    }
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
     }
 }

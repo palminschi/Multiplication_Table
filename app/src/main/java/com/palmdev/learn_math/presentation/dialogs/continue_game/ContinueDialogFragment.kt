@@ -65,6 +65,7 @@ class ContinueDialogFragment : DialogFragment() {
         }
         binding.btnNo.setOnClickListener {
             findNavController().popBackStack(R.id.selectGameFragment, false)
+            viewModel.showInterstitialAd()
         }
 
         ExpansionReductionAnim.anim(binding.ivHeart, true)

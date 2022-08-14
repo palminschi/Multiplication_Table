@@ -3,13 +3,15 @@ package com.palmdev.learn_math.presentation.screens.games.game_60sec
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.palmdev.learn_math.data.model.ExerciseSelect
+import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.domain.repository.games.Game60secRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.Operation
 import kotlin.random.Random
 
 class Game60secViewModel(
-    private val game60secRepository: Game60secRepository
+    private val game60secRepository: Game60secRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
 
     init {
@@ -32,5 +34,9 @@ class Game60secViewModel(
             exercise.value =
                 game60secRepository.getExercise(minNumber, maxNumber, operation)
         }
+    }
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
     }
 }

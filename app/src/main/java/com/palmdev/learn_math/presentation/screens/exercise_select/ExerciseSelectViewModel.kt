@@ -4,10 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.palmdev.learn_math.data.model.ExerciseSelect
-import com.palmdev.learn_math.domain.repository.AdditionRepository
-import com.palmdev.learn_math.domain.repository.DivisionRepository
-import com.palmdev.learn_math.domain.repository.MultiplicationRepository
-import com.palmdev.learn_math.domain.repository.SubtractionRepository
+import com.palmdev.learn_math.domain.repository.*
 import com.palmdev.learn_math.utils.FirebaseEvents
 import kotlinx.coroutines.launch
 
@@ -15,13 +12,18 @@ class ExerciseSelectViewModel(
     private val multiplicationRepository: MultiplicationRepository,
     private val divisionRepository: DivisionRepository,
     private val additionRepository: AdditionRepository,
-    private val subtractionRepository: SubtractionRepository
+    private val subtractionRepository: SubtractionRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
 
     val exercise = MutableLiveData<ExerciseSelect>()
 
     init {
         FirebaseEvents().setScreenViewEvent(screenName = "Exercise Select")
+    }
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
     }
 
     fun getMultiplicationExercise(withNumber: Int, minNumber: Int = 0, maxNumber: Int = 10) {

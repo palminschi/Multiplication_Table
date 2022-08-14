@@ -16,4 +16,8 @@ class ContinueViewModel(
     fun showRewardedAd(listener: OnUserEarnedRewardListener) {
         adsRepository.showContinueRewardedAd(listener)
     }
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
+    }
 }

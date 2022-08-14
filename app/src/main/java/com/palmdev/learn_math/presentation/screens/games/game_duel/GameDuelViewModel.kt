@@ -3,11 +3,8 @@ package com.palmdev.learn_math.presentation.screens.games.game_duel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.palmdev.learn_math.domain.repository.AdditionRepository
-import com.palmdev.learn_math.domain.repository.DivisionRepository
-import com.palmdev.learn_math.domain.repository.MultiplicationRepository
-import com.palmdev.learn_math.domain.repository.SubtractionRepository
 import com.palmdev.learn_math.data.model.ExerciseSelect
+import com.palmdev.learn_math.domain.repository.*
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
@@ -15,10 +12,15 @@ class GameDuelViewModel(
     private val multiplicationRepository: MultiplicationRepository,
     private val divisionRepository: DivisionRepository,
     private val additionRepository: AdditionRepository,
-    private val subtractionRepository: SubtractionRepository
+    private val subtractionRepository: SubtractionRepository,
+    private val adsRepository: AdsRepository
 ) : ViewModel() {
 
     val exercises = MutableLiveData<List<ExerciseSelect>>()
+
+    fun showInterstitialAd() {
+        adsRepository.showInterstitialAd()
+    }
 
     fun getMultiplicationExercise(minNumber: Int = 0, maxNumber: Int = 10) {
         viewModelScope.launch {

@@ -11,9 +11,11 @@ import androidx.navigation.fragment.findNavController
 import com.palmdev.learn_math.R
 import com.palmdev.learn_math.databinding.FragmentGameDuelEndBinding
 import com.palmdev.learn_math.utils.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class GameDuelEndFragment : Fragment() {
 
+    private val viewModel: GameDuelEndViewModel by viewModel()
     private lateinit var binding: FragmentGameDuelEndBinding
     private var redCorrectAnswers = 0
     private var redWrongAnswers = 0
@@ -62,6 +64,7 @@ class GameDuelEndFragment : Fragment() {
             findNavController().popBackStack()
             findNavController().popBackStack()
             findNavController().popBackStack()
+            viewModel.showInterstitialAd()
         }
         binding.btnAgain.setOnClickListener {
             findNavController().popBackStack()
@@ -82,6 +85,7 @@ class GameDuelEndFragment : Fragment() {
             override fun handleOnBackPressed() {
                 findNavController().popBackStack()
                 findNavController().popBackStack()
+                viewModel.showInterstitialAd()
             }
         }
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, customOnBackPressed)

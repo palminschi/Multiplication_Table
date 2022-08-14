@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -42,6 +43,7 @@ class GameMoreOrLessFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+        initCustomOnBackPressed()
     }
 
     override fun onResume() {
@@ -129,6 +131,16 @@ class GameMoreOrLessFragment : Fragment() {
                 ARG_BEST_SCORE to viewModel.bestScore.value
             )
         )
+    }
+
+    private fun initCustomOnBackPressed() {
+        val onBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+                viewModel.showInterstitialAd()
+            }
+        }
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, onBackPressedCallback)
     }
 
     override fun onDestroyView() {

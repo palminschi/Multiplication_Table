@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -43,6 +44,7 @@ class GameCatchFragment : Fragment() {
         activity?.window?.navigationBarColor = resources.getColor(R.color.black, null)
         init()
         initCountDownTimer()
+        initCustomOnBackPressed()
     }
 
     private fun init() {
@@ -114,6 +116,16 @@ class GameCatchFragment : Fragment() {
                 ARG_BEST_SCORE to viewModel.bestScore.value
             )
         )
+    }
+
+    private fun initCustomOnBackPressed() {
+        val onBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+                viewModel.showInterstitialAd()
+            }
+        }
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, onBackPressedCallback)
     }
 
     override fun onPause() {
