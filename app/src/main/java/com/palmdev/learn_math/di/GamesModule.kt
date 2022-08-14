@@ -1,9 +1,11 @@
 package com.palmdev.learn_math.di
 
 import com.palmdev.learn_math.data.local.repository.games.Game60secRepositoryImpl
+import com.palmdev.learn_math.data.local.repository.games.GameHardMathRepositoryImpl
 import com.palmdev.learn_math.data.local.repository.games.GameMoreOrLessRepositoryImpl
 import com.palmdev.learn_math.data.local.repository.games.GameScoresRepositoryImpl
 import com.palmdev.learn_math.domain.repository.games.Game60secRepository
+import com.palmdev.learn_math.domain.repository.games.GameHardMathRepository
 import com.palmdev.learn_math.domain.repository.games.GameMoreOrLessRepository
 import com.palmdev.learn_math.domain.repository.games.GameScoresRepository
 import org.koin.android.ext.koin.androidApplication
@@ -14,7 +16,8 @@ val gamesModule = module {
     single<GameScoresRepository> {
         GameScoresRepositoryImpl(
             game60secRepository = get(),
-            gameMoreOrLessRepository = get()
+            gameMoreOrLessRepository = get(),
+            gameHardMathRepository = get()
         )
     }
     single<Game60secRepository> {
@@ -28,5 +31,8 @@ val gamesModule = module {
     }
     single<GameMoreOrLessRepository> {
         GameMoreOrLessRepositoryImpl(context = androidApplication())
+    }
+    single<GameHardMathRepository> {
+        GameHardMathRepositoryImpl(context = androidApplication())
     }
 }

@@ -52,8 +52,8 @@ class GameMoreOrLessFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         countDownTimer?.cancel()
+        viewModel.saveResults(correctAnswers = correctAnswers)
     }
-
 
     private fun init() {
         getExercise()

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -32,6 +33,10 @@ class SelectGameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecords()
+        initButtons()
+    }
+
+    private fun initButtons() {
         binding.btnGameDuel.setOnClickListener {
             findNavController().navigate(R.id.action_selectGameFragment_to_gameDuelStartFragment)
         }
@@ -48,21 +53,27 @@ class SelectGameFragment : Fragment() {
         binding.btnGameMoreOrLess.setOnClickListener {
             findNavController().navigate(R.id.action_selectGameFragment_to_gameMoreOrLessFragment)
         }
-
+        binding.btnGameHardMath.setOnClickListener {
+            findNavController().navigate(R.id.action_selectGameFragment_to_gameHardMathFragment)
+        }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun initRecords() {
         viewModel.getRecords()
         viewModel.bestScoreGame60sec.observe(viewLifecycleOwner) {
-            binding.scoreGame60sec.text =
-                if (it != null) "${getText(R.string.best)} $it"
-                else "${getText(R.string.best)} ${getText(R.string.questionMark)}"
+            setBestScore(view = binding.scoreGame60sec, score = it)
         }
         viewModel.bestScoreGameMoreOrLess.observe(viewLifecycleOwner) {
-            binding.scoreGameMoreOrLess.text =
-                if (it != null) "${getText(R.string.best)} $it"
-                else "${getText(R.string.best)} ${getText(R.string.questionMark)}"
+            setBestScore(view = binding.scoreGameMoreOrLess, score = it)
         }
+        viewModel.bestScoreGameHardMath.observe(viewLifecycleOwner) {
+            setBestScore(view = binding.scoreGameHardMath, score = it)
+        }
+    }
+
+    private fun setBestScore(view: TextView, score: Int?) {
+        view.text =
+            if (score != null) "${getText(R.string.best)} $score"
+            else "${getText(R.string.best)} ${getText(R.string.questionMark)}"
     }
 }

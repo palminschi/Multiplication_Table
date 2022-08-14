@@ -18,9 +18,11 @@ class SelectGameViewModel(
 
     val bestScoreGame60sec = MutableLiveData<Int?>()
     val bestScoreGameMoreOrLess = MutableLiveData<Int?>()
+    val bestScoreGameHardMath = MutableLiveData<Int?>()
 
     fun getRecords() {
         bestScoreGame60sec.value = gameScoresRepository.game60sec()
         bestScoreGameMoreOrLess.value = gameScoresRepository.gameMoreOrLess()
+        bestScoreGameHardMath.value = gameScoresRepository.gameHardMath()
     }
 }
