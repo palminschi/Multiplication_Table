@@ -77,7 +77,7 @@
                 android:layout_marginTop="5dp"
                 android:progress="3"
                 android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
-                android:progressTint="@color/second_background" />
+                android:progressTint="@color/main_color" />
 
             <TextView
                 android:id="@+id/tvDivision"
@@ -97,7 +97,7 @@
                 android:layout_marginTop="5dp"
                 android:progress="3"
                 android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
-                android:progressTint="@color/second_background" />
+                android:progressTint="@color/main_color" />
 
             <TextView
                 android:id="@+id/tvAddition"
@@ -117,7 +117,7 @@
                 android:layout_marginTop="5dp"
                 android:progress="3"
                 android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
-                android:progressTint="@color/second_background" />
+                android:progressTint="@color/main_color" />
 
             <TextView
                 android:id="@+id/tvSubtraction"
@@ -137,7 +137,7 @@
                 android:layout_marginTop="5dp"
                 android:progress="3"
                 android:progressDrawable="@drawable/rounded_horizontal_progress_bar"
-                android:progressTint="@color/second_background" />
+                android:progressTint="@color/main_color" />
 
 
             <Button

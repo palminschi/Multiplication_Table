@@ -4,4 +4,5 @@ interface GameScoresRepository {
     fun game60sec(): Int?
     fun gameMoreOrLess(): Int?
     fun gameHardMath(): Int?
+    fun gameCatch(): Int?
 }

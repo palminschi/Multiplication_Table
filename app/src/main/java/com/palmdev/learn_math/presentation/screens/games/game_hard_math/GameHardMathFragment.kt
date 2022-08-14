@@ -77,10 +77,10 @@ class GameHardMathFragment : Fragment() {
         binding.tvCorrectAnswers.text = correctAnswers.toString()
         binding.tvCorrectAnswer.text = getText(R.string.questionMark)
         binding.tvCorrectAnswer.setTextColor(resources.getColor(R.color.white, null))
-        binding.option1.setBackgroundColor(resources.getColor(R.color.second_background, null))
-        binding.option2.setBackgroundColor(resources.getColor(R.color.second_background, null))
-        binding.option3.setBackgroundColor(resources.getColor(R.color.second_background, null))
-        binding.option4.setBackgroundColor(resources.getColor(R.color.second_background, null))
+        binding.option1.setBackgroundColor(resources.getColor(R.color.main_color, null))
+        binding.option2.setBackgroundColor(resources.getColor(R.color.main_color, null))
+        binding.option3.setBackgroundColor(resources.getColor(R.color.main_color, null))
+        binding.option4.setBackgroundColor(resources.getColor(R.color.main_color, null))
         binding.option1.isClickable = true
         binding.option2.isClickable = true
         binding.option3.isClickable = true

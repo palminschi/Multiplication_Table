@@ -161,6 +161,9 @@
         <action
             android:id="@+id/action_selectGameFragment_to_gameHardMathFragment"
             app:destination="@id/gameHardMathFragment" />
+        <action
+            android:id="@+id/action_selectGameFragment_to_gameCatchFragment"
+            app:destination="@id/gameCatchFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameDuelStartFragment"
@@ -225,6 +228,15 @@
         tools:layout="@layout/fragment_game_hard_math" >
         <action
             android:id="@+id/action_gameHardMathFragment_to_continueDialogFragment"
+            app:destination="@id/continueDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameCatchFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_catch.GameCatchFragment"
+        android:label="fragment_game_catch"
+        tools:layout="@layout/fragment_game_catch" >
+        <action
+            android:id="@+id/action_gameCatchFragment_to_continueDialogFragment"
             app:destination="@id/continueDialogFragment" />
     </fragment>
 </navigation>

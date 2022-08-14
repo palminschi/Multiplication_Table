@@ -10,12 +10,12 @@
     <color name="transparent">#00FFFFFF</color>
 
     <color name="background">#1D2238</color>
-    <color name="second_background">#086dd9</color>
-    <color name="second_background_transparent">#4B00579C</color>
-    <color name="third_background">#222B51</color>
+    <color name="second_background">#222B51</color>
+    <color name="main_color">#086dd9</color>
+    <color name="main_color_transparent">#4B00579C</color>
     <color name="dark_blue">#222845</color>
     <color name="blue_transparent">#E18A9CC6</color>
-    <color name="main_color">#d74315</color>
+    <color name="orange">#d74315</color>
     <color name="gray">#a1a6aa</color>
     <color name="gray_transparent">#806E6E6E</color>
     <color name="yellow">#ffde50</color>

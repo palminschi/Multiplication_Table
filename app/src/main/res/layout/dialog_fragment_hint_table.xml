@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/second_background"
+        app:cardBackgroundColor="@color/main_color"
         app:cardCornerRadius="3dp">
 
         <TextView
@@ -34,10 +34,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:background="@drawable/img_circle_background"
-        android:backgroundTint="@color/third_background"
+        android:backgroundTint="@color/second_background"
         android:contentDescription="@null"
         android:foreground="@drawable/ic_close_24"
-        android:foregroundTint="@color/second_background" />
+        android:foregroundTint="@color/main_color" />
 
 
 </LinearLayout>

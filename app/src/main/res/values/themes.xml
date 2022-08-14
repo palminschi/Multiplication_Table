@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.Learn_math" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/second_background</item>
+        <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/background</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/main_color</item>
-        <item name="colorSecondaryVariant">@color/main_color</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/background</item>

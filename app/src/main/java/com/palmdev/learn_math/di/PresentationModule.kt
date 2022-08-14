@@ -9,6 +9,7 @@ import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelec
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secEndViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_catch.GameCatchViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_duel.GameDuelViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_hard_math.GameHardMathViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_more_or_less.GameMoreOrLessViewModel
@@ -136,6 +137,11 @@ val presentationModule = module {
     viewModel {
         GameHardMathViewModel(
             gameGameHardMathRepository = get()
+        )
+    }
+    viewModel {
+        GameCatchViewModel(
+            gameCatchRepository = get()
         )
     }
 

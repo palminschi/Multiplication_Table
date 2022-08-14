@@ -1,6 +1,5 @@
 package com.palmdev.learn_math.presentation.screens.games.game_duel
 
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -56,7 +55,7 @@ class GameDuelEndFragment : Fragment() {
             binding.tvWhoWins.setTextColor(resources.getColor(R.color.red, null))
         } else if (redCorrectAnswers < blueCorrectAnswers) {
             binding.tvWhoWins.text = getText(R.string.blueWins)
-            binding.tvWhoWins.setTextColor(resources.getColor(R.color.second_background, null))
+            binding.tvWhoWins.setTextColor(resources.getColor(R.color.main_color, null))
         }
 
         binding.btnBack.setOnClickListener {

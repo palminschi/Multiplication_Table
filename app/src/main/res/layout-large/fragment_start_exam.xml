@@ -14,7 +14,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/exam"
-        android:textColor="@color/main_color"
+        android:textColor="@color/orange"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/third_background"
+        app:cardBackgroundColor="@color/second_background"
         app:cardCornerRadius="5dp">
 
         <LinearLayout
@@ -216,7 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="140dp"
         android:layout_marginBottom="40dp"
-        android:backgroundTint="@color/main_color"
+        android:backgroundTint="@color/orange"
         android:padding="10dp"
         android:text="@string/start"
         android:textSize="20sp" />

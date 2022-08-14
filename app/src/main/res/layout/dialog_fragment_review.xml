@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginHorizontal="20dp"
-    app:cardBackgroundColor="@color/third_background"
+    app:cardBackgroundColor="@color/second_background"
     app:cardCornerRadius="15dp"
     tools:context=".presentation.dialogs.review.ReviewDialogFragment">
 

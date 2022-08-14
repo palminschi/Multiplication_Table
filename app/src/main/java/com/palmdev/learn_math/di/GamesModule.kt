@@ -1,13 +1,7 @@
 package com.palmdev.learn_math.di
 
-import com.palmdev.learn_math.data.local.repository.games.Game60secRepositoryImpl
-import com.palmdev.learn_math.data.local.repository.games.GameHardMathRepositoryImpl
-import com.palmdev.learn_math.data.local.repository.games.GameMoreOrLessRepositoryImpl
-import com.palmdev.learn_math.data.local.repository.games.GameScoresRepositoryImpl
-import com.palmdev.learn_math.domain.repository.games.Game60secRepository
-import com.palmdev.learn_math.domain.repository.games.GameHardMathRepository
-import com.palmdev.learn_math.domain.repository.games.GameMoreOrLessRepository
-import com.palmdev.learn_math.domain.repository.games.GameScoresRepository
+import com.palmdev.learn_math.data.local.repository.games.*
+import com.palmdev.learn_math.domain.repository.games.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
@@ -17,7 +11,8 @@ val gamesModule = module {
         GameScoresRepositoryImpl(
             game60secRepository = get(),
             gameMoreOrLessRepository = get(),
-            gameHardMathRepository = get()
+            gameHardMathRepository = get(),
+            gameCatchRepository = get()
         )
     }
     single<Game60secRepository> {
@@ -34,5 +29,8 @@ val gamesModule = module {
     }
     single<GameHardMathRepository> {
         GameHardMathRepositoryImpl(context = androidApplication())
+    }
+    single<GameCatchRepository> {
+        GameCatchRepositoryImpl(context = androidApplication())
     }
 }

@@ -56,6 +56,9 @@ class SelectGameFragment : Fragment() {
         binding.btnGameHardMath.setOnClickListener {
             findNavController().navigate(R.id.action_selectGameFragment_to_gameHardMathFragment)
         }
+        binding.btnGameCatch.setOnClickListener {
+            findNavController().navigate(R.id.action_selectGameFragment_to_gameCatchFragment)
+        }
     }
 
     private fun initRecords() {
@@ -68,6 +71,9 @@ class SelectGameFragment : Fragment() {
         }
         viewModel.bestScoreGameHardMath.observe(viewLifecycleOwner) {
             setBestScore(view = binding.scoreGameHardMath, score = it)
+        }
+        viewModel.bestScoreGameCatch.observe(viewLifecycleOwner) {
+            setBestScore(view = binding.scoreGameCatch, score = it)
         }
     }
 

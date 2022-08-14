@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/training"
-        android:textColor="@color/main_color"
+        android:textColor="@color/orange"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
@@ -199,7 +199,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/second_background"
+            app:cardBackgroundColor="@color/main_color"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
@@ -243,7 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/second_background"
+            app:cardBackgroundColor="@color/main_color"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
@@ -286,7 +286,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/second_background"
+            app:cardBackgroundColor="@color/main_color"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
@@ -340,7 +340,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="90dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/second_background"
+            app:cardBackgroundColor="@color/main_color"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
