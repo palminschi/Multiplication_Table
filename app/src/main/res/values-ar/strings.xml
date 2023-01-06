@@ -83,6 +83,14 @@
     <string name="no">رقم</string>
     <string name="hardMath">الرياضيات الصعبة</string>
     <string name="catchAnswer">قبض على الجواب!</string>
+    <string name="scoreTitle">نتيجة:</string>
+    <string name="undo">رجوع 1</string>
+    <string name="reached2048">لقد وصلت إلى 2048!</string>
+    <string name="newGame">لعبة جديدة</string>
+    <string name="restart">لعبة جديدة</string>
+    <string name="start2048">إبدأ 2048</string>
+    <string name="gameOver">انتهت اللعبة</string>
+    <string name="onlyOneUndo">يمكنك التراجع مرة واحدة فقط.</string>
 
 
 </resources>

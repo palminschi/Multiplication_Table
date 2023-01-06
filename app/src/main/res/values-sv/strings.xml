@@ -84,5 +84,13 @@
     <string name="no">Nej</string>
     <string name="hardMath">Hård matte</string>
     <string name="catchAnswer">Fånga svaret</string>
+    <string name="scoreTitle">Göra:</string>
+    <string name="restart">Nytt spel</string>
+    <string name="undo">Tillbaka 1</string>
+    <string name="start2048">Start 2048</string>
+    <string name="reached2048">Du nådde 2048!</string>
+    <string name="gameOver">Game Over</string>
+    <string name="newGame">Nytt spel</string>
+    <string name="onlyOneUndo">Du kan bara ångra en gång.</string>
 
 </resources>

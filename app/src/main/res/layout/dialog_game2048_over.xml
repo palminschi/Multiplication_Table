@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="20dp"
+    app:cardBackgroundColor="@color/second_background"
+    app:cardCornerRadius="15dp"
+    tools:context=".presentation.screens.games.game_2048.Game2048OverDialogFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="60dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/ic_heart_24"
+            android:contentDescription="@null"
+            android:layout_marginVertical="24dp"
+            android:id="@+id/ivHeart"/>
+
+        <TextView
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gameOver"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnNewGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cell_background"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"
+            android:text="@string/newGame"
+            android:textStyle="bold"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/undoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableEnd="@drawable/ic_undo_24"
+            android:textSize="18sp"
+            android:text="@string/undo"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/cell_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/body" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

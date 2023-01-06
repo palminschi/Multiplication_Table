@@ -84,5 +84,13 @@
     <string name="no">Нет</string>
     <string name="hardMath">Тяжелая математика</string>
     <string name="catchAnswer">Поймай ответ</string>
+    <string name="scoreTitle">Счет:</string>
+    <string name="restart">Новая игра</string>
+    <string name="undo">Назад 1</string>
+    <string name="start2048">Начать 2048</string>
+    <string name="reached2048">Вы достигли 2048!</string>
+    <string name="gameOver">Игра закончена</string>
+    <string name="newGame">Новая игра</string>
+    <string name="onlyOneUndo">Вы можете отменить только один раз.</string>
 
 </resources>

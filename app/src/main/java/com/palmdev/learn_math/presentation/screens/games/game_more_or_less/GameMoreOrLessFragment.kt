@@ -125,7 +125,7 @@ class GameMoreOrLessFragment : Fragment() {
 
     private fun showDialog() {
         findNavController().navigate(
-            R.id.action_gameMoreOrLessFragment_to_continueDialogFragment,
+            R.id.continueDialogFragment,
             bundleOf(
                 ARG_CONTINUE_WITH_SCORE to correctAnswers,
                 ARG_BEST_SCORE to viewModel.bestScore.value

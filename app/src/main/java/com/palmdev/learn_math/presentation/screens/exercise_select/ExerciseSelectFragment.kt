@@ -190,7 +190,7 @@ class ExerciseSelectFragment : Fragment() {
     private fun finishExercise() {
         if (numberType == NumberType.FIXED) {
             findNavController().navigate(
-                R.id.action_exerciseSelectFragment_to_endFragment,
+                R.id.endFragment,
                 bundleOf(
                     ARG_OPERATION to operation,
                     ARG_AVG_TIME to avgAnswerTime,
@@ -201,7 +201,7 @@ class ExerciseSelectFragment : Fragment() {
             )
         } else {
             findNavController().navigate(
-                R.id.action_exerciseSelectFragment_to_endFragment,
+                R.id.endFragment,
                 bundleOf(
                     ARG_OPERATION to operation,
                     ARG_AVG_TIME to avgAnswerTime,
@@ -219,7 +219,7 @@ class ExerciseSelectFragment : Fragment() {
             binding.btnHint.visibility = View.VISIBLE
             binding.btnHint.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_exerciseSelectFragment_to_hintTableDialogFragment,
+                    R.id.hintTableDialogFragment,
                     bundleOf(
                         ARG_WITH_NUMBER to withNumber,
                         ARG_OPERATION to operation

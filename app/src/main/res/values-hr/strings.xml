@@ -84,5 +84,13 @@
     <string name="no">Ne</string>
     <string name="hardMath">Teška matematika</string>
     <string name="catchAnswer">Uhvatite odgovor!</string>
+    <string name="scoreTitle">Postići:</string>
+    <string name="restart">Nova igra</string>
+    <string name="undo">Natrag 1</string>
+    <string name="start2048">Početak 2048</string>
+    <string name="reached2048">Stigli ste do 2048!</string>
+    <string name="gameOver">Igra je gotova</string>
+    <string name="newGame">Nova igra</string>
+    <string name="onlyOneUndo">Možete poništiti samo jednom.</string>
 
 </resources>

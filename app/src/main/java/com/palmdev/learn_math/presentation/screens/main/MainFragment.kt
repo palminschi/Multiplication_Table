@@ -75,26 +75,29 @@ class MainFragment : Fragment() {
             }
         }
         binding.btnLearnTable.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_selectTableFragment)
+            findNavController().navigate(R.id.selectTableFragment)
         }
         binding.btnTraining.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_selectTrainingFragment)
+            findNavController().navigate(R.id.selectTrainingFragment)
         }
         binding.btnExam.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_startExamFragment)
+            findNavController().navigate(R.id.startExamFragment)
         }
         binding.btnDetails.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_statisticsFragment)
+            findNavController().navigate(R.id.statisticsFragment)
         }
         binding.btnGames.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_selectGameFragment)
+            findNavController().navigate(R.id.selectGameFragment)
+        }
+        binding.btnGame2048.setOnClickListener {
+            findNavController().navigate(R.id.game2048Fragment)
         }
         viewModel.isPremiumUser.observe(viewLifecycleOwner) { isPremium ->
             if (isPremium) binding.btnRemoveAds.visibility = View.GONE
             else {
                 binding.btnRemoveAds.visibility = View.VISIBLE
                 binding.btnRemoveAds.setOnClickListener {
-                    findNavController().navigate(R.id.action_mainFragment_to_purchaseFragment)
+                    findNavController().navigate(R.id.purchaseFragment)
                 }
                 ExpansionReductionAnim.anim(view = binding.btnRemoveAds, infinitely = false)
             }

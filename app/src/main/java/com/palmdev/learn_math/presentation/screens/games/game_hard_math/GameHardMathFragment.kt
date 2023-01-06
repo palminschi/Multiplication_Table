@@ -130,7 +130,7 @@ class GameHardMathFragment : Fragment() {
     private fun finishExercise() {
         viewModel.saveResults(correctAnswers = correctAnswers)
         findNavController().navigate(
-            R.id.action_gameHardMathFragment_to_continueDialogFragment,
+            R.id.continueDialogFragment,
             bundleOf(
                 ARG_CONTINUE_WITH_SCORE to correctAnswers,
                 ARG_BEST_SCORE to viewModel.bestScore.value

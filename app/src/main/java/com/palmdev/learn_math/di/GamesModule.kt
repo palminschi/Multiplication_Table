@@ -1,6 +1,6 @@
 package com.palmdev.learn_math.di
 
-import com.palmdev.learn_math.data.local.repository.games.*
+import com.palmdev.learn_math.data.games.repository.*
 import com.palmdev.learn_math.domain.repository.games.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module

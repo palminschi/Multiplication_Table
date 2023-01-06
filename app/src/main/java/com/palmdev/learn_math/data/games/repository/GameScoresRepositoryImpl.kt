@@ -1,4 +1,4 @@
-package com.palmdev.learn_math.data.local.repository.games
+package com.palmdev.learn_math.data.games.repository
 
 import com.palmdev.learn_math.domain.repository.games.*
 

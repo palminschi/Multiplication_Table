@@ -84,5 +84,13 @@
     <string name="no">No</string>
     <string name="hardMath">Matemáticas difíciles</string>
     <string name="catchAnswer">Atrapa la respuesta</string>
+    <string name="scoreTitle">Puntaje:</string>
+    <string name="restart">Nuevo juego</string>
+    <string name="undo">Volver 1</string>
+    <string name="start2048">Comienzo 2048</string>
+    <string name="reached2048">¡Llegaste a 2048!</string>
+    <string name="gameOver">Juego terminado</string>
+    <string name="newGame">Nuevo juego</string>
+    <string name="onlyOneUndo">Solo puedes deshacer una vez.</string>
 
 </resources>

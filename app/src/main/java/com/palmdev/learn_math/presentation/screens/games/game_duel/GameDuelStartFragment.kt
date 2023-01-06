@@ -56,7 +56,7 @@ class GameDuelStartFragment : Fragment() {
             }
 
             findNavController().navigate(
-                R.id.action_gameDuelStartFragment_to_gameDuelFragment,
+                R.id.gameDuelFragment,
                 bundleOf(
                     ARG_OPERATION to operation,
                     ARG_MIN_NUMBER to minNumber,

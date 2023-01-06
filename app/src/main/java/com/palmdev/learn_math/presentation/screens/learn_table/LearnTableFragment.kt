@@ -47,7 +47,7 @@ class LearnTableFragment : Fragment() {
 
         binding.btnStartMultiply.setOnClickListener {
             findNavController().navigate(
-                R.id.action_learnTableFragment_to_exerciseSelectFragment,
+                R.id.exerciseSelectFragment,
                 bundleOf(
                     ARG_WITH_NUMBER to selectedNumber,
                     ARG_OPERATION to Operation.MULTIPLICATION
@@ -57,7 +57,7 @@ class LearnTableFragment : Fragment() {
 
         binding.btnStartDivision.setOnClickListener {
             findNavController().navigate(
-                R.id.action_learnTableFragment_to_exerciseSelectFragment,
+                R.id.exerciseSelectFragment,
                 bundleOf(
                     ARG_WITH_NUMBER to selectedNumber,
                     ARG_OPERATION to Operation.DIVISION

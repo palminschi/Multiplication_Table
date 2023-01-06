@@ -81,7 +81,11 @@ class EndFragment : Fragment() {
         }
 
         binding.btnHome.setOnClickListener {
-            findNavController().navigate(R.id.action_endFragment_to_mainFragment)
+            findNavController().navigate(
+                R.id.mainFragment,
+                args = null,
+                NavOptions.Builder().setPopUpTo(R.id.mainFragment, inclusive = true, false).build()
+            )
         }
         binding.btnAgain.setOnClickListener {
             findNavController().popBackStack()
@@ -92,8 +96,10 @@ class EndFragment : Fragment() {
             binding.btnGoTo.text = "${getText(R.string.goToNextNumber)}${withNumber!! + 1}"
             binding.btnGoTo.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_endFragment_to_learnTableFragment,
-                    bundleOf(ARG_SELECTED_NUMBER to withNumber!! + 1)
+                    R.id.learnTableFragment,
+                    bundleOf(ARG_SELECTED_NUMBER to withNumber!! + 1),
+                    NavOptions.Builder()
+                        .setPopUpTo(R.id.learnTableFragment, inclusive = false, false).build()
                 )
             }
         } else binding.btnGoTo.visibility = View.GONE
@@ -109,7 +115,7 @@ class EndFragment : Fragment() {
                 )
             } else {
                 viewModel.userRatedApp.observe(viewLifecycleOwner) { rated ->
-                    if (!rated) findNavController().navigate(R.id.action_endFragment_to_reviewDialogFragment)
+                    if (!rated) findNavController().navigate(R.id.reviewDialogFragment)
                     else {
                         handler.postDelayed(
                             { viewModel.showInterstitialAd() },

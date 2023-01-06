@@ -19,7 +19,7 @@ class ReviewRepositoryImpl(private val application: Application) : ReviewReposit
     private val sharedPrefs = application.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
 
     override fun rateApp() {
-        application.startActivity(
+        MAIN.startActivity(
             Intent(
                 Intent.ACTION_VIEW,
                 Uri.parse("https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")

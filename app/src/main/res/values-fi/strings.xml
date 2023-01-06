@@ -84,5 +84,13 @@
     <string name="no">Ei</string>
     <string name="hardMath">Kovaa matematiikkaa</string>
     <string name="catchAnswer">Ota kiinni vastaus!</string>
+    <string name="scoreTitle">Pisteet:</string>
+    <string name="restart">Uusi peli</string>
+    <string name="undo">Takaisin 1</string>
+    <string name="start2048">Alkaa 2048</string>
+    <string name="reached2048">Pääsit vuoteen 2048!</string>
+    <string name="gameOver">Peli ohi</string>
+    <string name="newGame">Uusi peli</string>
+    <string name="onlyOneUndo">Voit kumota vain kerran.</string>
 
 </resources>

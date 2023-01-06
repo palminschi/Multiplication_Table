@@ -176,6 +176,19 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/btnGame2048"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:drawableEnd="@drawable/ic_game2048_34"
+            android:paddingVertical="10dp"
+            android:text="@string/start2048"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnTraining"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

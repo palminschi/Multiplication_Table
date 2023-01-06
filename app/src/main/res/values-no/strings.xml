@@ -84,5 +84,13 @@
     <string name="no">Nei</string>
     <string name="hardMath">Hard matte</string>
     <string name="catchAnswer">Fang svaret</string>
+    <string name="scoreTitle">Poengsum:</string>
+    <string name="restart">Nytt spill</string>
+    <string name="undo">Tilbake 1</string>
+    <string name="start2048">Start 2048</string>
+    <string name="reached2048">Du nådde 2048!</string>
+    <string name="gameOver">Spillet er slutt</string>
+    <string name="newGame">Nytt spill</string>
+    <string name="onlyOneUndo">Du kan bare angre én gang.</string>
 
 </resources>

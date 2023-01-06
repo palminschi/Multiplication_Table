@@ -84,5 +84,13 @@
     <string name="no">不</string>
     <string name="hardMath">硬数学</string>
     <string name="catchAnswer">抓住答案！</string>
+    <string name="scoreTitle">分数：</string>
+    <string name="restart">新游戏</string>
+    <string name="undo">返回 1</string>
+    <string name="start2048">开始 2048</string>
+    <string name="reached2048">你达到了 2048 年！</string>
+    <string name="gameOver">游戏结束</string>
+    <string name="newGame">新游戏</string>
+    <string name="onlyOneUndo">您只能撤消一次。</string>
 
 </resources>

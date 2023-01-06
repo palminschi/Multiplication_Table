@@ -7,6 +7,9 @@ import com.palmdev.learn_math.presentation.screens.end.EndViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_input.ExerciseInputViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_select.ExerciseSelectViewModel
 import com.palmdev.learn_math.presentation.screens.exercise_true_or_false.ExerciseTrueOrFalseViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_2048.Continue2048ViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_2048.Game2048OverViewModel
+import com.palmdev.learn_math.presentation.screens.games.game_2048.Game2048ViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secEndViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_60sec.Game60secViewModel
 import com.palmdev.learn_math.presentation.screens.games.game_catch.GameCatchViewModel
@@ -155,6 +158,21 @@ val presentationModule = module {
     }
     viewModel {
         GameDuelEndViewModel(
+            adsRepository = get()
+        )
+    }
+    viewModel {
+        Game2048OverViewModel(
+            adsRepository = get()
+        )
+    }
+    viewModel {
+        Game2048ViewModel(
+            adsRepository = get()
+        )
+    }
+    viewModel {
+        Continue2048ViewModel(
             adsRepository = get()
         )
     }

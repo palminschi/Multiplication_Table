@@ -157,7 +157,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
 
     private fun finishExercise() {
         findNavController().navigate(
-            R.id.action_exerciseTrueOrFalseFragment_to_endFragment,
+            R.id.endFragment,
             bundleOf(
                 ARG_OPERATION to operation,
                 ARG_AVG_TIME to avgAnswerTime,
@@ -174,7 +174,7 @@ class ExerciseTrueOrFalseFragment : Fragment() {
             binding.btnHint.visibility = View.VISIBLE
             binding.btnHint.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_exerciseTrueOrFalseFragment_to_hintTableDialogFragment,
+                    R.id.hintTableDialogFragment,
                     bundleOf(
                         ARG_WITH_NUMBER to withNumber,
                         ARG_OPERATION to operation

@@ -84,5 +84,13 @@
     <string name="no">いいえ</string>
     <string name="hardMath">難しい数学</string>
     <string name="catchAnswer">答えをキャッチ！</string>
+    <string name="scoreTitle">スコア：</string>
+    <string name="restart">新しいゲーム</string>
+    <string name="undo">戻る 1</string>
+    <string name="start2048">2048年開始</string>
+    <string name="reached2048">2048に到達しました！</string>
+    <string name="gameOver">ゲームオーバー</string>
+    <string name="newGame">新しいゲーム</string>
+    <string name="onlyOneUndo">元に戻すことができるのは 1 回だけです。</string>
 
 </resources>

@@ -25,7 +25,7 @@ class NumberAdapter(private val maxNumber: Int) :
 
             binding.root.setOnClickListener {
                 it.findNavController().navigate(
-                    R.id.action_selectTableFragment_to_learnTableFragment,
+                    R.id.learnTableFragment,
                     bundleOf(ARG_SELECTED_NUMBER to position + 1)
                 )
             }

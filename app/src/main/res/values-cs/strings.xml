@@ -84,5 +84,13 @@
     <string name="no">Ne</string>
     <string name="hardMath">Těžká matematika</string>
     <string name="catchAnswer">Chytit odpověď!</string>
+    <string name="scoreTitle">Skóre:</string>
+    <string name="restart">Nová hra</string>
+    <string name="undo">Zpět 1</string>
+    <string name="start2048">Začátek 2048</string>
+    <string name="reached2048">Dosáhli jste roku 2048!</string>
+    <string name="gameOver">Konec hry</string>
+    <string name="newGame">Nová hra</string>
+    <string name="onlyOneUndo">Vrátit zpět můžete pouze jednou.</string>
 
 </resources>

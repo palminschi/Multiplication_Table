@@ -159,7 +159,7 @@ class GameDuelFragment : Fragment() {
         }
         if (topUserFinished && bottomUserFinished) {
             findNavController().navigate(
-                R.id.action_gameDuelFragment_to_gameDuelEndFragment,
+                R.id.gameDuelEndFragment,
                 bundleOf(
                     ARG_RED_CORRECT_ANSWERS to correctAnswersTop,
                     ARG_RED_WRONG_ANSWERS to wrongAnswersTop,

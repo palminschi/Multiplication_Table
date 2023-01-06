@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_mainFragment_to_selectGameFragment"
             app:destination="@id/selectGameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_game2048Fragment"
+            app:destination="@id/game2048Fragment" />
     </fragment>
     <fragment
         android:id="@+id/selectTableFragment"
@@ -164,6 +167,9 @@
         <action
             android:id="@+id/action_selectGameFragment_to_gameCatchFragment"
             app:destination="@id/gameCatchFragment" />
+        <action
+            android:id="@+id/action_selectGameFragment_to_game2048Fragment"
+            app:destination="@id/game2048Fragment" />
     </fragment>
     <fragment
         android:id="@+id/gameDuelStartFragment"
@@ -239,4 +245,26 @@
             android:id="@+id/action_gameCatchFragment_to_continueDialogFragment"
             app:destination="@id/continueDialogFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/game2048Fragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_2048.Game2048Fragment"
+        android:label="fragment_game2048"
+        tools:layout="@layout/fragment_game2048" >
+        <action
+            android:id="@+id/action_game2048Fragment_to_game2048OverDialogFragment"
+            app:destination="@id/game2048OverDialogFragment" />
+        <action
+            android:id="@+id/action_game2048Fragment_to_continue2048DialogFragment"
+            app:destination="@id/continue2048DialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/continue2048DialogFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_2048.Continue2048DialogFragment"
+        android:label="dialog_continue2048"
+        tools:layout="@layout/dialog_continue2048" />
+    <dialog
+        android:id="@+id/game2048OverDialogFragment"
+        android:name="com.palmdev.learn_math.presentation.screens.games.game_2048.Game2048OverDialogFragment"
+        android:label="dialog_game2048_over"
+        tools:layout="@layout/dialog_game2048_over" />
 </navigation>

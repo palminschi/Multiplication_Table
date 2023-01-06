@@ -37,12 +37,15 @@ class SelectGameFragment : Fragment() {
     }
 
     private fun initButtons() {
+        binding.btnGame2048.setOnClickListener {
+            findNavController().navigate(R.id.game2048Fragment)
+        }
         binding.btnGameDuel.setOnClickListener {
-            findNavController().navigate(R.id.action_selectGameFragment_to_gameDuelStartFragment)
+            findNavController().navigate(R.id.gameDuelStartFragment)
         }
         binding.btnGame60sec.setOnClickListener {
             findNavController().navigate(
-                R.id.action_selectGameFragment_to_game60secFragment,
+                R.id.game60secFragment,
                 bundleOf(
                     ARG_MIN_NUMBER to 0,
                     ARG_MAX_NUMBER to 5,
@@ -51,13 +54,13 @@ class SelectGameFragment : Fragment() {
             )
         }
         binding.btnGameMoreOrLess.setOnClickListener {
-            findNavController().navigate(R.id.action_selectGameFragment_to_gameMoreOrLessFragment)
+            findNavController().navigate(R.id.gameMoreOrLessFragment)
         }
         binding.btnGameHardMath.setOnClickListener {
-            findNavController().navigate(R.id.action_selectGameFragment_to_gameHardMathFragment)
+            findNavController().navigate(R.id.gameHardMathFragment)
         }
         binding.btnGameCatch.setOnClickListener {
-            findNavController().navigate(R.id.action_selectGameFragment_to_gameCatchFragment)
+            findNavController().navigate(R.id.gameCatchFragment)
         }
     }
 

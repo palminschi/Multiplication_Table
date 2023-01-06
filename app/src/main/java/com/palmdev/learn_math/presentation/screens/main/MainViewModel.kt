@@ -8,6 +8,7 @@ import com.palmdev.learn_math.domain.repository.UserDataRepository
 import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.Operation
+import com.palmdev.learn_math.utils.REWARD_TYPE
 import kotlinx.coroutines.launch
 
 class MainViewModel(
@@ -25,7 +26,7 @@ class MainViewModel(
 
     fun loadAds(){
         adsRepository.loadInterstitialAd()
-        adsRepository.load500coinsRewardedAd()
+        adsRepository.loadRewardedAd(type = REWARD_TYPE.COINS)
     }
 
     init {

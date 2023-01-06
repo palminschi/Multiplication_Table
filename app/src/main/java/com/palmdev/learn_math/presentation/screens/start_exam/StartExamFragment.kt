@@ -79,7 +79,7 @@ class StartExamFragment : Fragment() {
             }
 
             findNavController().navigate(
-                R.id.action_startExamFragment_to_exerciseInputFragment,
+                R.id.exerciseInputFragment,
                 bundleOf(
                     ARG_OPERATION to operation,
                     ARG_MIN_NUMBER to minNumber,

@@ -1,4 +1,4 @@
-package com.palmdev.learn_math.data.local.repository.games
+package com.palmdev.learn_math.data.games.repository
 
 import android.content.Context
 import com.palmdev.learn_math.data.model.ExerciseHardMath

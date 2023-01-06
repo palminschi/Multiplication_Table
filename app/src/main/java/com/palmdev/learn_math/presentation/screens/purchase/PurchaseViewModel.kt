@@ -9,6 +9,7 @@ import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.domain.repository.PurchaseRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
 import com.palmdev.learn_math.utils.MAIN
+import com.palmdev.learn_math.utils.REWARD_TYPE
 
 const val COINS_PRICE = 50000
 
@@ -47,7 +48,8 @@ class PurchaseViewModel(
     }
 
     fun showRewardedAd() {
-        adsRepository.show500coinsRewardedAd(
+        adsRepository.showRewardedAd(
+            type = REWARD_TYPE.COINS,
             listener = { rewardItem ->
                 userDataRepository.addCoins(rewardItem.amount)
                 coins.value = userDataRepository.coins

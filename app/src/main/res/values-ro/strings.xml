@@ -82,5 +82,13 @@
     <string name="no">Nu</string>
     <string name="hardMath">Matematică grea</string>
     <string name="catchAnswer">Prinde răspunsul</string>
+    <string name="scoreTitle">Scorul:</string>
+    <string name="restart">Joc nou</string>
+    <string name="undo">Înapoi 1</string>
+    <string name="start2048">Începe 2048</string>
+    <string name="reached2048">Ai ajuns la 2048!</string>
+    <string name="gameOver">Joc încheiat</string>
+    <string name="newGame">Joc nou</string>
+    <string name="onlyOneUndo">Puteți anula o singură dată.</string>
 
 </resources>

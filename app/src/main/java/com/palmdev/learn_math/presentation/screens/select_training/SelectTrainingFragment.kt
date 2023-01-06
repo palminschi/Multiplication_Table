@@ -39,14 +39,14 @@ class SelectTrainingFragment : Fragment() {
         binding.multiply.isChecked = true
         binding.btnGameInput.setOnClickListener {
             findNavController().navigate(
-                R.id.action_selectTrainingFragment_to_exerciseInputFragment,
+                R.id.exerciseInputFragment,
                 getBundle()
             )
         }
         binding.btnGameSelect.setOnClickListener {
             checkEnteredData()
             findNavController().navigate(
-                R.id.action_selectTrainingFragment_to_exerciseSelectFragment,
+                R.id.exerciseSelectFragment,
                 bundleOf(
                     ARG_OPERATION to operation,
                     ARG_MAX_NUMBER to maxNumber,
@@ -57,13 +57,13 @@ class SelectTrainingFragment : Fragment() {
         }
         binding.btnGameTrueOrFalse.setOnClickListener {
             findNavController().navigate(
-                R.id.action_selectTrainingFragment_to_exerciseTrueOrFalseFragment,
+                R.id.exerciseTrueOrFalseFragment,
                 getBundle()
             )
         }
         binding.btnGame60sec?.setOnClickListener {
             findNavController().navigate(
-                R.id.action_selectTrainingFragment_to_game60secFragment,
+                R.id.game60secFragment,
                 getBundle()
             )
         }

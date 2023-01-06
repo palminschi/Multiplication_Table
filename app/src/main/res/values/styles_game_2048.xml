@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="gameContainer">
+        <item name="android:background">@drawable/grid_background</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="tile">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="layout_constraintDimensionRatio">1</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:src">@drawable/grid_cell</item>
+    </style>
+
+    <!-- Colors -->
+    <color name="game_2048_light_text">#ffffff</color>
+    <color name="game_2048_dark_text">#393d4e</color>
+
+    <color name="cell_background">#4071ca</color>
+
+    <color name="tile2">#FFFFFF</color>
+    <color name="tile4">#a5d3eb</color>
+    <color name="tile8">#61bdee</color>
+    <color name="tile16">#3ca9ee</color>
+    <color name="tile32">#1374ba</color>
+    <color name="tile64">#a668d5</color>
+    <color name="tile128">#7d29c5</color>
+    <color name="tile256">#710fea</color>
+    <color name="tile512">#e63997</color>
+    <color name="tile1024">#c91c7a</color>
+    <color name="tile2048">#e41739</color>
+    <color name="tileSuper">#000000</color>
+</resources>

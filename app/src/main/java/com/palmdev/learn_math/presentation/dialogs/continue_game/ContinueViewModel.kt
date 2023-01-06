@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.google.android.gms.ads.OnUserEarnedRewardListener
 import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
+import com.palmdev.learn_math.utils.REWARD_TYPE
 
 class ContinueViewModel(
     private val adsRepository: AdsRepository
@@ -14,7 +15,7 @@ class ContinueViewModel(
     }
 
     fun showRewardedAd(listener: OnUserEarnedRewardListener) {
-        adsRepository.showContinueRewardedAd(listener)
+        adsRepository.showRewardedAd(type = REWARD_TYPE.CONTINUE, listener = listener)
     }
 
     fun showInterstitialAd() {

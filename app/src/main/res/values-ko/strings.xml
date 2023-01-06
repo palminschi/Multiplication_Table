@@ -84,5 +84,13 @@
     <string name="no">아니</string>
     <string name="hardMath">어려운 수학</string>
     <string name="catchAnswer">답을 잡아라!</string>
+    <string name="scoreTitle">점수:</string>
+    <string name="restart">새로운 게임</string>
+    <string name="undo">뒤로 1</string>
+    <string name="start2048">시작 2048</string>
+    <string name="reached2048">2048에 도달했습니다!</string>
+    <string name="gameOver">게임 끝</string>
+    <string name="newGame">새로운 게임</string>
+    <string name="onlyOneUndo">한 번만 실행 취소할 수 있습니다.</string>
 
 </resources>

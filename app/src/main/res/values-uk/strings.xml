@@ -84,5 +84,13 @@
     <string name="no">Ні</string>
     <string name="hardMath">Важка математика</string>
     <string name="catchAnswer">Впіймайте відповідь</string>
+    <string name="scoreTitle">Счет:</string>
+    <string name="restart">Нова гра</string>
+    <string name="undo">Назад 1</string>
+    <string name="start2048">Старт 2048</string>
+    <string name="reached2048">Ви досягли 2048!</string>
+    <string name="gameOver">Гра завершена</string>
+    <string name="newGame">Нова гра</string>
+    <string name="onlyOneUndo">Скасувати можна лише один раз.</string>
 
 </resources>

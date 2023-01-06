@@ -128,7 +128,7 @@ class PurchaseRepositoryImpl(
     private fun handlePurchases(purchases: List<Purchase>) {
         for (purchase in purchases) {
             //if item is purchased
-            if (PURCHASE_PRODUCT_ID == purchase.sku && purchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
+            if (PURCHASE_PRODUCT_ID == purchase.skus.first() && purchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
                 if (!verifyValidSignature(purchase.originalJson, purchase.signature)) {
                     // Invalid purchase
                     // show error to user
@@ -157,12 +157,12 @@ class PurchaseRepositoryImpl(
                         ).show()
                     }
                 }
-            } else if (PURCHASE_PRODUCT_ID == purchase.sku && purchase.purchaseState == Purchase.PurchaseState.PENDING) {
+            } else if (PURCHASE_PRODUCT_ID == purchase.skus.first() && purchase.purchaseState == Purchase.PurchaseState.PENDING) {
                 Toast.makeText(
                     context,
                     "Purchase is Pending. Please complete Transaction", Toast.LENGTH_SHORT
                 ).show()
-            } else if (PURCHASE_PRODUCT_ID == purchase.sku && purchase.purchaseState == Purchase.PurchaseState.UNSPECIFIED_STATE) {
+            } else if (PURCHASE_PRODUCT_ID == purchase.skus.first() && purchase.purchaseState == Purchase.PurchaseState.UNSPECIFIED_STATE) {
                 userDataRepository.setIsPremiumUser(false)
                 //=-
                 Toast.makeText(

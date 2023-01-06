@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.palmdev.learn_math.domain.repository.AdsRepository
 import com.palmdev.learn_math.domain.repository.games.GameScoresRepository
 import com.palmdev.learn_math.utils.FirebaseEvents
+import com.palmdev.learn_math.utils.REWARD_TYPE
 
 class SelectGameViewModel(
     private val gameScoresRepository: GameScoresRepository,
@@ -13,7 +14,7 @@ class SelectGameViewModel(
 
     init {
         FirebaseEvents().setScreenViewEvent(screenName = "Select Game")
-        adsRepository.loadContinueRewardedAd()
+        adsRepository.loadRewardedAd(type = REWARD_TYPE.CONTINUE)
     }
 
     val bestScoreGame60sec = MutableLiveData<Int?>()

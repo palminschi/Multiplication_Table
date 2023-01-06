@@ -84,5 +84,13 @@
     <string name="no">Nee</string>
     <string name="hardMath">Moeilijke wiskunde</string>
     <string name="catchAnswer">Vang het antwoord!</string>
+    <string name="scoreTitle">Score:</string>
+    <string name="restart">Nieuw spel</string>
+    <string name="undo">Terug 1</string>
+    <string name="start2048">Begin 2048</string>
+    <string name="reached2048">Je hebt 2048 bereikt!</string>
+    <string name="gameOver">Spel is over</string>
+    <string name="newGame">Nieuw spel</string>
+    <string name="onlyOneUndo">U kunt slechts één keer ongedaan maken.</string>
 
 </resources>

@@ -196,7 +196,7 @@ class ExerciseInputFragment : Fragment() {
 
     private fun finishExercise() {
         findNavController().navigate(
-            R.id.action_exerciseInputFragment_to_endFragment,
+            R.id.endFragment,
             bundleOf(
                 ARG_OPERATION to operation,
                 ARG_RIGHT_ANSWERS to correctAnswers,
@@ -217,7 +217,7 @@ class ExerciseInputFragment : Fragment() {
             binding.btnHint.visibility = View.VISIBLE
             binding.btnHint.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_exerciseInputFragment_to_hintTableDialogFragment,
+                    R.id.hintTableDialogFragment,
                     bundleOf(
                         ARG_WITH_NUMBER to withNumber,
                         ARG_OPERATION to operation

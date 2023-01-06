@@ -140,7 +140,7 @@ class Game60secFragment : Fragment() {
 
     private fun finishGame() {
         findNavController().navigate(
-            R.id.action_game60secFragment_to_game60secEndFragment,
+            R.id.game60secEndFragment,
             bundleOf(
                 ARG_MIN_NUMBER to minNumber,
                 ARG_MAX_NUMBER to maxNumber,
